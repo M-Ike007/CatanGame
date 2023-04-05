@@ -1,6 +1,6 @@
 **/.metadata
-bin/
-doc/
+**/bin/
+**/doc/
 **/.DS_Store
 **/.swp
 **/.swo
