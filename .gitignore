@@ -1,4 +1,9 @@
-/.metadata
-bin/
-doc/
-**/DS_Store
+**/.project
+**/.classpath
+**/.settings/
+**/.metadata
+**/bin/
+**/doc/
+**/.DS_Store
+**/.swp
+**/.swo
