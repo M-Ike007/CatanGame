@@ -27,7 +27,7 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         
         // draw the images: name, x, y, size_x, size_y
 
-        g.drawImage(Img_desert, 0, 0, 100, 100, this); //max_x = 1182 max_y = ...
+        g.drawImage(Img_desert, 592, 250, 100, 100, this); //max_x = 1182 max_y = ...
         
           
     }  
