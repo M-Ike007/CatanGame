@@ -1,14 +1,12 @@
 package cost_card;
 
-import static org.junit.Assert.assertNotNull;
-import org.junit.Test;
+import junit.framework.TestCase;
 
-public class CostTableTest {
+public class CostTableTest extends TestCase {
 	
-	@Test
-	// Test to check if CostTable returns output
-	public void testNull(){
-		CostTable totaltable = new CostTable();
-		assertNotNull(totaltable);
+	public void testCreation() {
+		CostTable costTest = new CostTable();
+		assertNotNull(costTest);
 	}
+	
 }
