@@ -33,42 +33,44 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.drawImage(Img_sea, 550, 25, 100, 100, this);
         g.drawImage(Img_sea, 650, 25, 100, 100, this);
         g.drawImage(Img_sea, 750, 25, 100, 100, this);
+        
         // 2th row
         g.drawImage(Img_sea, 400, 100, 100, 100, this);
         g.drawImage(Img_wood, 500, 100, 100, 100, this);
-        g.drawImage(Img_wood, 600, 100, 100, 100, this);
-        g.drawImage(Img_wood, 700, 100, 100, 100, this);
+        g.drawImage(Img_wool, 600, 100, 100, 100, this);
+        g.drawImage(Img_wool, 700, 100, 100, 100, this);
         g.drawImage(Img_sea, 800, 100, 100, 100, this);
+        
         // 3th row
         g.drawImage(Img_sea, 350, 175, 100, 100, this);
-        g.drawImage(Img_wood, 450, 175, 100, 100, this);
-        g.drawImage(Img_wood, 550, 175, 100, 100, this);
-        g.drawImage(Img_brick, 650, 175, 100, 100, this);
-        g.drawImage(Img_brick, 750, 175, 100, 100, this);
+        g.drawImage(Img_wheat, 450, 175, 100, 100, this);
+        g.drawImage(Img_ore, 550, 175, 100, 100, this);
+        g.drawImage(Img_wheat, 650, 175, 100, 100, this);
+        g.drawImage(Img_wood, 750, 175, 100, 100, this);
         g.drawImage(Img_sea, 850, 175, 100, 100, this);
         
         // 4th row
-        g.drawImage(Img_desert, 600, 250, 100, 100, this);
-        g.drawImage(Img_wheat, 500, 250, 100, 100, this);
-        g.drawImage(Img_wood, 700, 250, 100, 100, this);
-        g.drawImage(Img_wheat, 800, 250, 100, 100, this);
-        g.drawImage(Img_sea, 900, 250, 100, 100, this);
-        g.drawImage(Img_wood, 400, 250, 100, 100, this);
         g.drawImage(Img_sea, 300, 250, 100, 100, this);
-        
+        g.drawImage(Img_wood, 400, 250, 100, 100, this);
+        g.drawImage(Img_brick, 500, 250, 100, 100, this);
+        g.drawImage(Img_desert, 600, 250, 100, 100, this);
+        g.drawImage(Img_ore, 700, 250, 100, 100, this);
+        g.drawImage(Img_wheat, 800, 250, 100, 100, this);
+        g.drawImage(Img_sea, 900, 250, 100, 100, this);       
+      
         // 5th row
-        g.drawImage(Img_wool, 550, 325, 100, 100, this);
-        g.drawImage(Img_ore, 650, 325, 100, 100, this);
+        g.drawImage(Img_sea, 350, 325, 100, 100, this);
+        g.drawImage(Img_wheat, 450, 325, 100, 100, this);
+        g.drawImage(Img_ore, 550, 325, 100, 100, this);
+        g.drawImage(Img_wood, 650, 325, 100, 100, this);
         g.drawImage(Img_wool, 750, 325, 100, 100, this);
         g.drawImage(Img_sea, 850, 325, 100, 100, this);
-        g.drawImage(Img_wool, 450, 325, 100, 100, this);
-        g.drawImage(Img_sea, 350, 325, 100, 100, this);
-        
+
         //6th row
         g.drawImage(Img_sea, 400, 400, 100, 100, this);
-        g.drawImage(Img_wood, 500, 400, 100, 100, this);
-        g.drawImage(Img_wood, 600, 400, 100, 100, this);
-        g.drawImage(Img_wood, 700, 400, 100, 100, this);
+        g.drawImage(Img_brick, 500, 400, 100, 100, this);
+        g.drawImage(Img_wool, 600, 400, 100, 100, this);
+        g.drawImage(Img_brick, 700, 400, 100, 100, this);
         g.drawImage(Img_sea, 800, 400, 100, 100, this);
         
         //7th row
@@ -77,6 +79,7 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.drawImage(Img_sea, 650, 475, 100, 100, this);
         g.drawImage(Img_sea, 750, 475, 100, 100, this);
         
+        //example card locations
         g.fillRect(530, 590, 65, 95);
         g.fillRect(600, 590, 65, 95);
         g.fillRect(670, 590, 65, 95);
