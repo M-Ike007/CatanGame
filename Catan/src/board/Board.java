@@ -27,13 +27,65 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         
         // draw the images: name, x, y, size_x, size_y
         // the location of the tiles currently depends on your screen ratio
+        
+        //1st row
+        g.drawImage(Img_sea, 450, 25, 100, 100, this);
+        g.drawImage(Img_sea, 550, 25, 100, 100, this);
+        g.drawImage(Img_sea, 650, 25, 100, 100, this);
+        g.drawImage(Img_sea, 750, 25, 100, 100, this);
+        
+        // 2nd row
+        g.drawImage(Img_sea, 400, 100, 100, 100, this);
+        g.drawImage(Img_wood, 500, 100, 100, 100, this);
+        g.drawImage(Img_wool, 600, 100, 100, 100, this);
+        g.drawImage(Img_wool, 700, 100, 100, 100, this);
+        g.drawImage(Img_sea, 800, 100, 100, 100, this);
+        
+        // 3th row
+        g.drawImage(Img_sea, 350, 175, 100, 100, this);
+        g.drawImage(Img_wheat, 450, 175, 100, 100, this);
+        g.drawImage(Img_ore, 550, 175, 100, 100, this);
+        g.drawImage(Img_wheat, 650, 175, 100, 100, this);
+        g.drawImage(Img_wood, 750, 175, 100, 100, this);
+        g.drawImage(Img_sea, 850, 175, 100, 100, this);
+        
+        // 4th row
+        g.drawImage(Img_sea, 300, 250, 100, 100, this);
+        g.drawImage(Img_wood, 400, 250, 100, 100, this);
+        g.drawImage(Img_brick, 500, 250, 100, 100, this);
         g.drawImage(Img_desert, 600, 250, 100, 100, this);
-        g.drawImage(Img_wood, 550, 175, 100, 100, this);
-        g.drawImage(Img_brick, 650, 175, 100, 100, this);
-        g.drawImage(Img_wool, 550, 325, 100, 100, this);
-        g.drawImage(Img_ore, 650, 325, 100, 100, this);
-        g.drawImage(Img_wheat, 500, 250, 100, 100, this);
-        g.drawImage(Img_wood, 700, 250, 100, 100, this);
+        g.drawImage(Img_ore, 700, 250, 100, 100, this);
+        g.drawImage(Img_wheat, 800, 250, 100, 100, this);
+        g.drawImage(Img_sea, 900, 250, 100, 100, this);       
+      
+        // 5th row
+        g.drawImage(Img_sea, 350, 325, 100, 100, this);
+        g.drawImage(Img_wheat, 450, 325, 100, 100, this);
+        g.drawImage(Img_ore, 550, 325, 100, 100, this);
+        g.drawImage(Img_wood, 650, 325, 100, 100, this);
+        g.drawImage(Img_wool, 750, 325, 100, 100, this);
+        g.drawImage(Img_sea, 850, 325, 100, 100, this);
+
+        //6th row
+        g.drawImage(Img_sea, 400, 400, 100, 100, this);
+        g.drawImage(Img_brick, 500, 400, 100, 100, this);
+        g.drawImage(Img_wool, 600, 400, 100, 100, this);
+        g.drawImage(Img_brick, 700, 400, 100, 100, this);
+        g.drawImage(Img_sea, 800, 400, 100, 100, this);
+        
+        //7th row
+        g.drawImage(Img_sea, 450, 475, 100, 100, this);
+        g.drawImage(Img_sea, 550, 475, 100, 100, this);
+        g.drawImage(Img_sea, 650, 475, 100, 100, this);
+        g.drawImage(Img_sea, 750, 475, 100, 100, this);
+        
+        //example card locations
+        g.fillRect(530, 590, 65, 95);
+        g.fillRect(600, 590, 65, 95);
+        g.fillRect(670, 590, 65, 95);
+        g.fillRect(740, 590, 65, 95);
+        g.fillRect(810, 590, 65, 95);
+
 
           
     }  
@@ -42,8 +94,11 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         Board m=new Board();  
         JFrame f=new JFrame();  
         f.add(m); // adds the board to the JFrame
+        f.setState(Frame.NORMAL);
         f.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
-        f.setVisible(true);  
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setResizable(false);
+        f.setVisible(true); 
         }
 
 	}
