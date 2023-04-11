@@ -4,13 +4,15 @@ import junit.framework.TestCase;
 
 public class DiceTest extends TestCase 
 {  
+	/**
+	 * Test if the sum of the dice throws falls in the 
+	 * correct range (minimum value 2 and maximum value of 12).
+	 */
 	public void testCreation()
 	{
 		int numTests = 10000000;
 		int error = 0;
 		
-		// A for loop to check for a number of dice rolls (numTests) if the sum falls in
-		// the correct range (minimum value 2 and maximum value of 12)
 		for (int i = 0; i < numTests; i++)
 		{
 			Dice dice = new Dice();
@@ -19,6 +21,7 @@ public class DiceTest extends TestCase
 				error += 1;
 		}
 		
+		// Expected output of error is zero.
 		assertEquals(error, 0);
 	}
 

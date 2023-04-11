@@ -2,12 +2,19 @@ package dice;
 
 import java.util.Random;
 
+/**
+ * @author SDH, IVV.
+ * This class simulates two dice throws and sums the results.
+ */
 public class Dice 
 {
 	private int die1;
 	private int die2;
 	private int sum;
 
+	/**
+	 * sets the sum of the two dice throws.
+	 */
 	public void setSum()
 	{
 		Random random = new Random();
@@ -16,6 +23,10 @@ public class Dice
 		this.sum = die1 + die2;
 	}
 	
+	/**
+	 * gets the sum of the two dice throws.
+	 * @return int: sum.
+	 */
 	public int getSum()
 	{
 		return sum;
