@@ -17,13 +17,13 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
   
         Toolkit t=Toolkit.getDefaultToolkit();  //This does something, just leave it 
         // with this we define an object as an image and give the file path. The pictures are already in the java project folder
-        Image Img_brick=t.getImage("TileImages/Tile_Brick.png");  
-        Image Img_wood=t.getImage("TileImages/Tile_Wood.png");
-        Image Img_ore=t.getImage("TileImages/Tile_Ore.png");
-        Image Img_wool=t.getImage("TileImages/Tile_Wool.png");
-        Image Img_wheat=t.getImage("TileImages/Tile_Wheat.png");
-        Image Img_desert=t.getImage("TileImages/Tile_Desert.png");
-        Image Img_sea=t.getImage("TileImages/Tile_Sea.png");
+        Image Img_brick=t.getImage("Tile_Images/Tile_Brick.png");  
+        Image Img_wood=t.getImage("Tile_Images/Tile_Wood.png");
+        Image Img_ore=t.getImage("Tile_Images/Tile_Ore.png");
+        Image Img_wool=t.getImage("Tile_Images/Tile_Wool.png");
+        Image Img_wheat=t.getImage("Tile_Images/Tile_Wheat.png");
+        Image Img_desert=t.getImage("Tile_Images/Tile_Desert.png");
+        Image Img_sea=t.getImage("Tile_Images/Tile_Sea.png");
         
         // draw the images: name, x, y, size_x, size_y
         // the location of the tiles currently depends on your screen ratio
