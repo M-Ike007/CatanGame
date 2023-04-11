@@ -28,13 +28,13 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         // draw the images: name, x, y, size_x, size_y
         // the location of the tiles currently depends on your screen ratio
         
-        //1th row
+        //1st row
         g.drawImage(Img_sea, 450, 25, 100, 100, this);
         g.drawImage(Img_sea, 550, 25, 100, 100, this);
         g.drawImage(Img_sea, 650, 25, 100, 100, this);
         g.drawImage(Img_sea, 750, 25, 100, 100, this);
         
-        // 2th row
+        // 2nd row
         g.drawImage(Img_sea, 400, 100, 100, 100, this);
         g.drawImage(Img_wood, 500, 100, 100, 100, this);
         g.drawImage(Img_wool, 600, 100, 100, 100, this);
