@@ -76,7 +76,12 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.drawImage(Img_sea, 550, 475, 100, 100, this);
         g.drawImage(Img_sea, 650, 475, 100, 100, this);
         g.drawImage(Img_sea, 750, 475, 100, 100, this);
-
+        
+        g.fillRect(530, 590, 65, 95);
+        g.fillRect(600, 590, 65, 95);
+        g.fillRect(670, 590, 65, 95);
+        g.fillRect(740, 590, 65, 95);
+        g.fillRect(810, 590, 65, 95);
 
 
           
@@ -88,7 +93,8 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         f.add(m); // adds the board to the JFrame
         f.setState(Frame.NORMAL);
         f.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setResizable(false);
         f.setVisible(true); 
         }
 
