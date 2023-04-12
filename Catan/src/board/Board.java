@@ -94,23 +94,24 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.drawImage(Img_cost, 1015, 10, 250, 333, this);
         
         //example card locations
+        g.fillRect(320, 590, 65, 95);
+        g.fillRect(390, 590, 65, 95);
+        g.fillRect(460, 590, 65, 95);
         g.fillRect(530, 590, 65, 95);
         g.fillRect(600, 590, 65, 95);
         g.fillRect(670, 590, 65, 95);
         g.fillRect(740, 590, 65, 95);       
         g.fillRect(810, 590, 65, 95);
+        g.fillRect(880, 590, 65, 95);
+        g.fillRect(950, 590, 65, 95);
         
-          
+        
+        //example road
+//        Graphics2D g2d = (Graphics2D)g; //We have to create the awesome object first so we can use its methods!
+//        Rectangle rect = new Rectangle(560, 160, 30, 30);
+//        g2d.rotate(Math.toRadians(25)); 
+//        g2d.draw(rect);
+        
     }  
-		// this generates the board in a JFrame
-        public static void main(String[] args) {  
-        Board m=new Board();  
-        JFrame f=new JFrame();  
-        f.add(m); // adds the board to the JFrame
-        f.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.setResizable(false);
-        f.setVisible(true); 
-        }
 
 	}
