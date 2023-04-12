@@ -23,7 +23,7 @@ public class VisualCostCard extends Canvas{
 	Toolkit t=Toolkit.getDefaultToolkit(); // With this we define an object as an image and give the file path. 
 
 	// Inserting image to be displayed	
-	Image Img_costcard=t.getImage("Tile_Images/Cost_Table.jpg"); 
+	Image Img_costcard=t.getImage("Images/Cost_Table.jpg"); 
 			
 		// draw the image: name, x, y, size_x, size_y
         g.drawImage(Img_costcard, 600, 250, 300, 400, this);
