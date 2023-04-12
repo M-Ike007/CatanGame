@@ -14,6 +14,7 @@ public class CostTable {
 	public static Hashtable<String, Hashtable<String, Integer>> costTable = new Hashtable<String, Hashtable<String, Integer>>();
 	
 	// Creating static empty hashtables for each structure
+	// METHOD NAME (main) IS TO BE CHANGED LATER WHEN CODE IS MERGED!
 	public static void main(String[] args) {
 		Hashtable<String, Integer> road_cost = new Hashtable<String, Integer>();
 		Hashtable<String, Integer> village_cost = new Hashtable<String, Integer>();
@@ -41,11 +42,10 @@ public class CostTable {
 		costTable.put("City:", city_cost);
 		costTable.put("Development Card:", development_card_cost);
 		
-		GetCosts();
-		
-	// Method to retrieve structure costs
-		
+		GetCosts();	
 	}
+	
+	// Method to retrieve structure costs
 	public static void GetCosts()	{
 		// Loop through costTable (road_cost, village_cost, city_cost, development_card_host)
 		// In this loop, loop through each structure and s.out.println resource + ": " + cost
