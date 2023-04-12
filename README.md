@@ -14,7 +14,7 @@ Titia Kool (TEK).
 
 # More information
 
-Please see the [project wik](https://git.wur.nl/inf32306/group2023b.wiki.git) for more information regarding meetings, design and documentation.
+Please see the [project wiki](https://git.wur.nl/inf32306/group2023b.wiki.git) for more information regarding meetings, design and documentation.
 
 # Running the programme
 
