@@ -26,7 +26,7 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         Image Img_sea=t.getImage("Images/Tile_Sea.png");
         Image Img_village=t.getImage("Images/Building_Village.png");
         Image Img_city=t.getImage("Images/Building_City.png");
-        Image Img_cost=t.getImage("Images/Cost_Table.png");
+        Image Img_cost=t.getImage("Images/Cost_Table.jpg");
         
         // draw the images: name, x, y, size_x, size_y
         // the location of the tiles currently depends on your screen ratio
@@ -91,7 +91,7 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.drawImage(Img_city, 435, 235, 30, 30, this);
         
         //example cost table
-        g.drawImage(Img_cost, 0, 0, this);
+        g.drawImage(Img_cost, 1015, 10, 250, 333, this);
         
         //example card locations
         g.fillRect(530, 590, 65, 95);
