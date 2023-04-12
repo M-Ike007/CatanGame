@@ -18,4 +18,4 @@ Please see the [project wiki](https://git.wur.nl/inf32306/group2023b.wiki.git) f
 
 # Running the programme
 
-This section will be added in the future, as no code has been added to this iteration yet.
+The programme is run though eclipse: Open the project in eclipse and execute individual classes as a java application. The main programme is accessed though the main menu class (`Catan/src/main/MainMenu.java`).
