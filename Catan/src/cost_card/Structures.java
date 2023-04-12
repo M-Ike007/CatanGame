@@ -6,5 +6,5 @@ public enum Structures {
 	// House, road, village
 	HOUSE,
 	ROAD,
-	VILLAGE,
+	CITY,
 }

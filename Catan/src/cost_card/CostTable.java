@@ -41,7 +41,7 @@ public class CostTable {
 		development_card_cost.put("ore", 1);
 		
 		structuresTable.put(Structures.ROAD, road_cost);
-		structuresTable.put(Structures.VILLAGE, city_cost);
+		structuresTable.put(Structures.CITY, city_cost);
 		structuresTable.put(Structures.HOUSE, village_cost);
 		
 		

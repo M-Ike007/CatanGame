@@ -21,10 +21,13 @@ public class CostTableTest extends TestCase {
 		expected_village.put("wool", 1);
 		expected_village.put("wheat", 1);
 		CostTable costTest = new CostTable();
-		Hashtable<String, Integer> actual = costTest.getStructureCost(Structures.VILLAGE);
-		assertEquals(actual.get("wood"), actual.get("wood"));
-		assertEquals(actual.get("brick"), actual.get("brick"));
-		assertEquals(actual.get("wool"), actual.get("wool"));
-		assertEquals(actual.get("weat"), actual.get("weat"));
+		Hashtable<String, Integer> actual_village = costTest.getStructureCost(Structures.HOUSE);
+		assertEquals(expected_village.get("wood"), actual_village.get("wood"));
+		System.out.println(expected_village.get("wood"));
+		System.out.println(actual_village.get("brick"));
+		assertEquals(expected_village.get("brick"), actual_village.get("brick"));
+		assertEquals(expected_village.get("brick"), actual_village.get("brick"));
+		assertEquals(expected_village.get("wool"), actual_village.get("wool"));
+		assertEquals(expected_village.get("weat"), actual_village.get("weat"));
 	}
 }
