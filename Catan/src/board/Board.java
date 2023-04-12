@@ -24,6 +24,8 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         Image Img_wheat=t.getImage("Tile_Images/Tile_Wheat.png");
         Image Img_desert=t.getImage("Tile_Images/Tile_Desert.png");
         Image Img_sea=t.getImage("Tile_Images/Tile_Sea.png");
+        Image Img_village=t.getImage("Tile_Images/village.png");
+        Image Img_city=t.getImage("Tile_Images/city.png");
         
         // draw the images: name, x, y, size_x, size_y
         // the location of the tiles currently depends on your screen ratio
@@ -79,12 +81,24 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.drawImage(Img_sea, 650, 475, 100, 100, this);
         g.drawImage(Img_sea, 750, 475, 100, 100, this);
         
+        
+        //example villages+cities
+        g.drawImage(Img_village, 635, 385, 30, 30, this);
+        g.drawImage(Img_village, 785, 310, 30, 30, this);
+        
+        g.drawImage(Img_city, 685, 160, 30, 30, this);    
+        g.drawImage(Img_city, 435, 235, 30, 30, this);
+        
+        //example cost table
+        g.fillRect(1015, 10, 250, 333);
+        
         //example card locations
         g.fillRect(530, 590, 65, 95);
         g.fillRect(600, 590, 65, 95);
         g.fillRect(670, 590, 65, 95);
-        g.fillRect(740, 590, 65, 95);
+        g.fillRect(740, 590, 65, 95);       
         g.fillRect(810, 590, 65, 95);
+        
 
 
           
@@ -94,7 +108,6 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         Board m=new Board();  
         JFrame f=new JFrame();  
         f.add(m); // adds the board to the JFrame
-        f.setState(Frame.NORMAL);
         f.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setResizable(false);
