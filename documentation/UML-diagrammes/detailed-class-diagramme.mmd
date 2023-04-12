@@ -1,0 +1,38 @@
+%% The detailed class diagramme drawn up at the start of iteration 1.
+classDiagram
+    
+    Player --|> Manage
+    Manage <|-- Dice
+    Manage <|-- tile
+    PassivePayout --|> Manage
+    board --|> tile
+    sea  <|-- tile
+    sand <|-- tile
+    resource <|-- tile
+    Manage <|-- Build
+    class PassivePayout {
+
+    }
+    class Dice{
+      +Roll()
+    }
+    class board{
+
+    }
+    class resource{
+    }
+    class tile{
+
+    }
+    class sea{
+
+    }
+    class sand{
+
+    }
+    class Build{
+
+    }
+    class Player{
+      +bool State
+    }
