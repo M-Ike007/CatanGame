@@ -17,6 +17,7 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
   
         Toolkit t=Toolkit.getDefaultToolkit();  //This does something, just leave it 
         // with this we define an object as an image and give the file path. The pictures are already in the java project folder
+        // Importing images for tiles, cities and cost tables
         Image Img_brick=t.getImage("Images/Tile_Brick.png");  
         Image Img_wood=t.getImage("Images/Tile_Wood.png");
         Image Img_ore=t.getImage("Images/Tile_Ore.png");
@@ -27,6 +28,18 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         Image Img_village=t.getImage("Images/Building_Village.png");
         Image Img_city=t.getImage("Images/Building_City.png");
         Image Img_cost=t.getImage("Images/Cost_Table.jpg");
+        
+        // Importing images for resource and development cards
+        Image Img_card_brick=t.getImage("Images/Card_Brick.jpg");
+        Image Img_card_forest=t.getImage("Images/Card_Forest.jpg");
+        Image Img_card_ore=t.getImage("Images/Card_Ore.jpg");
+        Image Img_card_sheep=t.getImage("Images/Card_Sheep.jpg");
+        Image Img_card_wheat=t.getImage("Images/Card_Wheat.jpg");
+        Image Img_card_invention=t.getImage("Images/Card_Invention.jpg");
+        Image Img_card_knight=t.getImage("Images/Card_Knight.jpg");
+        Image Img_card_monopoly=t.getImage("Images/Card_Monopoly.jpg");
+        Image Img_card_two_roads=t.getImage("Images/Card_TwoRoads.jpg");
+        Image Img_card_victory=t.getImage("Images/Card_VP.jpg");
         
         // draw the images: name, x, y, size_x, size_y
         // the location of the tiles currently depends on your screen ratio
@@ -94,23 +107,23 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.drawImage(Img_cost, 1015, 10, 250, 333, this);
         
         //example card locations
-        g.fillRect(320, 590, 65, 95);
-        g.fillRect(390, 590, 65, 95);
-        g.fillRect(460, 590, 65, 95);
-        g.fillRect(530, 590, 65, 95);
-        g.fillRect(600, 590, 65, 95);
-        g.fillRect(670, 590, 65, 95);
-        g.fillRect(740, 590, 65, 95);       
-        g.fillRect(810, 590, 65, 95);
-        g.fillRect(880, 590, 65, 95);
-        g.fillRect(950, 590, 65, 95);
+        g.drawImage(Img_card_brick, 320, 590, 65, 95, this);
+        g.drawImage(Img_card_forest, 390, 590, 65, 95, this);
+        g.drawImage(Img_card_ore, 460, 590, 65, 95, this);
+        g.drawImage(Img_card_sheep, 530, 590, 65, 95, this);
+        g.drawImage(Img_card_wheat, 600, 590, 65, 95, this);
+        g.drawImage(Img_card_invention, 670, 590, 65, 95, this);
+        g.drawImage(Img_card_knight, 740, 590, 65, 95, this);       
+        g.drawImage(Img_card_monopoly, 810, 590, 65, 95, this);
+        g.drawImage(Img_card_two_roads, 880, 590, 65, 95, this);
+        g.drawImage(Img_card_victory, 950, 590, 65, 95, this);
         
         
         //example road
-//        Graphics2D g2d = (Graphics2D)g; //We have to create the awesome object first so we can use its methods!
-//        Rectangle rect = new Rectangle(560, 160, 30, 30);
-//        g2d.rotate(Math.toRadians(25)); 
-//        g2d.draw(rect);
+        Graphics2D g2d = (Graphics2D)g; //We have to create the awesome object first so we can use its methods!
+        Rectangle rect = new Rectangle(560, 160, 30, 30);
+        g2d.rotate(Math.toRadians(25)); 
+        g2d.draw(rect);
         
     }  
 
