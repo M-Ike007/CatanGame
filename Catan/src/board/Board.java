@@ -17,15 +17,16 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
   
         Toolkit t=Toolkit.getDefaultToolkit();  //This does something, just leave it 
         // with this we define an object as an image and give the file path. The pictures are already in the java project folder
-        Image Img_brick=t.getImage("Tile_Images/Tile_Brick.png");  
-        Image Img_wood=t.getImage("Tile_Images/Tile_Wood.png");
-        Image Img_ore=t.getImage("Tile_Images/Tile_Ore.png");
-        Image Img_wool=t.getImage("Tile_Images/Tile_Wool.png");
-        Image Img_wheat=t.getImage("Tile_Images/Tile_Wheat.png");
-        Image Img_desert=t.getImage("Tile_Images/Tile_Desert.png");
-        Image Img_sea=t.getImage("Tile_Images/Tile_Sea.png");
-        Image Img_village=t.getImage("Tile_Images/village.png");
-        Image Img_city=t.getImage("Tile_Images/city.png");
+        Image Img_brick=t.getImage("Images/Tile_Brick.png");  
+        Image Img_wood=t.getImage("Images/Tile_Wood.png");
+        Image Img_ore=t.getImage("Images/Tile_Ore.png");
+        Image Img_wool=t.getImage("Images/Tile_Wool.png");
+        Image Img_wheat=t.getImage("Images/Tile_Wheat.png");
+        Image Img_desert=t.getImage("Images/Tile_Desert.png");
+        Image Img_sea=t.getImage("Images/Tile_Sea.png");
+        Image Img_village=t.getImage("Images/Building_Village.png");
+        Image Img_city=t.getImage("Images/Building_City.png");
+        Image Img_cost=t.getImage("Images/Cost_Table.png");
         
         // draw the images: name, x, y, size_x, size_y
         // the location of the tiles currently depends on your screen ratio
@@ -90,7 +91,7 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.drawImage(Img_city, 435, 235, 30, 30, this);
         
         //example cost table
-        g.fillRect(1015, 10, 250, 333);
+        g.drawImage(Img_cost, 0, 0, this);
         
         //example card locations
         g.fillRect(530, 590, 65, 95);
@@ -99,8 +100,6 @@ public class Board extends Canvas{ //extends Canvas is needed to draw, we think
         g.fillRect(740, 590, 65, 95);       
         g.fillRect(810, 590, 65, 95);
         
-
-
           
     }  
 		// this generates the board in a JFrame
