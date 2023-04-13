@@ -8,17 +8,7 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
-import net.miginfocom.swing.MigLayout;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.FormSpecs;
-import com.jgoodies.forms.layout.RowSpec;
-import java.awt.GridLayout;
 import javax.swing.JPanel;
-
-import java.util.HashMap; // import the HashMap class
 import java.util.Hashtable;
 
 /** The class that starts the game.
@@ -90,7 +80,6 @@ public class StartGame {
 		panel_1.add(lblSetupOptions);
 		
 		panel.add(panel_2, BorderLayout.CENTER);
-		panel_2.setLayout(new MigLayout("", "[][][grow]", "[][][][][][][][][][]"));
 		
 		panel_2.add(lblPlayer_header, "cell 0 0");
 		
