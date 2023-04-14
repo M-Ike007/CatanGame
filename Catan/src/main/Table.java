@@ -8,7 +8,7 @@ import javax.swing.*;
  * 
  * Currently this method throws errors.
  */
-public class Table extends JFrame{    
+public class Table extends JPanel {    
 	private JButton bGoBack = new JButton("Back");
     private static final long serialVersionUID = 1L;   
 		JFrame f;    

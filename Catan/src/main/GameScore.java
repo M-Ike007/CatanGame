@@ -18,20 +18,6 @@ public class GameScore {
 	
 	
 	public GameScore() {
-		f.getContentPane().add(lNotYetImplemented, BorderLayout.EAST);
-		f.getContentPane().add(bGoBack, BorderLayout.WEST);
-		
 		f.getContentPane().add(TableTest, BorderLayout.NORTH);
-		
-		bGoBack.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent ae) {
-				f.dispose();
-				new MainMenu();
-			}
-		});
-		
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		f.setSize(300,300);
-		f.setVisible(true);
 	}
 }
