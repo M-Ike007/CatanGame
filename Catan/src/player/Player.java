@@ -4,7 +4,7 @@ import dice.*;
 
 public class Player{
 	public Dice dice = new Dice();
-	private final Hand hand;
+	public final Hand hand;
 	
 	public Player(Hand hand){
 		
