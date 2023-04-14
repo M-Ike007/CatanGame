@@ -16,8 +16,8 @@ public class Hand {
 	 */
 	public Hand() { 
 		this.resource_cards.put("wool", 0);
-		this.resource_cards.put("iron", 0);
-		this.resource_cards.put("weed", 0);
+		this.resource_cards.put("brick", 0);
+		this.resource_cards.put("wheat", 0);
 		this.resource_cards.put("ore", 0);
 		this.resource_cards.put("wood", 0);
 		

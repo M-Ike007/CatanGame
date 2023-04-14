@@ -1,9 +1,7 @@
-**/.settings/
 **/.metadata
 **/bin/
 **/doc/
 **/.DS_Store
 **/.swp
 **/.swo
-**/miglayout-src.zip
-**/miglayout15-swing.jar
+
