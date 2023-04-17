@@ -23,6 +23,8 @@ public class Hand {
 		
 		this.development_cards.put("Knight",0);
 		this.development_cards.put("Monopoly",0);
+		this.development_cards.put("Invention", 0);
+		this.development_cards.put("TwoRoads", 0);
 		this.development_cards.put("VPC", 0);
 	}
 	
