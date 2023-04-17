@@ -54,6 +54,7 @@ public class HandActivePlayer {
 	    t5.setFont(new Font("Gill Sans Nova Regular",Font.PLAIN, 18));
 	    
 	    
+	    
 	    // development cards
 	    t6=new JTextField(Integer.toString(player_hand.getCard("development", "knight")));  
 	    t6.setBounds(670,590, 65,30);
@@ -96,9 +97,10 @@ public class HandActivePlayer {
 	    t10.setFont(new Font("Gill Sans Nova Regular",Font.PLAIN, 18));
 	    
 	    
-	    // rescource cards
-	    f.add(t1); f.add(t2); f.add(t3); f.add(t4); f.add(t5); f.add(t6); f.add(t7); f.add(t8); f.add(t9); f.add(t10);   
+	     //rescource cards
+	    f.add(t1); f.add(t2); f.add(t3); f.add(t4); f.add(t5);    
 		// development cards
+	    f.add(t6); f.add(t7); f.add(t8); f.add(t9); f.add(t10);
 	    
 	    
 	    TempBoardForShowHand m=new TempBoardForShowHand();   
@@ -107,7 +109,7 @@ public class HandActivePlayer {
 	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    f.setResizable(false);
 	    f.setVisible(true); 
-		
+//		
 	}
 
 }

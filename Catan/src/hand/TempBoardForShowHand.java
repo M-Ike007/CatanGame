@@ -5,8 +5,7 @@ package hand;
 // These packages are needed for making a Frame
 // and *draw* images in that Frame
 
-import java.awt.*;  
-import javax.swing.JFrame;  
+import java.awt.*;   
   
 
 // we make the main Board class in which we put everything (for now!)
