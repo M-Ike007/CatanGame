@@ -20,8 +20,8 @@ public class HandTest extends TestCase {
 		assertEquals(resultRes, desired);
 		
 		// Test for knight cards
-		testHand.setCard("development", "Knight", desired);
-		int resultDev = testHand.getCard("development", "Knight");
+		testHand.setCard("development", "knight", desired);
+		int resultDev = testHand.getCard("development", "knight");
 		assertEquals(resultDev, desired);
 	}
 	
@@ -37,9 +37,9 @@ public class HandTest extends TestCase {
 		assertEquals(resultWool, desired - 1);
 		
 		// Test for knight
-		testHand.setCard("development", "Knight", desired);
-		testHand.setCard("development", "Knight", - 1);
-		int resultKnight = testHand.getCard("development", "Knight");
+		testHand.setCard("development", "knight", desired);
+		testHand.setCard("development", "knight", - 1);
+		int resultKnight = testHand.getCard("development", "knight");
 		assertEquals(resultKnight, desired - 1);
 	}
 	
@@ -54,9 +54,9 @@ public class HandTest extends TestCase {
 		assertEquals(resultWool, desired +  1);
 		
 		// Test knight 
-		testHand.setCard("development", "Knight", desired);
-		testHand.setCard("development", "Knight", + 1);
-		int resultKnight = testHand.getCard("development", "Knight");
+		testHand.setCard("development", "knight", desired);
+		testHand.setCard("development", "knight", + 1);
+		int resultKnight = testHand.getCard("development", "knight");
 		assertEquals(resultKnight, desired + 1);		
 	}
 }
