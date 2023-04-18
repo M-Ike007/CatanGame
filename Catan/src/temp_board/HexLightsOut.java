@@ -58,6 +58,13 @@ public class HexLightsOut extends JPanel{
         return image;
     }
     
+    /** 
+     * @authors SDH, GH, LAK.
+     * Display numbers on tiles from a array of possible numbers.
+     * Numbers are chosen randomly and removed from the array so that the numbers are not drawn more than twice (except 2 and 12 which are drawn once).
+     * @param 18 tiles. 
+     * @return none.
+     */
     public void paint(Graphics g) {
         Random rand = new Random();
         ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12));
@@ -76,7 +83,7 @@ public class HexLightsOut extends JPanel{
             g2d.drawPolygon(allcorX[n], allcorY[n], NUM_HEX_CORNERS);
             g2d.setClip(null); 
 
-            // display numbers
+            // pick numbers randomly
             Font font = new Font("Arial", Font.PLAIN, 20);
             g.setFont(font);
             FontMetrics metrics = g.getFontMetrics(font);
@@ -84,9 +91,11 @@ public class HexLightsOut extends JPanel{
             String number = String.valueOf(numbers.get(index));
             numbers.remove(index);
             
-            int x = allcorX[n][0] + (mCellMetrics.RADIUS - metrics.stringWidth(number)) / 2;
+            // display numbers in the center
+            int x = allcorX[n][0] + (mCellMetrics.RADIUS - metrics.stringWidth(number)) / 1;
             int y = allcorY[n][0] + (mCellMetrics.RADIUS - metrics.getHeight()) / 2 + metrics.getAscent();
 
+            // display numbers on the board
             g.setColor(Color.WHITE);
             g.drawString(number, x, y);
         }
