@@ -21,9 +21,11 @@ public class Hand {
 		this.resource_cards.put("ore", 0);
 		this.resource_cards.put("wood", 0);
 		
-		this.development_cards.put("Knight",0);
-		this.development_cards.put("Monopoly",0);
-		this.development_cards.put("VPC", 0);
+		this.development_cards.put("knight",0);
+		this.development_cards.put("monopoly",0);
+		this.development_cards.put("invention", 0);
+		this.development_cards.put("twoRoads", 0);
+		this.development_cards.put("vpc", 0);
 	}
 	
 	/** Sets the cards in a hand
