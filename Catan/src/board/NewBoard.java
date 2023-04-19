@@ -468,6 +468,7 @@ public class NewBoard {
 		
 		// Settings of the JFrame
         f.setVisible(true);
+        f.setResizable(false);
 	    f.setSize(1920,1080);  
     }
 }
