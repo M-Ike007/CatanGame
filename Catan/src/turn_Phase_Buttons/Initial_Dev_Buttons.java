@@ -6,10 +6,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import dice.Dice;
 
 public class Initial_Dev_Buttons extends JFrame {
 
 	private JPanel turn_Phase_Panel;
+	private Dice diceRoll;
 
 	/**
 	 * Launch the application.
@@ -44,6 +48,11 @@ public class Initial_Dev_Buttons extends JFrame {
 		turn_Phase_Panel.add(btnDevCard);
 		
 		JButton btnThrowDice = new JButton("Throw dice");
+		btnThrowDice.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				handleDiceroll();
+				}
+		});
 		btnThrowDice.setBounds(20, 10, 150, 23);
 		turn_Phase_Panel.add(btnThrowDice);
 		
@@ -55,4 +64,14 @@ public class Initial_Dev_Buttons extends JFrame {
 		btnBuild.setBounds(20, 130, 150, 23);
 		turn_Phase_Panel.add(btnBuild);
 	}
+
+
+
+	protected void handleDiceroll () {
+		if (diceRoll != null) {
+			diceRoll.getSum();
+		}
+	}
+
 }
+
