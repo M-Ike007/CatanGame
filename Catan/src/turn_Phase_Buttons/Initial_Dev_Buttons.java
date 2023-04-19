@@ -16,6 +16,7 @@ import java.awt.event.ActionEvent;
 import dice.Dice;
 import main.MainMenu;
 import banktrade.BankTrade;
+import javax.swing.JLabel;
 
 public class Initial_Dev_Buttons extends JFrame {
 
@@ -44,7 +45,7 @@ public class Initial_Dev_Buttons extends JFrame {
 	 */
 	public Initial_Dev_Buttons() {
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 200, 240);
+		setBounds(100, 100, 296, 240);
 		turn_Phase_Panel = new JPanel();
 		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -80,6 +81,14 @@ public class Initial_Dev_Buttons extends JFrame {
 		JButton btnTradePlayer = new JButton("Trade with player");
 		btnTradePlayer.setBounds(20, 90, 150, 23);
 		turn_Phase_Panel.add(btnTradePlayer);
+		
+		JLabel lblDiceTitle = new JLabel("Dice result");
+		lblDiceTitle.setBounds(200, 10, 62, 23);
+		turn_Phase_Panel.add(lblDiceTitle);
+		
+		JLabel lblDiceResult = new JLabel("");
+		lblDiceResult.setBounds(200, 35, 49, 14);
+		turn_Phase_Panel.add(lblDiceResult);
 		
 		
 	}
