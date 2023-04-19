@@ -5,13 +5,17 @@ package hand;
 // These packages are needed for making a Frame
 // and *draw* images in that Frame
 
-import java.awt.*;   
-  
+import java.awt.*;
+
+import javax.swing.JTextField;   
 
 // we make the main Board class in which we put everything (for now!)
 
 public class TempBoardForShowHand extends Canvas{ //extends Canvas is needed to draw, we think   
 	private static final long serialVersionUID = 1L; // This is needed, not sure what it is but probably defines some settings regarding these packages
+	
+	Hand player_hand = new Hand();
+	
 	public void paint(Graphics g) {  
   
         Toolkit t=Toolkit.getDefaultToolkit();  //This does something, just leave it 
@@ -40,6 +44,8 @@ public class TempBoardForShowHand extends Canvas{ //extends Canvas is needed to 
         g.drawImage(Img_card_monopoly, 810, 590, 65, 95, this);
         g.drawImage(Img_card_two_roads, 880, 590, 65, 95, this);
         g.drawImage(Img_card_victory, 950, 590, 65, 95, this);
+        
+        // ShowHandTextfield(Hand player_hand, String card_class, String card, int x, int y, int width, int height)
         
         
         

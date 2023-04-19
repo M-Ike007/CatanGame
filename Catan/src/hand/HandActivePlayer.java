@@ -10,7 +10,7 @@ public class HandActivePlayer {
 		
 		player_hand.setCard("resource", "brick", 10000);
 		
-	    JFrame f= new JFrame("TextField Example");  
+	    //JFrame f= new JFrame("TextField Example");  
 	    JTextField t1, t2, t3, t4, t5, t6, t7, t8, t9, t10;  
 	    // resource cards
 	    t1=new JTextField(Integer.toString(player_hand.getCard("resource", "brick")));  
@@ -98,17 +98,17 @@ public class HandActivePlayer {
 	    
 	    
 	     //rescource cards
-	    f.add(t1); f.add(t2); f.add(t3); f.add(t4); f.add(t5);    
+	    // f.add(t1); f.add(t2); f.add(t3); f.add(t4); f.add(t5);    
 		// development cards
-	    f.add(t6); f.add(t7); f.add(t8); f.add(t9); f.add(t10);
+	    // f.add(t6); f.add(t7); f.add(t8); f.add(t9); f.add(t10);
 	    
 	    
-	    TempBoardForShowHand m=new TempBoardForShowHand();   
-	    f.add(m); // adds the board to the JFrame
-	    f.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
-	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    f.setResizable(false);
-	    f.setVisible(true); 
+//	    TempBoardForShowHand m=new TempBoardForShowHand();   
+//	    f.add(m); // adds the board to the JFrame
+//	    f.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
+//	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//	    f.setResizable(false);
+//	    f.setVisible(true); 
 //		
 	}
 
