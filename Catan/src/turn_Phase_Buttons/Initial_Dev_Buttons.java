@@ -2,15 +2,19 @@
 
 package turn_Phase_Buttons;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.awt.event.ActionEvent;
 import dice.Dice;
+import main.MainMenu;
 import banktrade.BankTrade;
 
 public class Initial_Dev_Buttons extends JFrame {
@@ -39,7 +43,7 @@ public class Initial_Dev_Buttons extends JFrame {
 	 * Create the frame.
 	 */
 	public Initial_Dev_Buttons() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 200, 240);
 		turn_Phase_Panel = new JPanel();
 		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -76,6 +80,8 @@ public class Initial_Dev_Buttons extends JFrame {
 		JButton btnTradePlayer = new JButton("Trade with player");
 		btnTradePlayer.setBounds(20, 90, 150, 23);
 		turn_Phase_Panel.add(btnTradePlayer);
+		
+		
 	}
 
 
@@ -87,8 +93,11 @@ public class Initial_Dev_Buttons extends JFrame {
 			System.out.println("dice output is " + output);
 	}
 	
+	
 	protected void handleTrade() {
-			trading.main(null);
+			
+		trading.main(null);
+			
 	}
 }
 

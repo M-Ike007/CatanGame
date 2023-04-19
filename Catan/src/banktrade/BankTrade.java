@@ -1,4 +1,5 @@
 package banktrade;
+import turn_Phase_Buttons.*;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -6,7 +7,9 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 import hand.Hand;
+import main.MainMenu;
 import player.Player;
+import turn_Phase_Buttons.Initial_Dev_Buttons;
 
 
 /**
@@ -129,6 +132,19 @@ public class BankTrade {
                 }
             }
         });
+        
+        JButton bGoBack = new JButton("back");
+		//bGoBack.setBounds(20, 90, 150, 23);
+		frame1.add(bGoBack);
+		
+			
+		bGoBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				frame1.dispose();
+				new Initial_Dev_Buttons();
+			}
+		});
+		
         frame1.add(label);
         frame1.add(ok);
         label.setPreferredSize(new Dimension(70, 50));
