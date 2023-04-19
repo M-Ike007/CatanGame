@@ -23,6 +23,9 @@ public class Initial_Dev_Buttons extends JFrame {
 	private JPanel turn_Phase_Panel;
 	private Dice diceRoll = new Dice();
 	private BankTrade trading = new BankTrade();
+	private String outputString = new String("");
+	private JLabel lblDiceResult = new JLabel(outputString);
+
 
 	/**
 	 * Launch the application.
@@ -86,21 +89,26 @@ public class Initial_Dev_Buttons extends JFrame {
 		lblDiceTitle.setBounds(200, 10, 62, 23);
 		turn_Phase_Panel.add(lblDiceTitle);
 		
-		JLabel lblDiceResult = new JLabel("");
 		lblDiceResult.setBounds(200, 35, 49, 14);
 		turn_Phase_Panel.add(lblDiceResult);
-		
-		
 	}
 
 
-// pressing the buttons refers to these methods below
-	
+	/**
+	 * Print the result.
+	 */
 	protected void handleDiceroll () {
 			diceRoll.setSum();
 			int output = diceRoll.getSum();
+			String outputString = Integer.toString(output);
 			System.out.println("dice output is " + output);
-	}
+			turn_Phase_Panel.remove(lblDiceResult);
+			turn_Phase_Panel.validate();
+			turn_Phase_Panel.repaint();
+			JLabel lblDiceResult = new JLabel(outputString);
+			lblDiceResult.setBounds(200, 35, 49, 14);
+			turn_Phase_Panel.add(lblDiceResult);
+			}
 	
 	
 	protected void handleTrade() {
