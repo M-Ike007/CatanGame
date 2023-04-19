@@ -13,7 +13,7 @@ import dice.Dice;
 public class Initial_Dev_Buttons extends JFrame {
 
 	private JPanel turn_Phase_Panel;
-	private Dice diceRoll;
+	private Dice diceRoll = new Dice();
 
 	/**
 	 * Launch the application.
@@ -49,7 +49,7 @@ public class Initial_Dev_Buttons extends JFrame {
 		
 		JButton btnThrowDice = new JButton("Throw dice");
 		btnThrowDice.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) { //when you click dice roll it sends you to line 69
 				handleDiceroll();
 				}
 		});
@@ -66,12 +66,13 @@ public class Initial_Dev_Buttons extends JFrame {
 	}
 
 
-
+// handles dice button by rolling the dice from dice class
 	protected void handleDiceroll () {
-		if (diceRoll != null) {
-			diceRoll.getSum();
-		}
+			diceRoll.setSum();
+			int output = diceRoll.getSum();
+			System.out.println("dice output is " + output);
 	}
-
 }
+
+
 
