@@ -84,10 +84,10 @@ public class Initial_Dev_Buttons extends JFrame {
 		turn_Phase_Panel.add(btnTradePlayer);
 		
 		JLabel lblDiceTitle = new JLabel("Dice result");
-		lblDiceTitle.setBounds(200, 10, 62, 23);
+		lblDiceTitle.setBounds(190, 10, 70, 23);
 		turn_Phase_Panel.add(lblDiceTitle);
 		
-		lblDiceResult.setBounds(200, 35, 49, 14);
+		lblDiceResult.setBounds(190, 35, 49, 14);
 		turn_Phase_Panel.add(lblDiceResult);
 	}
 
@@ -100,7 +100,7 @@ public class Initial_Dev_Buttons extends JFrame {
 			int output = diceRoll.getSum();
 			String outputString = Integer.toString(output);
 			JLabel lblDiceResult = new JLabel(outputString);
-			lblDiceResult.setBounds(200, 35, 49, 14);
+			lblDiceResult.setBounds(190, 35, 49, 14);
 			turn_Phase_Panel.add(lblDiceResult);
 			turn_Phase_Panel.repaint();
 			
