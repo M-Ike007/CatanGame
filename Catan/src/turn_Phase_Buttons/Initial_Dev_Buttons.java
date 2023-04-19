@@ -2,27 +2,25 @@
 
 package turn_Phase_Buttons;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import java.awt.event.ActionEvent;
 import dice.Dice;
-import main.MainMenu;
 import banktrade.BankTrade;
 import javax.swing.JLabel;
 
 public class Initial_Dev_Buttons extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel turn_Phase_Panel;
 	private Dice diceRoll = new Dice();
-	private BankTrade trading = new BankTrade();
 	private String outputString = new String("");
 	private JLabel lblDiceResult = new JLabel(outputString);
 
@@ -101,19 +99,17 @@ public class Initial_Dev_Buttons extends JFrame {
 			diceRoll.setSum();
 			int output = diceRoll.getSum();
 			String outputString = Integer.toString(output);
-			System.out.println("dice output is " + output);
-			turn_Phase_Panel.remove(lblDiceResult);
-			turn_Phase_Panel.validate();
-			turn_Phase_Panel.repaint();
 			JLabel lblDiceResult = new JLabel(outputString);
 			lblDiceResult.setBounds(200, 35, 49, 14);
 			turn_Phase_Panel.add(lblDiceResult);
+			turn_Phase_Panel.repaint();
+			
+			System.out.println("dice output is " + output);
 			}
 	
 	
-	protected void handleTrade() {
-			
-		trading.main(null);
+	protected void handleTrade() {	
+		BankTrade.main(null);
 			
 	}
 }
