@@ -163,63 +163,234 @@ public class NewBoard { //extends Canvas is needed to draw, we think
 	    ImageIcon card_victory = new ImageIcon(cardVictoryImg);
         
         //1st row
-//        JLabel Row1Col1 = new JLabel();
-//        Row1Col1.setIcon(sea);
-//        Row1Col1.setBounds(450, 25, 100, 100);
-//        Row1Col1.setSize(100, 150);
-//        f.add(Row1Col1);
+        JLabel Row1Col1 = new JLabel();
+        Row1Col1.setIcon(sea);
+        Row1Col1.setBounds(450, 25, 100, 100);
+        Row1Col1.setSize(100, 100);
+        f.add(Row1Col1);
 	    
-//        g.drawImage(Img_sea, 450, 25, 100, 100, this);
-//        g.drawImage(Img_sea, 550, 25, 100, 100, this);
-//        g.drawImage(Img_sea, 650, 25, 100, 100, this);
-//        g.drawImage(Img_sea, 750, 25, 100, 100, this);
-//        
-//        // 2nd row
-//        g.drawImage(Img_sea, 400, 100, 100, 100, this);
-//        g.drawImage(Img_wood, 500, 100, 100, 100, this);
-//        g.drawImage(Img_wool, 600, 100, 100, 100, this);
-//        g.drawImage(Img_wool, 700, 100, 100, 100, this);
-//        g.drawImage(Img_sea, 800, 100, 100, 100, this);
-//        
-//        // 3th row
-//        g.drawImage(Img_sea, 350, 175, 100, 100, this);
-//        g.drawImage(Img_wheat, 450, 175, 100, 100, this);
-//        g.drawImage(Img_ore, 550, 175, 100, 100, this);
-//        g.drawImage(Img_wheat, 650, 175, 100, 100, this);
-//        g.drawImage(Img_wood, 750, 175, 100, 100, this);
-//        g.drawImage(Img_sea, 850, 175, 100, 100, this);
-//        
-//        // 4th row
-//        g.drawImage(Img_sea, 300, 250, 100, 100, this);
-//        g.drawImage(Img_wood, 400, 250, 100, 100, this);
-//        g.drawImage(Img_brick, 500, 250, 100, 100, this);
-//        g.drawImage(Img_desert, 600, 250, 100, 100, this);
-//        g.drawImage(Img_ore, 700, 250, 100, 100, this);
-//        g.drawImage(Img_wheat, 800, 250, 100, 100, this);
-//        g.drawImage(Img_sea, 900, 250, 100, 100, this);       
-//      
-//        // 5th row
-//        g.drawImage(Img_sea, 350, 325, 100, 100, this);
-//        g.drawImage(Img_wheat, 450, 325, 100, 100, this);
-//        g.drawImage(Img_ore, 550, 325, 100, 100, this);
-//        g.drawImage(Img_wood, 650, 325, 100, 100, this);
-//        g.drawImage(Img_wool, 750, 325, 100, 100, this);
-//        g.drawImage(Img_sea, 850, 325, 100, 100, this);
-//
-//        //6th row
-//        g.drawImage(Img_sea, 400, 400, 100, 100, this);
-//        g.drawImage(Img_brick, 500, 400, 100, 100, this);
-//        g.drawImage(Img_wool, 600, 400, 100, 100, this);
-//        g.drawImage(Img_brick, 700, 400, 100, 100, this);
-//        g.drawImage(Img_sea, 800, 400, 100, 100, this);
-//        
-//        //7th row
-//        g.drawImage(Img_sea, 450, 475, 100, 100, this);
-//        g.drawImage(Img_sea, 550, 475, 100, 100, this);
-//        g.drawImage(Img_sea, 650, 475, 100, 100, this);
-//        g.drawImage(Img_sea, 750, 475, 100, 100, this);
-//        
-//        
+        JLabel Row1Col2 = new JLabel();
+        Row1Col2.setIcon(sea);
+        Row1Col2.setBounds(550, 25, 100, 100);
+        Row1Col2.setSize(100, 100);
+        f.add(Row1Col2);
+        
+        JLabel Row1Col3 = new JLabel();
+        Row1Col3.setIcon(sea);
+        Row1Col3.setBounds(650, 25, 100, 100);
+        Row1Col3.setSize(100, 100);
+        f.add(Row1Col3);
+
+        JLabel Row1Col4 = new JLabel();
+        Row1Col4.setIcon(sea);
+        Row1Col4.setBounds(750, 25, 100, 100);
+        Row1Col4.setSize(100, 100);
+        f.add(Row1Col4);
+
+        // 2nd row
+        JLabel Row2Col1 = new JLabel();
+        Row2Col1.setIcon(sea);
+        Row2Col1.setBounds(400, 100, 100, 100);
+        Row2Col1.setSize(100, 100);
+        f.add(Row2Col1);
+		
+        JLabel Row2Col2 = new JLabel();
+        Row2Col2.setIcon(wood);
+        Row2Col2.setBounds(500, 100, 100, 100);
+        Row2Col2.setSize(100, 100);
+        f.add(Row2Col2);
+        
+      	JLabel Row2Col3 = new JLabel();
+        Row2Col3.setIcon(wool);
+        Row2Col3.setBounds(600, 100, 100, 100);
+        Row2Col3.setSize(100, 100);
+        f.add(Row2Col3);
+        
+        JLabel Row2Col4 = new JLabel();
+        Row2Col4.setIcon(wool);
+        Row2Col4.setBounds(700, 100, 100, 100);
+        Row2Col4.setSize(100, 100);
+        f.add(Row2Col4);
+        
+        JLabel Row2Col5 = new JLabel();
+        Row2Col5.setIcon(sea);
+        Row2Col5.setBounds(800, 100, 100, 100);
+        Row2Col5.setSize(100, 100);
+        f.add(Row2Col5);
+       
+        // 3th row
+        JLabel Row3Col1 = new JLabel();
+        Row3Col1.setIcon(sea);
+        Row3Col1.setBounds(350, 175, 100, 100);
+        Row3Col1.setSize(100, 100);
+        f.add(Row3Col1);
+        
+        JLabel Row3Col2 = new JLabel();
+        Row3Col2.setIcon(wheat);
+        Row3Col2.setBounds(450, 175, 100, 100);
+        Row3Col2.setSize(100, 100);
+        f.add(Row3Col2);
+        
+        JLabel Row3Col3 = new JLabel();
+        Row3Col3.setIcon(ore);
+        Row3Col3.setBounds(550, 175, 100, 100);
+        Row3Col3.setSize(100, 100);
+        f.add(Row3Col3);
+        
+        JLabel Row3Col4 = new JLabel();
+        Row3Col4.setIcon(wheat);
+        Row3Col4.setBounds(650, 175, 100, 100);
+        Row3Col4.setSize(100, 100);
+        f.add(Row3Col4);
+        
+        JLabel Row3Col5 = new JLabel();
+        Row3Col5.setIcon(wood);
+        Row3Col5.setBounds(750, 175, 100, 100);
+        Row3Col5.setSize(100, 100);
+        f.add(Row3Col5);
+        
+        JLabel Row3Col6 = new JLabel();
+        Row3Col6.setIcon(sea);
+        Row3Col6.setBounds(850, 175, 100, 100);
+        Row3Col6.setSize(100, 100);
+        f.add(Row3Col6);
+              
+        // 4th row
+        JLabel Row4Col1 = new JLabel();
+        Row4Col1.setIcon(sea);
+        Row4Col1.setBounds(300, 250, 100, 100);
+        Row4Col1.setSize(100, 100);
+        f.add(Row4Col1);
+        
+        JLabel Row4Col2 = new JLabel();
+        Row4Col2.setIcon(wood);
+        Row4Col2.setBounds(400, 250, 100, 100);
+        Row4Col2.setSize(100, 100);
+        f.add(Row4Col2);
+        
+        JLabel Row4Col3 = new JLabel();
+        Row4Col3.setIcon(brick);
+        Row4Col3.setBounds(500, 250, 100, 100);
+        Row4Col3.setSize(100, 100);
+        f.add(Row4Col3);
+        
+        JLabel Row4Col4 = new JLabel();
+        Row4Col4.setIcon(desert);
+        Row4Col4.setBounds(600, 250, 100, 100);
+        Row4Col4.setSize(100, 100);
+        f.add(Row4Col4);
+        
+        JLabel Row4Col5 = new JLabel();
+        Row4Col5.setIcon(ore);
+        Row4Col5.setBounds(700, 250, 100, 100);
+        Row4Col5.setSize(100, 100);
+        f.add(Row4Col5);
+        
+        JLabel Row4Col6 = new JLabel();
+        Row4Col6.setIcon(wheat);
+        Row4Col6.setBounds(800, 250, 100, 100);
+        Row4Col6.setSize(100, 100);
+        f.add(Row4Col6);
+        
+        JLabel Row4Col7 = new JLabel();
+        Row4Col7.setIcon(sea);
+        Row4Col7.setBounds(900, 250, 100, 100);
+        Row4Col7.setSize(100, 100);
+        f.add(Row4Col7);
+                   
+        // 5th row
+        JLabel Row5Col1 = new JLabel();
+        Row5Col1.setIcon(sea);
+        Row5Col1.setBounds(350, 325, 100, 100);
+        Row5Col1.setSize(100, 100);
+        f.add(Row5Col1);
+        
+        JLabel Row5Col2 = new JLabel();
+        Row5Col2.setIcon(wheat);
+        Row5Col2.setBounds(450, 325, 100, 100);
+        Row5Col2.setSize(100, 100);
+        f.add(Row5Col2);
+        
+        JLabel Row5Col3 = new JLabel();
+        Row5Col3.setIcon(ore);
+        Row5Col3.setBounds(550, 325, 100, 100);
+        Row5Col3.setSize(100, 100);
+        f.add(Row5Col3);
+        
+        JLabel Row5Col4 = new JLabel();
+        Row5Col4.setIcon(wood);
+        Row5Col4.setBounds(650, 325, 100, 100);
+        Row5Col4.setSize(100, 100);
+        f.add(Row5Col4);
+        
+        JLabel Row5Col5 = new JLabel();
+        Row5Col5.setIcon(wool);
+        Row5Col5.setBounds(750, 325, 100, 100);
+        Row5Col5.setSize(100, 100);
+        f.add(Row5Col5);
+        
+        JLabel Row5Col6 = new JLabel();
+        Row5Col6.setIcon(sea);
+        Row5Col6.setBounds(850, 325, 100, 100);
+        Row5Col6.setSize(100, 100);
+        f.add(Row5Col6);
+
+        //6th row
+        JLabel Row6Col1 = new JLabel();
+        Row6Col1.setIcon(sea);
+        Row6Col1.setBounds(400, 400, 100, 100);
+        Row6Col1.setSize(100, 100);
+        f.add(Row6Col1);
+        
+        JLabel Row6Col2 = new JLabel();
+        Row6Col2.setIcon(brick);
+        Row6Col2.setBounds(500, 400, 100, 100);
+        Row6Col2.setSize(100, 100);
+        f.add(Row6Col2);
+        
+        JLabel Row6Col3 = new JLabel();
+        Row6Col3.setIcon(wool);
+        Row6Col3.setBounds(600, 400, 100, 100);
+        Row6Col3.setSize(100, 100);
+        f.add(Row6Col3);
+        
+        JLabel Row6Col4 = new JLabel();
+        Row6Col4.setIcon(brick);
+        Row6Col4.setBounds(700, 400, 100, 100);
+        Row6Col4.setSize(100, 100);
+        f.add(Row6Col4);
+        
+        JLabel Row6Col5 = new JLabel();
+        Row6Col5.setIcon(sea);
+        Row6Col5.setBounds(800, 400, 100, 100);
+        Row6Col5.setSize(100, 100);
+        f.add(Row6Col5);
+              
+        //7th row
+        JLabel Row7Col1 = new JLabel();
+        Row7Col1.setIcon(sea);
+        Row7Col1.setBounds(450, 475, 100, 100);
+        Row7Col1.setSize(100, 100);
+        f.add(Row7Col1);
+        
+        JLabel Row7Col2 = new JLabel();
+        Row7Col2.setIcon(sea);
+        Row7Col2.setBounds(550, 475, 100, 100);
+        Row7Col2.setSize(100, 100);
+        f.add(Row7Col2);
+        
+        JLabel Row7Col3 = new JLabel();
+        Row7Col3.setIcon(sea);
+        Row7Col3.setBounds(650, 475, 100, 100);
+        Row7Col3.setSize(100, 100);
+        f.add(Row7Col3);
+        
+        JLabel Row7Col4 = new JLabel();
+        Row7Col4.setIcon(sea);
+        Row7Col4.setBounds(750, 475, 100, 100);
+        Row7Col4.setSize(100, 100);
+        f.add(Row7Col4);
+        
 //        //example villages+cities
 //        g.drawImage(Img_village, 635, 385, 30, 30, this);
 //        g.drawImage(Img_village, 785, 310, 30, 30, this);
@@ -248,14 +419,10 @@ public class NewBoard { //extends Canvas is needed to draw, we think
 //        Rectangle rect = new Rectangle(560, 160, 30, 30);
 //        g2d.rotate(Math.toRadians(25)); 
 //        g2d.draw(rect);
-//        f.setVisible(true);
-//	    f.setSize(300,300);  
-
-//       panel.setVisible(true);
-//       panel.repaint();
-//       frame.add(panel); 
-//	   frame.setSize(300,300);  
-//	   frame.setLayout(null);  
-//	   frame.setVisible(true);  
+        
+        JLabel last = new JLabel();
+        f.add(last);
+        f.setVisible(true);
+	    f.setSize(1920,1080);  
     }
 }
