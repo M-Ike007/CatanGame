@@ -88,79 +88,81 @@ public class NewBoard { //extends Canvas is needed to draw, we think
 	    // Cost image loading and preparing
         ImageIcon Img_cost=new ImageIcon("Images/Cost_Table.jpg");
 		Image imageCost = Img_cost.getImage(); // "transform" it to an Image
-	    Image costImg = imageCost.getScaledInstance(100, 100,
+	    Image costImg = imageCost.getScaledInstance(250, 333,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon cost = new ImageIcon(costImg);
         
 	    // Card brick image loading and preparing
         ImageIcon Img_card_brick=new ImageIcon("Images/Card_Brick.jpg");
 		Image imageCardBrick = Img_card_brick.getImage(); // "transform" it to an Image
-	    Image cardBrickImg = imageCardBrick.getScaledInstance(100, 100,
+	    Image cardBrickImg = imageCardBrick.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_brick = new ImageIcon(cardBrickImg);
 	    
 	    // Card forest image loading and preparing
         ImageIcon Img_card_forest=new ImageIcon("Images/Card_Forest.jpg");
         Image imageCardForest = Img_card_forest.getImage(); // "transform" it to an Image
-	    Image cardForestImg = imageCardForest.getScaledInstance(100, 100,
+	    Image cardForestImg = imageCardForest.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_forest = new ImageIcon(cardForestImg);
 	    
 	    // Card ore image loading and preparing
         ImageIcon Img_card_ore=new ImageIcon("Images/Card_Ore.jpg");
         Image imageCardOre = Img_card_ore.getImage(); // "transform" it to an Image
-	    Image cardOreImg = imageCardOre.getScaledInstance(100, 100,
+	    Image cardOreImg = imageCardOre.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_ore = new ImageIcon(cardOreImg);
 	    
 	    // Card sheep image loading and preparing
         ImageIcon Img_card_sheep=new ImageIcon("Images/Card_Sheep.jpg");
         Image imageCardSheep = Img_card_sheep.getImage(); // "transform" it to an Image
-	    Image cardSheepImg = imageCardSheep.getScaledInstance(100, 100,
+	    Image cardSheepImg = imageCardSheep.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_sheep = new ImageIcon(cardSheepImg);
 	    
 	    // Card wheat image loading and preparing
         ImageIcon Img_card_wheat=new ImageIcon("Images/Card_Wheat.jpg");
         Image imageCardWheat = Img_card_wheat.getImage(); // "transform" it to an Image
-	    Image cardWheatImg = imageCardWheat.getScaledInstance(100, 100,
+	    Image cardWheatImg = imageCardWheat.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_wheat = new ImageIcon(cardWheatImg);
 	    
 	    // Card invention image loading and preparing
         ImageIcon Img_card_invention=new ImageIcon("Images/Card_Invention.jpg");
         Image imageCardInvention = Img_card_invention.getImage(); // "transform" it to an Image
-	    Image cardInventionImg = imageCardInvention.getScaledInstance(100, 100,
+	    Image cardInventionImg = imageCardInvention.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_invention = new ImageIcon(cardInventionImg);
 	    
 	 	// Card knight image loading and preparing
         ImageIcon Img_card_knight=new ImageIcon("Images/Card_Knight.jpg");
         Image imageCardKnight = Img_card_knight.getImage(); // "transform" it to an Image
-	    Image cardKnightImg = imageCardKnight.getScaledInstance(100, 100,
+	    Image cardKnightImg = imageCardKnight.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_knight = new ImageIcon(cardKnightImg);
 	    
 	    // Card monopoly image loading and preparing
         ImageIcon Img_card_monopoly=new ImageIcon("Images/Card_Monopoly.jpg");
         Image imageCardMonopoly = Img_card_monopoly.getImage(); // "transform" it to an Image
-	    Image cardMonopolyImg = imageCardMonopoly.getScaledInstance(100, 100,
+	    Image cardMonopolyImg = imageCardMonopoly.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_monopoly = new ImageIcon(cardMonopolyImg);
 	    
 	    // Card two roads image loading and preparing
         ImageIcon Img_card_two_roads=new ImageIcon("Images/Card_TwoRoads.jpg");
         Image imageCardTwoRoads = Img_card_two_roads.getImage(); // "transform" it to an Image
-	    Image cardTwoRoadsImg = imageCardTwoRoads.getScaledInstance(100, 100,
+	    Image cardTwoRoadsImg = imageCardTwoRoads.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_two_roads = new ImageIcon(cardTwoRoadsImg);
 	    
 	    // Card victory image loading and preparing
         ImageIcon Img_card_victory=new ImageIcon("Images/Card_VP.jpg");
         Image imageCardVictory = Img_card_victory.getImage(); // "transform" it to an Image
-	    Image cardVictoryImg = imageCardVictory.getScaledInstance(100, 100,
+	    Image cardVictoryImg = imageCardVictory.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_victory = new ImageIcon(cardVictoryImg);
+        
+        // Adding the tiles.
         
         //1st row
         JLabel Row1Col1 = new JLabel();
@@ -391,6 +393,10 @@ public class NewBoard { //extends Canvas is needed to draw, we think
         Row7Col4.setSize(100, 100);
         f.add(Row7Col4);
         
+        
+   
+        
+        
 //        //example villages+cities
 //        g.drawImage(Img_village, 635, 385, 30, 30, this);
 //        g.drawImage(Img_village, 785, 310, 30, 30, this);
@@ -398,30 +404,88 @@ public class NewBoard { //extends Canvas is needed to draw, we think
 //        g.drawImage(Img_city, 685, 160, 30, 30, this);    
 //        g.drawImage(Img_city, 435, 235, 30, 30, this);
 //        
-//        //example cost table
-//        g.drawImage(Img_cost, 1015, 10, 250, 333, this);
-//        
-//        //example card locations
-//        g.drawImage(Img_card_brick, 320, 590, 65, 95, this);
-//        g.drawImage(Img_card_forest, 390, 590, 65, 95, this);
-//        g.drawImage(Img_card_ore, 460, 590, 65, 95, this);
-//        g.drawImage(Img_card_sheep, 530, 590, 65, 95, this);
-//        g.drawImage(Img_card_wheat, 600, 590, 65, 95, this);
-//        g.drawImage(Img_card_invention, 670, 590, 65, 95, this);
-//        g.drawImage(Img_card_knight, 740, 590, 65, 95, this);       
-//        g.drawImage(Img_card_monopoly, 810, 590, 65, 95, this);
-//        g.drawImage(Img_card_two_roads, 880, 590, 65, 95, this);
-//        g.drawImage(Img_card_victory, 950, 590, 65, 95, this);
-//        
-//        
-//        //example road
-//        Graphics2D g2d = (Graphics2D)g; //We have to create the awesome object first so we can use its methods!
-//        Rectangle rect = new Rectangle(560, 160, 30, 30);
-//        g2d.rotate(Math.toRadians(25)); 
-//        g2d.draw(rect);
-        
-        JLabel last = new JLabel();
-        f.add(last);
+
+	     // Adding the cards
+	     
+	     // Cost card
+		JLabel CostCard = new JLabel();
+		CostCard.setIcon(cost);
+		CostCard.setBounds(1015, 10, 250, 333);
+		CostCard.setSize(250, 333);
+		f.add(CostCard);
+		
+		 // brick
+		JLabel BrickCard = new JLabel();
+		BrickCard.setIcon(card_brick);
+		BrickCard.setBounds(320, 590, 65, 95);
+		BrickCard.setSize(65, 95);
+		f.add(BrickCard);
+		
+		 // forest
+		JLabel ForestCard = new JLabel();
+		ForestCard.setIcon(card_forest);
+		ForestCard.setBounds(390, 590, 65, 95);
+		ForestCard.setSize(65, 95);
+		f.add(ForestCard);
+
+		// ore
+		JLabel OreCard = new JLabel();
+		OreCard.setIcon(card_ore);
+		OreCard.setBounds(460, 590, 65, 95);
+		OreCard.setSize(65, 95);
+		f.add(OreCard);
+		
+		// sheep
+		JLabel SheepCard = new JLabel();
+		SheepCard.setIcon(card_sheep);
+		SheepCard.setBounds(530, 590, 65, 95);
+		SheepCard.setSize(65, 95);
+		f.add(SheepCard);
+		
+		// wheat
+		JLabel WheatCard = new JLabel();
+		WheatCard.setIcon(card_wheat);
+		WheatCard.setBounds(600, 590, 65, 95);
+		WheatCard.setSize(65, 95);
+		f.add(WheatCard);
+		
+		// Invention
+		JLabel InventionCard = new JLabel();
+		InventionCard.setIcon(card_invention);
+		InventionCard.setBounds(670, 590, 65, 95);
+		InventionCard.setSize(65, 95);
+		f.add(InventionCard);
+		
+		// Knight
+		JLabel KnightCard = new JLabel();
+		KnightCard.setIcon(card_knight);
+		KnightCard.setBounds(740, 590, 65, 95);
+		KnightCard.setSize(65, 95);
+		f.add(KnightCard);
+		
+		// Monopoly
+		JLabel MonopolyCard = new JLabel();
+		MonopolyCard.setIcon(card_monopoly);
+		MonopolyCard.setBounds(810, 590, 65, 95);
+		MonopolyCard.setSize(65, 95);
+		f.add(MonopolyCard);
+		
+		// Two roads
+		JLabel TwoRoadsCard = new JLabel();
+		TwoRoadsCard.setIcon(card_two_roads);
+		TwoRoadsCard.setBounds(880, 590, 65, 95);
+		TwoRoadsCard.setSize(65, 95);
+		f.add(TwoRoadsCard);
+		
+		// Victory
+		JLabel VictoryCard = new JLabel();
+		VictoryCard.setIcon(card_victory);
+		VictoryCard.setBounds(950, 590, 65, 95);
+		VictoryCard.setSize(65, 95);
+		f.add(VictoryCard);
+		
+		JLabel last = new JLabel();
+		f.add(last);
         f.setVisible(true);
 	    f.setSize(1920,1080);  
     }
