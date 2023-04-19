@@ -10,6 +10,9 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import java.awt.*;
 
+import java.util.Random;
+import java.util.ArrayList;
+
 public class HexLightsOut extends JPanel{
 	
 	public HexLightsOut() {
@@ -31,8 +34,8 @@ public class HexLightsOut extends JPanel{
 	
 	private static final long serialVersionUID = 1L;
 
-    private static final int BOARD_WIDTH = 2;
-    private static final int BOARD_HEIGHT = 3;
+    private static final int BOARD_WIDTH = 1;
+    private static final int BOARD_HEIGHT = 18;
 
     private static final int NUM_HEX_CORNERS = 6;
     private static final int CELL_RADIUS = 40;
@@ -43,7 +46,6 @@ public class HexLightsOut extends JPanel{
     public int[][] allcorX;
     public int[][] allcorY;
    
-
     public HexGridCell mCellMetrics = new HexGridCell(CELL_RADIUS);
 
     private BufferedImage loadImage(File file) {
@@ -56,9 +58,19 @@ public class HexLightsOut extends JPanel{
         return image;
     }
     
+    /** 
+     * @authors SDH, GH, LAK.
+     * Display numbers on tiles from a array of possible numbers.
+     * Numbers are chosen randomly and removed from the array so that the numbers are not drawn more than twice (except 2 and 12 which are drawn once).
+     * @param 18 tiles. 
+     * @return none.
+     */
     public void paint(Graphics g) {
+        Random rand = new Random();
+        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12));
+
         for (int n = 0; n < BOARD_HEIGHT * BOARD_WIDTH; n++) {
-            File file = new File("hex2.png"); 
+            File file = new File("Images/hex2.jpg"); 
             Polygon poly = new Polygon(allcorX[n], allcorY[n], 6);
             BufferedImage image = loadImage(file);
 
@@ -71,23 +83,24 @@ public class HexLightsOut extends JPanel{
             g2d.drawPolygon(allcorX[n], allcorY[n], NUM_HEX_CORNERS);
             g2d.setClip(null); 
 
-            // Display number inside hexagon tiles - SDH & GH (not done yet)
-            // Should pick numbers at random from the list given by numbers - now it just starts at the first number in the list
-            // Should display the number in the center of the hexagon - doesn't display it in the center yet 
-            // (try to use the getCenterY and getCenterX methods)
+            // pick numbers randomly
             Font font = new Font("Arial", Font.PLAIN, 20);
             g.setFont(font);
             FontMetrics metrics = g.getFontMetrics(font);
-            int[] numbers = {1,2,2,3,3,4,4,5,5,6,6,8,8,9,9,10,10,11,11,12};
-            String number = String.valueOf(numbers[n]);
+            int index = rand.nextInt(numbers.size());
+            String number = String.valueOf(numbers.get(index));
+            numbers.remove(index);
             
-            int x = allcorX[n][0] + (mCellMetrics.RADIUS - metrics.stringWidth(number)) / 2;
+            // display numbers in the center
+            int x = allcorX[n][0] + (mCellMetrics.RADIUS - metrics.stringWidth(number)) / 1;
             int y = allcorY[n][0] + (mCellMetrics.RADIUS - metrics.getHeight()) / 2 + metrics.getAscent();
-            
+
+            // display numbers on the board
             g.setColor(Color.WHITE);
             g.drawString(number, x, y);
         }
     }
+
 
     public int[] getCornerX() {
     	return mCornersX;
