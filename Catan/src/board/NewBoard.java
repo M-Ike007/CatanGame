@@ -1,10 +1,5 @@
 package board;
 
-// we used this tutorial: https://www.javatpoint.com/java-swing
-
-// These packages are needed for making a Frame
-// and *draw* images in that Frame
-
 import java.awt.*;
 
 import javax.swing.*;
@@ -12,16 +7,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-// we make the main Board class in which we put everything (for now!)
+// we make the main Board class in which we put everything
 
-public class NewBoard { //extends Canvas is needed to draw, we think   
+public class NewBoard {
 	private JFrame f = new JFrame("Catan - Game");
 	
 	// The constructor class
 	public NewBoard() {  
-		//JFrame frame = new JFrame();
-		//JPanel panel = new JPanel();
-		
 		// Brick image loading and preparing
 		ImageIcon Img_brick=new ImageIcon("Images/Tile_Brick.png");
 		Image imageBrick = Img_brick.getImage(); // "transform" it to an Image
@@ -391,101 +383,90 @@ public class NewBoard { //extends Canvas is needed to draw, we think
         Row7Col4.setIcon(sea);
         Row7Col4.setBounds(750, 475, 100, 100);
         Row7Col4.setSize(100, 100);
-        f.add(Row7Col4);
-        
-        
-   
-        
-        
-//        //example villages+cities
-//        g.drawImage(Img_village, 635, 385, 30, 30, this);
-//        g.drawImage(Img_village, 785, 310, 30, 30, this);
-//        
-//        g.drawImage(Img_city, 685, 160, 30, 30, this);    
-//        g.drawImage(Img_city, 435, 235, 30, 30, this);
-//        
+        f.add(Row7Col4);  
 
-	     // Adding the cards
-	     
-	     // Cost card
+	    // Cost card
 		JLabel CostCard = new JLabel();
 		CostCard.setIcon(cost);
 		CostCard.setBounds(1015, 10, 250, 333);
 		CostCard.setSize(250, 333);
 		f.add(CostCard);
 		
-		 // brick
+		// brick card
 		JLabel BrickCard = new JLabel();
 		BrickCard.setIcon(card_brick);
 		BrickCard.setBounds(320, 590, 65, 95);
 		BrickCard.setSize(65, 95);
 		f.add(BrickCard);
 		
-		 // forest
+		// forest card
 		JLabel ForestCard = new JLabel();
 		ForestCard.setIcon(card_forest);
 		ForestCard.setBounds(390, 590, 65, 95);
 		ForestCard.setSize(65, 95);
 		f.add(ForestCard);
 
-		// ore
+		// ore card
 		JLabel OreCard = new JLabel();
 		OreCard.setIcon(card_ore);
 		OreCard.setBounds(460, 590, 65, 95);
 		OreCard.setSize(65, 95);
 		f.add(OreCard);
 		
-		// sheep
+		// sheep card
 		JLabel SheepCard = new JLabel();
 		SheepCard.setIcon(card_sheep);
 		SheepCard.setBounds(530, 590, 65, 95);
 		SheepCard.setSize(65, 95);
 		f.add(SheepCard);
 		
-		// wheat
+		// wheat card
 		JLabel WheatCard = new JLabel();
 		WheatCard.setIcon(card_wheat);
 		WheatCard.setBounds(600, 590, 65, 95);
 		WheatCard.setSize(65, 95);
 		f.add(WheatCard);
 		
-		// Invention
+		// Invention card
 		JLabel InventionCard = new JLabel();
 		InventionCard.setIcon(card_invention);
 		InventionCard.setBounds(670, 590, 65, 95);
 		InventionCard.setSize(65, 95);
 		f.add(InventionCard);
 		
-		// Knight
+		// Knight card
 		JLabel KnightCard = new JLabel();
 		KnightCard.setIcon(card_knight);
 		KnightCard.setBounds(740, 590, 65, 95);
 		KnightCard.setSize(65, 95);
 		f.add(KnightCard);
 		
-		// Monopoly
+		// Monopoly card
 		JLabel MonopolyCard = new JLabel();
 		MonopolyCard.setIcon(card_monopoly);
 		MonopolyCard.setBounds(810, 590, 65, 95);
 		MonopolyCard.setSize(65, 95);
 		f.add(MonopolyCard);
 		
-		// Two roads
+		// Two roads card
 		JLabel TwoRoadsCard = new JLabel();
 		TwoRoadsCard.setIcon(card_two_roads);
 		TwoRoadsCard.setBounds(880, 590, 65, 95);
 		TwoRoadsCard.setSize(65, 95);
 		f.add(TwoRoadsCard);
 		
-		// Victory
+		// Victory card
 		JLabel VictoryCard = new JLabel();
 		VictoryCard.setIcon(card_victory);
 		VictoryCard.setBounds(950, 590, 65, 95);
 		VictoryCard.setSize(65, 95);
 		f.add(VictoryCard);
 		
+		// To fix the problem of the last JLabel location
 		JLabel last = new JLabel();
 		f.add(last);
+		
+		// Settings of the JFrame
         f.setVisible(true);
 	    f.setSize(1920,1080);  
     }
