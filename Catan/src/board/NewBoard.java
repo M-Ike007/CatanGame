@@ -427,19 +427,19 @@ public class NewBoard {
 		WheatCard.setSize(65, 95);
 		f.add(WheatCard);
 		
-		// Invention card
-		JLabel InventionCard = new JLabel();
-		InventionCard.setIcon(card_invention);
-		InventionCard.setBounds(670, 590, 65, 95);
-		InventionCard.setSize(65, 95);
-		f.add(InventionCard);
-		
 		// Knight card
 		JLabel KnightCard = new JLabel();
 		KnightCard.setIcon(card_knight);
-		KnightCard.setBounds(740, 590, 65, 95);
+		KnightCard.setBounds(670, 590, 65, 95);
 		KnightCard.setSize(65, 95);
 		f.add(KnightCard);
+		
+		// Invention card
+		JLabel InventionCard = new JLabel();
+		InventionCard.setIcon(card_invention);
+		InventionCard.setBounds(740, 590, 65, 95);
+		InventionCard.setSize(65, 95);
+		f.add(InventionCard);
 		
 		// Monopoly card
 		JLabel MonopolyCard = new JLabel();
