@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import dice.Dice;
-import banktrade.BankTrade;
+import trade_player.*;
 import javax.swing.JLabel;
 
 public class Initial_Dev_Buttons extends JFrame {
@@ -102,7 +102,7 @@ public class Initial_Dev_Buttons extends JFrame {
 	
 	
 	protected void handleTrade() {	
-		BankTrade.main(null);
+		TradePlayer.main(null);
 			
 	}
 }
