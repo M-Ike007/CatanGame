@@ -3,9 +3,11 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.*;  
 import javax.swing.*;
+
+import gui_menu.MainMenu;
+
 import java.util.*;
 import hand.Hand;
-import main.MainMenu;
 import player.Player;
 import turn_player_action.*;
 
