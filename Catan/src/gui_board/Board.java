@@ -1,4 +1,4 @@
-package board;
+package gui_board;
 
 import java.awt.*;
 

@@ -1,6 +1,4 @@
 package gui_menu;
-import board.*;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -8,6 +6,9 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
+
+import gui_board.*;
+
 import javax.swing.JPanel;
 import java.util.Hashtable;
 

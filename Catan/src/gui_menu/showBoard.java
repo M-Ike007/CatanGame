@@ -1,7 +1,9 @@
 package gui_menu;
-import board.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import gui_board.*;
+
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.Component;
