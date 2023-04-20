@@ -1,20 +1,13 @@
 **ID:**
-**Title:**
+
+**Title:** 
 
 ---
 
-*As a:* ...
+**As a:** ...
 
-*I want to:* ...
+**I want to:** ...
 
-*So that:*
+**So that:** ...
 
-*Acceptance criteria*
-
-
-| item      | it0   | it1   | it2   | it3   | it4   |
-|-----------|-------|-------|-------|-------|-------|
-| PP        |  --   |       |       |       |       |
-| Priority  |  --   |       |       |       |       |
-| Status    |  N    |       |       |       |       |
-
+**Acceptance criteria:** ...
