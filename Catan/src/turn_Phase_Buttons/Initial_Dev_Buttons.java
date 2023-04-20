@@ -1,5 +1,3 @@
-//only throw dice button works for now (the result of the roll is in the console)
-
 package turn_Phase_Buttons;
 
 import java.awt.EventQueue;
@@ -45,7 +43,7 @@ public class Initial_Dev_Buttons extends JFrame {
 	 * Create the frame.
 	 */
 	public Initial_Dev_Buttons() {
-		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 296, 240);
 		turn_Phase_Panel = new JPanel();
 		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -96,16 +94,11 @@ public class Initial_Dev_Buttons extends JFrame {
 	 * Print the result.
 	 */
 	protected void handleDiceroll () {
-			diceRoll.setSum();
-			int output = diceRoll.getSum();
-			String outputString = Integer.toString(output);
-			JLabel lblDiceResult = new JLabel(outputString);
-			lblDiceResult.setBounds(190, 35, 49, 14);
-			turn_Phase_Panel.add(lblDiceResult);
-			turn_Phase_Panel.repaint();
-			
-			System.out.println("dice output is " + output);
-			}
+		diceRoll.setSum();
+		int output = diceRoll.getSum();
+		String outputString = Integer.toString(output);
+		lblDiceResult.setText(outputString);			
+	}
 	
 	
 	protected void handleTrade() {	
