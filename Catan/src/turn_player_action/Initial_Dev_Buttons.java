@@ -1,4 +1,4 @@
-package turn_Phase_Buttons;
+package turn_player_action;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
