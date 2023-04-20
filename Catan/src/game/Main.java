@@ -1,7 +1,6 @@
-package main;
+package game;
 import hand.Hand;
 import player.Player;
-import game.GameStatus;
 import dice.*;
 
 import java.util.*;
