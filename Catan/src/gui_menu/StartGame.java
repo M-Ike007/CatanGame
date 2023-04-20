@@ -63,13 +63,7 @@ public class StartGame {
 				player_info.put(txtPlayer3.getText(), "orange");
 				player_info.put(txtPlayer4.getText(), "white");
 				f.dispose();
-			    Board m=new Board();  
-			    JFrame f=new JFrame();  
-			    f.getContentPane().add(m); // adds the board to the JFrame
-			    f.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
-			    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			    f.setResizable(false);
-			    f.setVisible(true); 
+			    new Board();  
 			    }
 			}
 		);

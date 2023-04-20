@@ -9,11 +9,11 @@ import java.awt.event.ActionListener;
 
 // we make the main Board class in which we put everything
 
-public class NewBoard {
+public class Board {
 	private JFrame f = new JFrame("Catan - Game");
 	
 	// The constructor class
-	public NewBoard() {  
+	public Board() {  
 		// Brick image loading and preparing
 		ImageIcon Img_brick=new ImageIcon("Images/Tile_Brick.png");
 		Image imageBrick = Img_brick.getImage(); // "transform" it to an Image
