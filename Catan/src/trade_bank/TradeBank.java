@@ -1,4 +1,4 @@
-package tradeBank;
+package trade_bank;
 
 import java.awt.event.*;  
 import javax.swing.*;
