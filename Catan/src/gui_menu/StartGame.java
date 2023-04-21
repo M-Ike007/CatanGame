@@ -1,6 +1,4 @@
-package main;
-import board.*;
-
+package gui_menu;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -8,6 +6,9 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
+
+import gui_board.*;
+
 import javax.swing.JPanel;
 import java.util.Hashtable;
 
@@ -63,13 +64,7 @@ public class StartGame {
 				player_info.put(txtPlayer3.getText(), "orange");
 				player_info.put(txtPlayer4.getText(), "white");
 				f.dispose();
-			    Board m=new Board();  
-			    JFrame f=new JFrame();  
-			    f.getContentPane().add(m); // adds the board to the JFrame
-			    f.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
-			    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			    f.setResizable(false);
-			    f.setVisible(true); 
+			    new Board();  
 			    }
 			}
 		);

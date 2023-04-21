@@ -1,6 +1,5 @@
-package main;
+package game;
 
-import game.*;
 import hand.*;
 import player.*;
 
