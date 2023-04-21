@@ -471,4 +471,8 @@ public class Board {
         f.setResizable(false);
 	    f.setSize(1920,1080);  
     }
+	
+    public static void main(String[] args) {  
+    new Board();  
+    }
 }
