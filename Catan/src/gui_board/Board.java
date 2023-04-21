@@ -476,4 +476,3 @@ public class Board {
     new Board();  
     }
 }
-}
