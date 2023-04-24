@@ -1,5 +1,6 @@
 package gui_menu;
 import javax.swing.JFrame;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
@@ -8,12 +9,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
 import gui_board.*;
-
+import player.*;
+import game.*;
 import javax.swing.JPanel;
 import java.util.Hashtable;
 
 /** The class that starts the game.
- * It gives the players back as a hashmap; with player names as keys, and colours as values: "blue", "green", "orange", "white".
+ * It gives the players back as a hashmap; with player names as keys, and PlayerColour as values.
  */
 public class StartGame {
 	private JFrame f = new JFrame("Catan - Start game");
@@ -21,10 +23,11 @@ public class StartGame {
 	private final JPanel panel_1 = new JPanel();
 	private final JLabel lblSetupOptions = new JLabel("Setup options");
 	private final JPanel panel_2 = new JPanel();
-	private final JLabel lblPlayer3 = new JLabel("player 3");
 	private final JLabel lblPlayer1 = new JLabel("player 1");
 	private final JLabel lblPlayer2 = new JLabel("player 2");
+	private final JLabel lblPlayer3 = new JLabel("player 3");
 	private final JLabel lblPlayer4 = new JLabel("player 4");
+	
 	private final JLabel lblPlayer_header = new JLabel("Player");
 	
 	
@@ -58,13 +61,13 @@ public class StartGame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				// Instanciating the hash table
-				Hashtable<String, String> player_info = new Hashtable<String, String>();
-				player_info.put(txtPlayer1.getText(), "blue");
-				player_info.put(txtPlayer2.getText(), "green");
-				player_info.put(txtPlayer3.getText(), "orange");
-				player_info.put(txtPlayer4.getText(), "white");
+				Hashtable<String, PlayerColour> player_info = new Hashtable<String, PlayerColour>();
+				player_info.put(txtPlayer1.getText(), PlayerColour.BLUE);
+				player_info.put(txtPlayer2.getText(), PlayerColour.GREEN);
+				player_info.put(txtPlayer3.getText(), PlayerColour.YELLOW);
+				player_info.put(txtPlayer4.getText(), PlayerColour.RED);
 				f.dispose();
-			    new Board();  
+			    new Main(player_info);  
 			    }
 			}
 		);

@@ -17,7 +17,7 @@ import java.util.Map.Entry;
 public class Main {
     // Initialising the class.
 	public PlayerColour cols;
-	public static ArrayList<Player> players = new ArrayList<Player>();
+	public ArrayList<Player> players = new ArrayList<Player>();
     // A map to store dice throw results.
 	private Map<Player, Integer> throwmap = new LinkedHashMap<>();
     // A map to store the order of player play. 
@@ -26,15 +26,21 @@ public class Main {
 	private Player activeplayer;
 	
 	
-	static ArrayList<Player>  turnlist = new ArrayList<Player>();
+	private ArrayList<Player>  turnlist = new ArrayList<Player>();
+	
+	public Main (Hashtable<String, PlayerColour> player_info) {
+		initHands(player_info);
+	}
 	
 	/**
      * Initialising players.
      * 
 	 * This class initiates the players and allocates hands.
 	 */
-	public static void initHands() {
-		
+	private void initHands(Hashtable<String, PlayerColour> player_info) {
+//		for (String key : player_info.keySet()) {
+//			System.out.println(key + player_info.get(key));
+//		}
 		players.add(new Player(new Hand(), PlayerColour.BLUE, "player1"));
 		players.add(new Player(new Hand(), PlayerColour.RED, "player2"));
 		players.add(new Player(new Hand(), PlayerColour.GREEN, "player3"));
@@ -48,7 +54,8 @@ public class Main {
 	 * This class gets the size of the players List to check the number of
      * players
 	 */
-	public static int getSize() {
+	public int getSize() {
+		System.out.println(players.toString());
 		int size = players.size();
 		return size;
 	}
