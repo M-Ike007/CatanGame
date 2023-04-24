@@ -7,6 +7,13 @@ public class Player{
 	private final Hand hand;
 	private PlayerColour colour;
 	private String name;
+	
+	public Player(Hand hand) {
+		this.hand = hand;
+		this.colour = PlayerColour.RED;
+		this.name = "test";
+	}
+	
 	public Player(Hand hand, PlayerColour col_assigned, String name){
 		
 		
