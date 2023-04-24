@@ -29,6 +29,9 @@ public class Main {
 	
 	private ArrayList<Player>  turnlist = new ArrayList<Player>();
 	
+	/** Constructing the main and show the board.
+	 * @param player_info A hashmap of player name and colour.
+	 */
 	public Main (Hashtable<String, PlayerColour> player_info) {
 		System.out.println("---");
 		System.out.println("Initialise Main");
@@ -37,6 +40,10 @@ public class Main {
 		new Board();
 	}
 
+	/** Constructing the main without showing the board (for testing). 
+	 * @param player_info A hashmap of player name and colour.	
+	 * @param flag When true or false, the board will not be printed.
+	 */
 	public  Main (Hashtable<String, PlayerColour> player_info, Boolean flag) {
 		System.out.println("---");
 		System.out.println("Initialise Main");
@@ -88,7 +95,7 @@ public class Main {
 	 */
 	public void setStatus(GameStatus status) {
 		
-		this.status= status;
+		this.status = status;
 	}
 	
 	/**
@@ -206,11 +213,7 @@ public class Main {
 				it = it.hasNext() ? it : tempmap.entrySet().iterator();
 				this.activeplayer = it.next().getKey();
 				System.out.println("new player"+this.activeplayer);
-			}
-			else {
-				continue;
-			}
-			
+			}	
 		}	
 	} 
 }
