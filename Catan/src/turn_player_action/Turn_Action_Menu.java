@@ -45,7 +45,7 @@ public class Turn_Action_Menu extends JFrame {
 	 */
 	public Turn_Action_Menu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 296, 240);
+		setBounds(100, 100, 296, 280);
 		turn_Phase_Panel = new JPanel();
 		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -96,6 +96,10 @@ public class Turn_Action_Menu extends JFrame {
 		
 		lblDiceResult.setBounds(190, 35, 49, 14);
 		turn_Phase_Panel.add(lblDiceResult);
+		
+		JButton btnEndTurn = new JButton("End turn");
+		btnEndTurn.setBounds(20, 210, 150, 23);
+		turn_Phase_Panel.add(btnEndTurn);
 	}
 
 
