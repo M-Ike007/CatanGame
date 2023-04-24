@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import dice.Dice;
 import trade_player.*;
-//import turn_player_action.Build_Structures;
+import gui_menu.BuildingSelectionMenu;
 import javax.swing.JLabel;
 
 public class Turn_Action_Menu extends JFrame {
@@ -66,24 +66,27 @@ public class Turn_Action_Menu extends JFrame {
 		turn_Phase_Panel.add(btnThrowDice);
 		
 		JButton btnTradeBank = new JButton("Trade with bank");
-		btnTradeBank.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			handleTrade();
-			}
-		});
+		
 		btnTradeBank.setBounds(20, 50, 150, 23);
 		turn_Phase_Panel.add(btnTradeBank);
 		
 		JButton btnBuild = new JButton("Build");
 		btnBuild.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//buildFunction();
+				built_elements();
+				
 			}
 		});
 		btnBuild.setBounds(20, 170, 150, 23);
 		turn_Phase_Panel.add(btnBuild);
 		
 		JButton btnTradePlayer = new JButton("Trade with player");
+		btnTradePlayer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				handlePlayerTrade();
+			}
+			
+		});
 		btnTradePlayer.setBounds(20, 90, 150, 23);
 		turn_Phase_Panel.add(btnTradePlayer);
 		
@@ -106,12 +109,13 @@ public class Turn_Action_Menu extends JFrame {
 		lblDiceResult.setText(outputString);			
 	}
 	
-//	protected void () {
-//		lekkerbuilden.function(null);
-//		
-//	}
+     protected void built_elements() {
+    	 BuildingSelectionMenu.main(null);
+     }
+		
 	
-	protected void handleTrade() {	
+	
+	protected void handlePlayerTrade() {	
 		TradePlayer.main(null);
 			
 	}
