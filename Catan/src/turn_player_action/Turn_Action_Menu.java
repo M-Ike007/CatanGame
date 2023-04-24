@@ -47,7 +47,7 @@ public class Turn_Action_Menu extends JFrame {
 	 */
 	public Turn_Action_Menu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 296, 280);
+		setBounds(100, 100, 300, 290);
 		turn_Phase_Panel = new JPanel();
 		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -106,6 +106,13 @@ public class Turn_Action_Menu extends JFrame {
 		turn_Phase_Panel.add(lblDiceResult);
 		
 		JButton btnEndTurn = new JButton("End turn");
+		btnEndTurn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// Likely have to implement a code that calls a method which exits the system and
+				// calls another method to process the end of a turn.
+				// handleEndTurn();
+			}
+		});
 		btnEndTurn.setBounds(20, 210, 150, 23);
 		turn_Phase_Panel.add(btnEndTurn);
 	}
@@ -125,12 +132,14 @@ public class Turn_Action_Menu extends JFrame {
     	 BuildingSelectionMenu.main(null);
      }
 		
-	
-	
 	protected void handlePlayerTrade() {	
-		TradePlayer.main(null);
-			
+		TradePlayer.main(null);	
 	}
+	// Possible code to handle the end of a turn -> Pseudo-code for EndTurn-method import not added!
+//    protected void handleEndTurn()  {
+//	      System.exit(0);
+//		  EndTurnSequence.main(null);
+//    }
 }
 
 

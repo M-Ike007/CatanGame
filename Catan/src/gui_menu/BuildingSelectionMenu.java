@@ -87,5 +87,15 @@ public class BuildingSelectionMenu extends JFrame {
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 12));
 		lblNewLabel_2.setBounds(190, 100, 250, 23);
 		contentPane.add(lblNewLabel_2);
+		
+		JButton btnReturn = new JButton("Return");
+		btnReturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+			}
+		});
+		btnReturn.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnReturn.setBounds(317, 100, 89, 23);
+		contentPane.add(btnReturn);
 	}
 }
