@@ -1,8 +1,9 @@
-![badge](https://img.shields.io/badge/iteration-two-brightgreen 'iteration 1')
+![badge](https://img.shields.io/badge/iteration-three-brightgreen 'iteration 3')
 
 # Description
 
-This is the group B repo for the computer version of the board game [settlers of Catan](https://en.wikipedia.org/wiki/Catan). This project is developed by 
+This is the group B repo for the computer version of the board game [settlers
+of Catan](https://en.wikipedia.org/wiki/Catan). This project is developed by 
 Getalem Heilia (GH),
 Inge van Vugt (IVV),
 Jan van Lindert (JVL),
@@ -14,8 +15,11 @@ Titia Kool (TEK).
 
 # More information
 
-Please see the [project wiki](https://git.wur.nl/inf32306/group2023b.wiki.git) for more information regarding meetings, design and documentation.
+Please see the [project wiki](https://git.wur.nl/inf32306/group2023b.wiki.git)
+for more information regarding meetings, design and documentation.
 
 # Running the programme
 
-The programme is run though eclipse: Open the project in eclipse and execute individual classes as a java application. The main programme is accessed though the main menu class (`Catan/src/main/MainMenu.java`).
+The programme is run though eclipse: Open the project in eclipse and execute
+individual classes as a java application. The main programme is accessed
+though the main menu class (`Catan/src/gui_menu/MainMenu.java`).
