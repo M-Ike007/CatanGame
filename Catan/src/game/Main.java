@@ -1,6 +1,7 @@
 package game;
 import hand.Hand;
-import player.Player;
+
+import player.*;
 import dice.*;
 
 import java.util.*;
@@ -15,7 +16,7 @@ import java.util.Map.Entry;
  */
 public class Main {
     // Initialising the class.
-
+	public PlayerColour cols;
 	public static ArrayList<Player> players = new ArrayList<Player>();
     // A map to store dice throw results.
 	private Map<Player, Integer> throwmap = new LinkedHashMap<>();
@@ -34,10 +35,10 @@ public class Main {
 	 */
 	public static void initHands() {
 		
-		players.add(new Player(new Hand()));
-		players.add(new Player(new Hand()));
-		players.add(new Player(new Hand()));
-		players.add(new Player(new Hand()));
+		players.add(new Player(new Hand(), PlayerColour.BLUE, "player1"));
+		players.add(new Player(new Hand(), PlayerColour.RED, "player2"));
+		players.add(new Player(new Hand(), PlayerColour.GREEN, "player3"));
+		players.add(new Player(new Hand(), PlayerColour.YELLOW, "player4"));
 		
 	}	
 

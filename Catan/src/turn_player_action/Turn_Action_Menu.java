@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import dice.Dice;
 import trade_player.*;
-//import turn_player_action.Build_Structures;
+import gui_menu.BuildingSelectionMenu;
 import javax.swing.JLabel;
 
 public class Turn_Action_Menu extends JFrame {
@@ -45,7 +45,7 @@ public class Turn_Action_Menu extends JFrame {
 	 */
 	public Turn_Action_Menu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 296, 240);
+		setBounds(100, 100, 296, 280);
 		turn_Phase_Panel = new JPanel();
 		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -66,24 +66,27 @@ public class Turn_Action_Menu extends JFrame {
 		turn_Phase_Panel.add(btnThrowDice);
 		
 		JButton btnTradeBank = new JButton("Trade with bank");
-		btnTradeBank.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			handleTrade();
-			}
-		});
+		
 		btnTradeBank.setBounds(20, 50, 150, 23);
 		turn_Phase_Panel.add(btnTradeBank);
 		
 		JButton btnBuild = new JButton("Build");
 		btnBuild.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//buildFunction();
+				built_elements();
+				
 			}
 		});
 		btnBuild.setBounds(20, 170, 150, 23);
 		turn_Phase_Panel.add(btnBuild);
 		
 		JButton btnTradePlayer = new JButton("Trade with player");
+		btnTradePlayer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				handlePlayerTrade();
+			}
+			
+		});
 		btnTradePlayer.setBounds(20, 90, 150, 23);
 		turn_Phase_Panel.add(btnTradePlayer);
 		
@@ -93,6 +96,10 @@ public class Turn_Action_Menu extends JFrame {
 		
 		lblDiceResult.setBounds(190, 35, 49, 14);
 		turn_Phase_Panel.add(lblDiceResult);
+		
+		JButton btnEndTurn = new JButton("End turn");
+		btnEndTurn.setBounds(20, 210, 150, 23);
+		turn_Phase_Panel.add(btnEndTurn);
 	}
 
 
@@ -106,12 +113,13 @@ public class Turn_Action_Menu extends JFrame {
 		lblDiceResult.setText(outputString);			
 	}
 	
-//	protected void () {
-//		lekkerbuilden.function(null);
-//		
-//	}
+     protected void built_elements() {
+    	 BuildingSelectionMenu.main(null);
+     }
+		
 	
-	protected void handleTrade() {	
+	
+	protected void handlePlayerTrade() {	
 		TradePlayer.main(null);
 			
 	}

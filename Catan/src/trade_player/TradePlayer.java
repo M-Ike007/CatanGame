@@ -107,7 +107,7 @@ public class TradePlayer {
 		buttonmn.setPreferredSize(new Dimension(50, 30));
 		frame1.pack();
 		frame1.setVisible(true);
-		frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
 		return data;
 
 	}
@@ -125,8 +125,8 @@ public class TradePlayer {
 				label.setText("ok");
 				for (Map.Entry<String, Integer> set : amount.entrySet()) {
 					System.out.println(set.getKey());
-					player.hand.setCard("resource", set.getKey(), set.getValue());
-					int test = player.hand.getCard("resource", set.getKey());
+					player.getHand().setCard("resource", set.getKey(), set.getValue());
+					int test = player.getHand().getCard("resource", set.getKey());
 					System.out.println(set.getKey() + ": " + test);
 					frame1.pack();
 				}
