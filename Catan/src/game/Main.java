@@ -3,6 +3,7 @@ import hand.Hand;
 
 import player.*;
 import dice.*;
+import gui_board.*;
 
 import java.util.*;
 import java.util.Map.Entry;
@@ -29,7 +30,18 @@ public class Main {
 	private ArrayList<Player>  turnlist = new ArrayList<Player>();
 	
 	public Main (Hashtable<String, PlayerColour> player_info) {
+		System.out.println("---");
+		System.out.println("Initialise Main");
 		initHands(player_info);
+		System.out.println("printing a new board");
+		new Board();
+	}
+
+	public  Main (Hashtable<String, PlayerColour> player_info, Boolean flag) {
+		System.out.println("---");
+		System.out.println("Initialise Main");
+		initHands(player_info);
+		System.out.println("printing a new board");
 	}
 	
 	/**
@@ -38,14 +50,11 @@ public class Main {
 	 * This class initiates the players and allocates hands.
 	 */
 	private void initHands(Hashtable<String, PlayerColour> player_info) {
-//		for (String key : player_info.keySet()) {
-//			System.out.println(key + player_info.get(key));
-//		}
-		players.add(new Player(new Hand(), PlayerColour.BLUE, "player1"));
-		players.add(new Player(new Hand(), PlayerColour.RED, "player2"));
-		players.add(new Player(new Hand(), PlayerColour.GREEN, "player3"));
-		players.add(new Player(new Hand(), PlayerColour.YELLOW, "player4"));
-		
+		for (String key : player_info.keySet()) {
+			System.out.println("initiating " + player_info.get(key) + " " + key);
+			players.add(new Player(new Hand(), player_info.get(key), key));
+
+		}		
 	}	
 
 	/**

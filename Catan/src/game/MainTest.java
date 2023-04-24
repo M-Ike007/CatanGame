@@ -20,7 +20,7 @@ public class MainTest extends TestCase {
 	 * This tests initHands().
 	 */
 	public void testInitHands() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		int testsize = main.getSize();
 		System.out.println("number of players in test is " + testsize);
 		assertEquals(4, testsize);
@@ -31,7 +31,7 @@ public class MainTest extends TestCase {
 	 * @return this.activeplayer The current active player.
 	 */	
 	public void testgetHand() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		Hand testhand = main.getHand(1);
 		assertEquals(testhand, main.getHand(1));
 	}
@@ -39,7 +39,7 @@ public class MainTest extends TestCase {
 	 * This class to setStatus() and getStatus().
 	 */	
 	public void testSetGetStatus() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		main.setStatus(GameStatus.FIRSTPHASE);
 		assertEquals(main.getStatus(), GameStatus.FIRSTPHASE);
 	}
@@ -49,7 +49,7 @@ public class MainTest extends TestCase {
 	 * This class to test getOrder() for the default case.
 	 */	
 	public void testOrderDefault() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		main.setStatus(GameStatus.FIRSTPHASE);
 		List<Integer> dummy1 = Arrays.asList(3,2,4,1);
 		List<Integer> dummy2 = Arrays.asList(4,3,2,1);
@@ -67,7 +67,7 @@ public class MainTest extends TestCase {
 	 * This class to test getOrder() for PHASETWO, so ascending order.
 	 */	
 	public void testOrderAsc() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		main.setStatus(GameStatus.SECONDPHASE);
 		List<Integer> dummy1 = Arrays.asList(3,2,4,1);
 		List<Integer> dummy2 = Arrays.asList(1,2,3,4);
@@ -83,7 +83,7 @@ public class MainTest extends TestCase {
 	 * This class to test getOrder() for END to confirm empty map.
 	 */
 	public void testOrderEnd() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		main.setStatus(GameStatus.END);
 		List<Integer> dummy1 = Arrays.asList(3,2,4,1);
 		main.dummythrow(dummy1);
@@ -96,7 +96,7 @@ public class MainTest extends TestCase {
 	 * This class to test setFirstPlayer() and getPlayer().
 	 */
 	public void testFirstPlayergetPlayer() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		main.setStatus(GameStatus.FIRSTPHASE);
 		List<Integer> dummy1 = Arrays.asList(3,2,4,1);
 		main.dummythrow(dummy1);
@@ -110,7 +110,7 @@ public class MainTest extends TestCase {
 	 * This class to test setNextPlayer() for the default status.
 	 */
 	public void testNextDsc() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		main.setStatus(GameStatus.FIRSTPHASE);
 		List<Integer> dummy1 = Arrays.asList(3,2,4,1);
 		main.dummythrow(dummy1);
@@ -128,7 +128,7 @@ public class MainTest extends TestCase {
 	 * This class to test setNextPlayer() in ascending turn order status.
 	 */
 	public void testNextPlayerAsc() {
-		Main main = new Main(player_info);
+		Main main = new Main(player_info, true);
 		main.setStatus(GameStatus.SECONDPHASE);
 		List<Integer> dummy1 = Arrays.asList(3,2,4,1);
 		main.dummythrow(dummy1);
