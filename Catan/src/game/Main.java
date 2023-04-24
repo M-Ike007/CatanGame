@@ -35,10 +35,10 @@ public class Main {
 	 */
 	public static void initHands() {
 		
-		players.add(new Player(new Hand(), PlayerColour.BLUE));
-		players.add(new Player(new Hand(), PlayerColour.RED));
-		players.add(new Player(new Hand(), PlayerColour.GREEN));
-		players.add(new Player(new Hand(), PlayerColour.YELLOW));
+		players.add(new Player(new Hand(), PlayerColour.BLUE, "player1"));
+		players.add(new Player(new Hand(), PlayerColour.RED, "player2"));
+		players.add(new Player(new Hand(), PlayerColour.GREEN, "player3"));
+		players.add(new Player(new Hand(), PlayerColour.YELLOW, "player4"));
 		
 	}	
 
