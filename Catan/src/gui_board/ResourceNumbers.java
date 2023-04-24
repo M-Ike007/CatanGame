@@ -115,13 +115,13 @@ public class ResourceNumbers {
         Pos43.setText(Integer.toString(rNums.get("Pos43")));
         f.add(Pos43);
         
-        JLabel Pos44 = new JLabel();
-        //Row4Col4.setIcon(desert);
-        Pos44.setBounds(600, 250, 100, 100);
-        Pos44.setSize(100, 100);
-        Pos22.setHorizontalAlignment(JLabel.CENTER);
-        Pos22.setText("desert");
-        f.add(Pos44);
+//        JLabel Pos44 = new JLabel();
+//        //Row4Col4.setIcon(desert);
+//        Pos44.setBounds(600, 250, 100, 100);
+//        Pos44.setSize(100, 100);
+//        Pos22.setHorizontalAlignment(JLabel.CENTER);
+//        Pos22.setText("desert");
+//        f.add(Pos44);
         
         JLabel Pos45 = new JLabel();
         Pos45.setBounds(700, 250, 100, 100);
@@ -148,8 +148,8 @@ public class ResourceNumbers {
         JLabel Pos53 = new JLabel();
         Pos53.setBounds(550, 325, 100, 100);
         Pos53.setSize(100, 100);
-        Pos52.setHorizontalAlignment(JLabel.CENTER);
-        Pos52.setText(Integer.toString(rNums.get("Pos53")));
+        Pos53.setHorizontalAlignment(JLabel.CENTER);
+        Pos53.setText(Integer.toString(rNums.get("Pos53")));
         f.add(Pos53);
         
         JLabel Pos54 = new JLabel();
