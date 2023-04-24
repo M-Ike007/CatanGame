@@ -8,6 +8,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import dice.Dice;
+import trade_bank.*;
+import hand.*;
 import trade_player.*;
 import gui_menu.BuildingSelectionMenu;
 import javax.swing.JLabel;
@@ -66,6 +68,12 @@ public class Turn_Action_Menu extends JFrame {
 		turn_Phase_Panel.add(btnThrowDice);
 		
 		JButton btnTradeBank = new JButton("Trade with bank");
+		btnTradeBank.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Hand hello = new Hand();
+				new TradeBank(hello);
+			}
+		});
 		
 		btnTradeBank.setBounds(20, 50, 150, 23);
 		turn_Phase_Panel.add(btnTradeBank);

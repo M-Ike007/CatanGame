@@ -23,16 +23,16 @@ import player.*;
 
 public class TradeBank extends JFrame {
 	
-	public static void main(String[] args) {
-		TradeBank frame = new TradeBank();
-		//frame.setVisible(true);
-	}
-	
-	Hand myHand = new Hand();
-	
-	int counter = 0;
+//	public static void main(String[] args) {
+//		TradeBank frame = new TradeBank();
+//		//frame.setVisible(true);
+//	}
 
-	public TradeBank() {  
+	public Hand myHand;
+	private int counter = 0;
+	
+	public TradeBank(Hand myHand) {  
+		
 		JFrame frame=new JFrame("Trade");  
 	    JTextField tf;
 	    tf = new JTextField("Do you want to trade?");
@@ -66,12 +66,6 @@ public class TradeBank extends JFrame {
 				frame.add(brick);
 				frame.add(wood);
 				frame.add(wheat);
-				
-				// if wool button clicked:
-				//		
-				// add actions to buttons
-				// -4 wordt variable en eerste keer klikken is die -4 en tweede keer +1
-				// actionlistener for giving that resource to the player
 				
 				wool.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -213,7 +207,8 @@ public class TradeBank extends JFrame {
 	    frame.setLayout(null);
 	    frame.setVisible(true);
 	}  
-	
+
+
 	public void Banktax(Hand myHand, String resource, String card, int amount) {
 		myHand.setCard(resource, card, amount);
 	} 
