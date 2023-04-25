@@ -153,7 +153,7 @@ public class Board {
         Image imageCardInvention = Img_card_invention.getImage(); // "transform" it to an Image
 	    Image cardInventionImg = imageCardInvention.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_invention = new ImageIcon(cardInventionImg);
+	    ImageIcon card_invention = new ImageIcon(cardInventionImg); 
 	    
 	 	// Card knight image loading and preparing
         ImageIcon Img_card_knight=new ImageIcon("Images/Card_Knight.jpg");
@@ -735,37 +735,46 @@ public class Board {
 		// To fix the problem of the last JLabel location
 		JLabel last = new JLabel();
 		f.add(last);
-		
+    	
 		// Settings of the JFrame
         f.setVisible(true);
         f.setResizable(false);
 	    f.setSize(1920,1080);  
     }
 	
+	
     //action handlers
     
     //handle the hex buttons
+	//First button press works, second doesn't :(
+	
     private class ButtonHandler implements ActionListener{
 
         @Override
 
         public void actionPerformed(ActionEvent e){
         	Point cords = ((JButton)e.getSource()).getLocation();
-        	int x0 = cords.x;
-        	int y0 = cords.y;
+        	int x0 = cords.x-4;
+        	int y0 = cords.y+15;
         	
-            ImageIcon Img_village=new ImageIcon("Images/Building_Village.png");
+            ImageIcon Img_village = new ImageIcon("Images/Building_Village.png");
     		Image imageVillage = Img_village.getImage(); // "transform" it to an Image
     	    Image villageImg = imageVillage.getScaledInstance(30, 30,
     	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-    	    ImageIcon village = new ImageIcon(villageImg);
+    	    ImageIcon village  = new ImageIcon(villageImg);
         	
         	JLabel Village = new JLabel();
         	Village.setIcon(village);
-        	Village.setBounds(5, 5, x0, y0);
+        	Village.setBounds(x0, y0, 30, 30);
         	f.add(Village);
         	
+        	JLabel empty = new JLabel();
+        	empty.setBounds(10, 10, 0, 0);
+        	f.add(empty);      	
+        	f.remove(empty);       	        
+        	
         	SwingUtilities.updateComponentTreeUI(f);
+        	f.setComponentZOrder(Village, 0);
         	
             System.out.println( ((JButton)e.getSource()).getLocation() );
             System.out.println(cords);
