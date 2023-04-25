@@ -9,7 +9,12 @@
 
 *So that:* I can decide my next step and see where other players are.
 
-*Acceptance criteria*
+*Acceptance criteria:* The board is visible and shows the resource tiles.
+
+*Acceptance test:* 
+Press "start game"
+Press "start"
+The board is now visible.
 
 
 | item      | it0   | it1   | it2   | it3   | it4   |
