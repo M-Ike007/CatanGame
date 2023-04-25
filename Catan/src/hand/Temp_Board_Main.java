@@ -3,6 +3,7 @@ package hand;
 import java.awt.*;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 
 import gui_board.Board;
 
@@ -14,6 +15,7 @@ import java.awt.event.ActionListener;
 
 public class Temp_Board_Main {
 	private JFrame f = new JFrame("Catan - Game");
+	private JPanel p;
 	
 	// The constructor class
 	public Temp_Board_Main() {  
@@ -472,14 +474,16 @@ public class Temp_Board_Main {
 		Hand mees = new Hand();
 	    mees.setCard("resource", "brick", 10);
 	    
-	    
-	    JFrame handPlot = new HandActivePlayer(mees, f).plotHand();
-	    System.out.println(handPlot);
-	    handPlot.setSize(1920,1080);  // sets the size of the JFrame window (1920x1080 is full screen (usually))
-	    handPlot.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    handPlot.setResizable(true);
-	    handPlot.setLayout(null);
-	    handPlot.setVisible(true);
+	    p = new JPanel();
+		p.setBorder(new EmptyBorder(5, 5, 5, 5));
+		p.setBounds(990, 350, 300, 250);
+		p.setLayout(null);
+
+	    p = new HandActivePlayer(mees, p).plotHand();
+	    f.add(p);
+        f.setVisible(true);
+        f.setResizable(false);
+	    f.setSize(1920,1080);  
     }
     public static void main(String[] args) {  
     new Temp_Board_Main();  
