@@ -3,6 +3,7 @@ package hand;
 import java.awt.*;
 
 import javax.swing.*;
+import game.Main;
 
 /** Class to plot the numbers of a players hand.
  * @author Sibbe, Mees
@@ -21,9 +22,8 @@ import javax.swing.*;
  *```
  */
 public class HandActivePlayer  {
-	private JFrame p;// = new JFrame();
-	public HandActivePlayer(Hand currentHand, JFrame p) {
-			
+	private JPanel p;// = new JFrame();
+	public HandActivePlayer(Hand currentHand, JPanel p) {
 		
 	    //JFrame f= new JFrame("TextField Example");  
 	    JTextField t1, t2, t3, t4, t5, t6, t7, t8, t9, t10;  
@@ -130,8 +130,9 @@ public class HandActivePlayer  {
 	    t10.setFont(new Font("Gill Sans Nova Regular",Font.PLAIN, 18));
 	    p.add(t10);  
 	    this.p = p; 
+	    
 	}
-	 public JFrame plotHand() {
+	 public JPanel plotHand() {
 		 return this.p;
 	 }
 	
