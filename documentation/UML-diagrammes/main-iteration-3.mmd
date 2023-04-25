@@ -1,0 +1,32 @@
+---
+title: Main overview
+---
+classDiagram
+    Main --> Board
+    Main --> PassivePayout
+    Main --> Player
+    Player --* Hand
+
+    Main --> TurnActionMenu
+    TurnActionMenu --> Dice
+
+    class Main {
+        - Board
+        - Player
+        - PassivePayout
+    }
+    class Board {
+        - LocationsHash
+        + getLocationHash() -> LocationsHash
+
+    }
+
+    class PassivePayout {
+        - LocationsHash
+        - Dice
+        + DoTheThing()
+    }
+
+    class TurnActionMenu {
+        + GetPlayerDiceRoll
+    }
