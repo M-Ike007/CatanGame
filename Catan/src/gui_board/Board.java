@@ -1,12 +1,15 @@
 package gui_board;
 
 import java.awt.*;
+import location.LocationJunction;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 // we make the main Board class in which we put everything
 
@@ -14,7 +17,21 @@ public class Board {
 	private JFrame f = new JFrame("Catan - Game");
 	
 	// The constructor class
-	public Board() {  
+	public Board() { 
+		
+		LocationJunction loc = new LocationJunction();
+		HashSet<ArrayList<Integer>> cords = loc.getLocationJunction();
+		JButton[] buttons = new JButton[cords.size()];
+		int count = 0;
+		for(ArrayList<Integer> set: cords) {
+			ButtonHandler but = new ButtonHandler();
+			buttons[count] = new JButton();
+			buttons[count].setBounds(set.get(0), set.get(1), 10,10);
+			buttons[count].addActionListener(but);
+			f.add(buttons[count]);
+			count ++;
+
+		};
 		// Brick image loading and preparing
 		ImageIcon Img_brick=new ImageIcon("Images/Tile_Brick.png");
 		Image imageBrick = Img_brick.getImage(); // "transform" it to an Image
@@ -643,5 +660,15 @@ public class Board {
 	
     public static void main(String[] args) {  
     new Board();  
+    }
+    private class ButtonHandler implements ActionListener{
+
+        @Override
+
+        public void actionPerformed(ActionEvent e){
+
+            System.out.println( ((JButton)e.getSource()).getLocation());
+
+        }
     }
 }
