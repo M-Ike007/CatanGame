@@ -1,20 +1,48 @@
 package gui_board;
 
 import java.awt.*;
+import location.LocationJunction;
+import trade_bank.TradeBank;
+import trade_player.TradePlayer;
 
 import javax.swing.*;
-import java.awt.*;
+import javax.swing.border.EmptyBorder;
+
+import dice.Dice;
+import gui_menu.BuildingSelectionMenu;
+import hand.Hand;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 // we make the main Board class in which we put everything
 
 public class Board {
-	private JFrame f = new JFrame("Catan - Game");
+	private JFrame f = new JFrame("Catan - Game"); 
+	private JPanel turn_Phase_Panel;
+	private Dice diceRoll = new Dice();
+	private String outputString = new String("");
+	private JLabel lblDiceResult = new JLabel(outputString); 
 	
 	// The constructor class
-	public Board() {  
+	public Board() { 
+		
+		LocationJunction loc = new LocationJunction();
+		HashSet<ArrayList<Integer>> cords = loc.getLocationJunction();
+		JButton[] buttons = new JButton[cords.size()];
+		int count = 0;
+		for(ArrayList<Integer> set: cords) {
+			ButtonHandler but = new ButtonHandler();
+			buttons[count] = new JButton();
+			buttons[count].setBounds(set.get(0), set.get(1), 10,10);
+			buttons[count].addActionListener(but);
+			f.add(buttons[count]);
+			count ++;
+
+		};
 		// Brick image loading and preparing
 		ImageIcon Img_brick=new ImageIcon("Images/Tile_Brick.png");
 		Image imageBrick = Img_brick.getImage(); // "transform" it to an Image
@@ -154,7 +182,82 @@ public class Board {
 	    Image cardVictoryImg = imageCardVictory.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_victory = new ImageIcon(cardVictoryImg);
-        
+ 
+	    //TURN PHASE PANEL
+	    turn_Phase_Panel = new JPanel();
+		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		turn_Phase_Panel.setBounds(990, 350, 300, 250);
+
+		turn_Phase_Panel.setLayout(null);
+		
+		
+		
+		JButton btnDevCard = new JButton("Development card");
+		btnDevCard.setBounds(20, 130, 150, 23);
+		turn_Phase_Panel.add(btnDevCard);
+		
+		JButton btnThrowDice = new JButton("Throw dice");
+		btnThrowDice.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				handleDiceroll();
+				}
+		});
+		btnThrowDice.setBounds(20, 10, 150, 23);
+		turn_Phase_Panel.add(btnThrowDice);
+		
+		JButton btnTradeBank = new JButton("Trade with bank");
+		btnTradeBank.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Hand hello = new Hand();
+				new TradeBank(hello);
+			}
+		});
+		
+		btnTradeBank.setBounds(20, 50, 150, 23);
+		turn_Phase_Panel.add(btnTradeBank);
+		
+		JButton btnBuild = new JButton("Build");
+		btnBuild.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				built_elements();
+				
+			}
+		});
+		btnBuild.setBounds(20, 170, 150, 23);
+		turn_Phase_Panel.add(btnBuild);
+		
+		JButton btnTradePlayer = new JButton("Trade with player");
+		btnTradePlayer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				handlePlayerTrade();
+			}
+			
+		});
+		btnTradePlayer.setBounds(20, 90, 150, 23);
+		turn_Phase_Panel.add(btnTradePlayer);
+		
+		JLabel lblDiceTitle = new JLabel("Dice result");
+		lblDiceTitle.setBounds(190, 10, 90, 23);
+		turn_Phase_Panel.add(lblDiceTitle);
+		
+		lblDiceResult.setBounds(190, 35, 49, 14);
+		turn_Phase_Panel.add(lblDiceResult);
+		
+		JButton btnEndTurn = new JButton("End turn");
+		btnEndTurn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// Likely have to implement a code that calls a method which exits the system and
+				// calls another method to process the end of a turn.
+				// handleEndTurn();
+			}
+		});
+		btnEndTurn.setBounds(20, 210, 150, 23);
+		turn_Phase_Panel.add(btnEndTurn);	
+		
+		f.add(turn_Phase_Panel);
+	    
+	     
+		//RESOURCE NUMBERS
 		//HashMap with resource numbers per location
 		HashMap<String, Integer> rNums = new HashMap<String, Integer>();
 
@@ -178,8 +281,6 @@ public class Board {
 		rNums.put("Pos62", 8);
 		rNums.put("Pos63", 4);
 		rNums.put("Pos64", 11);
-		
-		
 		
 		//adding the resource numbers
         // 2nd row
@@ -641,6 +742,54 @@ public class Board {
 	    f.setSize(1920,1080);  
     }
 	
+    //action handlers
+    
+    //handle the hex buttons
+    private class ButtonHandler implements ActionListener{
+
+        @Override
+
+        public void actionPerformed(ActionEvent e){
+        	Point cords = ((JButton)e.getSource()).getLocation();
+        	int x0 = cords.x;
+        	int y0 = cords.y;
+        	
+            ImageIcon Img_village=new ImageIcon("Images/Building_Village.png");
+    		Image imageVillage = Img_village.getImage(); // "transform" it to an Image
+    	    Image villageImg = imageVillage.getScaledInstance(30, 30,
+    	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
+    	    ImageIcon village = new ImageIcon(villageImg);
+        	
+        	JLabel Village = new JLabel();
+        	Village.setIcon(village);
+        	Village.setBounds(5, 5, x0, y0);
+        	f.add(Village);
+        	
+        	SwingUtilities.updateComponentTreeUI(f);
+        	
+            System.out.println( ((JButton)e.getSource()).getLocation() );
+            System.out.println(cords);
+            System.out.println(x0);
+            System.out.println(y0);
+        }
+    }
+	protected void handleDiceroll () {
+		diceRoll.setSum();
+		int output = diceRoll.getSum();
+		String outputString = Integer.toString(output);
+		lblDiceResult.setText(outputString);			
+	}
+	
+     protected void built_elements() {
+    	 BuildingSelectionMenu.main(null);
+     }
+		
+    // closing this window closes the board as well
+	protected void handlePlayerTrade() {	
+		TradePlayer.main(null);	
+	} 
+	
+	// main
     public static void main(String[] args) {  
     new Board();  
     }
