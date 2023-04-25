@@ -9,7 +9,11 @@
 
 *So that:* The active player can build or buy
 
-*Acceptance criteria*
+*Acceptance criteria* the active player can click on the junctions of every tile. 
+
+Press start game.
+Press start. 
+Player can select a button on a junction of a tile. 
 
 
 | item      | it0   | it1   | it2   | it3   | it4   |
