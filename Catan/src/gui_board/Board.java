@@ -12,7 +12,6 @@ import dice.Dice;
 import gui_menu.BuildingSelectionMenu;
 import hand.Hand;
 
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -751,8 +750,27 @@ public class Board {
         @Override
 
         public void actionPerformed(ActionEvent e){
-
-            System.out.println( ((JButton)e.getSource()).getLocation());
+        	Point cords = ((JButton)e.getSource()).getLocation();
+        	int x0 = cords.x;
+        	int y0 = cords.y;
+        	
+            ImageIcon Img_village=new ImageIcon("Images/Building_Village.png");
+    		Image imageVillage = Img_village.getImage(); // "transform" it to an Image
+    	    Image villageImg = imageVillage.getScaledInstance(30, 30,
+    	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
+    	    ImageIcon village = new ImageIcon(villageImg);
+        	
+        	JLabel Village = new JLabel();
+        	Village.setIcon(village);
+        	Village.setBounds(5, 5, x0, y0);
+        	f.add(Village);
+        	
+        	SwingUtilities.updateComponentTreeUI(f);
+        	
+            System.out.println( ((JButton)e.getSource()).getLocation() );
+            System.out.println(cords);
+            System.out.println(x0);
+            System.out.println(y0);
         }
     }
 	protected void handleDiceroll () {
