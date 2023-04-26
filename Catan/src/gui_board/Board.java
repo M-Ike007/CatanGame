@@ -801,6 +801,6 @@ public class Board {
 	
 	// main
     public static void main(String[] args) {  
-    new Board2();  
+    new Board();  
     }
 }
