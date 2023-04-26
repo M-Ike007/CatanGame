@@ -27,22 +27,17 @@ public class Board {
 	private String outputString = new String("");
 	private JLabel lblDiceResult = new JLabel(outputString); 
 	
-	// The constructor class
-	public Board() { 
-		
-		LocationJunction loc = new LocationJunction();
-		HashSet<ArrayList<Integer>> cords = loc.getLocationJunction();
-		JButton[] buttons = new JButton[cords.size()];
-		int count = 0;
-		for(ArrayList<Integer> set: cords) {
-			ButtonHandler but = new ButtonHandler();
-			buttons[count] = new JButton();
-			buttons[count].setBounds(set.get(0), set.get(1), 10,10);
-			buttons[count].addActionListener(but);
-			f.add(buttons[count]);
-			count ++;
+	LocationJunction loc = new LocationJunction();
+	HashSet<ArrayList<Integer>> hexCorners = loc.getLocationJunction();		//HashSet with all the coordinates for building
+	JButton[] buttons = new JButton[hexCorners.size()];						//List of JButtons for building
+	JLabel[] labels = new JLabel[hexCorners.size()];						//List of JLabels for building
+	HashMap<Point, Integer> lblCords = new HashMap<Point, Integer>();		//HashMap for labels and location for building
+	HashMap<String, Integer> rNums = new HashMap<String, Integer>();		//HashMap for resource numbers and locations
+	
+	
+	// PREPARING ALL THE IMAGES
+	// Outside of the constructor class so the event handlers can access the images (needed for building and the robber)
 
-		};
 		// Brick image loading and preparing
 		ImageIcon Img_brick=new ImageIcon("Images/Tile_Brick.png");
 		Image imageBrick = Img_brick.getImage(); // "transform" it to an Image
@@ -51,146 +46,169 @@ public class Board {
 	    ImageIcon brick = new ImageIcon(brickImg);
 	    
 	    // Wood image loading and preparing
-        ImageIcon Img_wood=new ImageIcon("Images/Tile_Wood.png");
+	    ImageIcon Img_wood=new ImageIcon("Images/Tile_Wood.png");
 		Image imageWood = Img_wood.getImage(); // "transform" it to an Image
 	    Image woodImg = imageWood.getScaledInstance(100, 100,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon wood = new ImageIcon(woodImg);
 	    
 	    // Ore image loading and preparing
-        ImageIcon Img_ore=new ImageIcon("Images/Tile_Ore.png");
+	    ImageIcon Img_ore=new ImageIcon("Images/Tile_Ore.png");
 		Image imageOre = Img_ore.getImage(); // "transform" it to an Image
 	    Image oreImg = imageOre.getScaledInstance(100, 100,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon ore = new ImageIcon(oreImg);
 	    
 	    // Wool image loading and preparing
-        ImageIcon Img_wool=new ImageIcon("Images/Tile_Wool.png");
+	    ImageIcon Img_wool=new ImageIcon("Images/Tile_Wool.png");
 		Image imageWool = Img_wool.getImage(); // "transform" it to an Image
 	    Image woolImg = imageWool.getScaledInstance(100, 100,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon wool = new ImageIcon(woolImg);
 	    
 	    // Wheat image loading and preparing	
-        ImageIcon Img_wheat=new ImageIcon("Images/Tile_Wheat.png");
+	    ImageIcon Img_wheat=new ImageIcon("Images/Tile_Wheat.png");
 		Image imageWheat = Img_wheat.getImage(); // "transform" it to an Image
 	    Image wheatImg = imageWheat.getScaledInstance(100, 100,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon wheat = new ImageIcon(wheatImg);
 	    
 	    // Desert image loading and preparing
-        ImageIcon Img_desert=new ImageIcon("Images/Tile_Desert.png");
+	    ImageIcon Img_desert=new ImageIcon("Images/Tile_Desert.png");
 		Image imageDesert = Img_desert.getImage(); // "transform" it to an Image
 	    Image desertImg = imageDesert.getScaledInstance(100, 100,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon desert = new ImageIcon(desertImg);
-
-        // Sea image loading and preparing
-        ImageIcon Img_sea=new ImageIcon("Images/Tile_Sea.png");
-        Image imageSea = Img_sea.getImage(); // "transform" it to an Image
+	
+	    // Sea image loading and preparing
+	    ImageIcon Img_sea=new ImageIcon("Images/Tile_Sea.png");
+	    Image imageSea = Img_sea.getImage(); // "transform" it to an Image
 	    Image seaImg = imageSea.getScaledInstance(100, 100,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon sea = new ImageIcon(seaImg);
 	    
 	    // Village image loading and preparing
-        ImageIcon Img_village=new ImageIcon("Images/Building_Village.png");
+	    ImageIcon Img_village=new ImageIcon("Images/Building_Village.png");
 		Image imageVillage = Img_village.getImage(); // "transform" it to an Image
-	    Image villageImg = imageVillage.getScaledInstance(100, 100,
+	    Image villageImg = imageVillage.getScaledInstance(25, 25,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon village = new ImageIcon(villageImg);
 	    
 	    // City image loading and preparing
-        ImageIcon Img_city=new ImageIcon("Images/Building_City.png");
+	    ImageIcon Img_city=new ImageIcon("Images/Building_City.png");
 		Image imageCity = Img_city.getImage(); // "transform" it to an Image
-	    Image cityImg = imageCity.getScaledInstance(100, 100,
+	    Image cityImg = imageCity.getScaledInstance(25, 25,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon city = new ImageIcon(cityImg);
 	    
 	    // Cost image loading and preparing
-        ImageIcon Img_cost=new ImageIcon("Images/Cost_Table.jpg");
+	    ImageIcon Img_cost=new ImageIcon("Images/Cost_Table.jpg");
 		Image imageCost = Img_cost.getImage(); // "transform" it to an Image
 	    Image costImg = imageCost.getScaledInstance(250, 333,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon cost = new ImageIcon(costImg);
-        
+	    
 	    // Card brick image loading and preparing
-        ImageIcon Img_card_brick=new ImageIcon("Images/Card_Brick.jpg");
+	    ImageIcon Img_card_brick=new ImageIcon("Images/Card_Brick.jpg");
 		Image imageCardBrick = Img_card_brick.getImage(); // "transform" it to an Image
 	    Image cardBrickImg = imageCardBrick.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_brick = new ImageIcon(cardBrickImg);
 	    
 	    // Card forest image loading and preparing
-        ImageIcon Img_card_forest=new ImageIcon("Images/Card_Forest.jpg");
-        Image imageCardForest = Img_card_forest.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_forest=new ImageIcon("Images/Card_Forest.jpg");
+	    Image imageCardForest = Img_card_forest.getImage(); // "transform" it to an Image
 	    Image cardForestImg = imageCardForest.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_forest = new ImageIcon(cardForestImg);
 	    
 	    // Card ore image loading and preparing
-        ImageIcon Img_card_ore=new ImageIcon("Images/Card_Ore.jpg");
-        Image imageCardOre = Img_card_ore.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_ore=new ImageIcon("Images/Card_Ore.jpg");
+	    Image imageCardOre = Img_card_ore.getImage(); // "transform" it to an Image
 	    Image cardOreImg = imageCardOre.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_ore = new ImageIcon(cardOreImg);
 	    
 	    // Card sheep image loading and preparing
-        ImageIcon Img_card_sheep=new ImageIcon("Images/Card_Sheep.jpg");
-        Image imageCardSheep = Img_card_sheep.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_sheep=new ImageIcon("Images/Card_Sheep.jpg");
+	    Image imageCardSheep = Img_card_sheep.getImage(); // "transform" it to an Image
 	    Image cardSheepImg = imageCardSheep.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_sheep = new ImageIcon(cardSheepImg);
 	    
 	    // Card wheat image loading and preparing
-        ImageIcon Img_card_wheat=new ImageIcon("Images/Card_Wheat.jpg");
-        Image imageCardWheat = Img_card_wheat.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_wheat=new ImageIcon("Images/Card_Wheat.jpg");
+	    Image imageCardWheat = Img_card_wheat.getImage(); // "transform" it to an Image
 	    Image cardWheatImg = imageCardWheat.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_wheat = new ImageIcon(cardWheatImg);
 	    
 	    // Card invention image loading and preparing
-        ImageIcon Img_card_invention=new ImageIcon("Images/Card_Invention.jpg");
-        Image imageCardInvention = Img_card_invention.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_invention=new ImageIcon("Images/Card_Invention.jpg");
+	    Image imageCardInvention = Img_card_invention.getImage(); // "transform" it to an Image
 	    Image cardInventionImg = imageCardInvention.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_invention = new ImageIcon(cardInventionImg); 
 	    
 	 	// Card knight image loading and preparing
-        ImageIcon Img_card_knight=new ImageIcon("Images/Card_Knight.jpg");
-        Image imageCardKnight = Img_card_knight.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_knight=new ImageIcon("Images/Card_Knight.jpg");
+	    Image imageCardKnight = Img_card_knight.getImage(); // "transform" it to an Image
 	    Image cardKnightImg = imageCardKnight.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_knight = new ImageIcon(cardKnightImg);
 	    
 	    // Card monopoly image loading and preparing
-        ImageIcon Img_card_monopoly=new ImageIcon("Images/Card_Monopoly.jpg");
-        Image imageCardMonopoly = Img_card_monopoly.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_monopoly=new ImageIcon("Images/Card_Monopoly.jpg");
+	    Image imageCardMonopoly = Img_card_monopoly.getImage(); // "transform" it to an Image
 	    Image cardMonopolyImg = imageCardMonopoly.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_monopoly = new ImageIcon(cardMonopolyImg);
 	    
 	    // Card two roads image loading and preparing
-        ImageIcon Img_card_two_roads=new ImageIcon("Images/Card_TwoRoads.jpg");
-        Image imageCardTwoRoads = Img_card_two_roads.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_two_roads=new ImageIcon("Images/Card_TwoRoads.jpg");
+	    Image imageCardTwoRoads = Img_card_two_roads.getImage(); // "transform" it to an Image
 	    Image cardTwoRoadsImg = imageCardTwoRoads.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_two_roads = new ImageIcon(cardTwoRoadsImg);
 	    
 	    // Card victory image loading and preparing
-        ImageIcon Img_card_victory=new ImageIcon("Images/Card_VP.jpg");
-        Image imageCardVictory = Img_card_victory.getImage(); // "transform" it to an Image
+	    ImageIcon Img_card_victory=new ImageIcon("Images/Card_VP.jpg");
+	    Image imageCardVictory = Img_card_victory.getImage(); // "transform" it to an Image
 	    Image cardVictoryImg = imageCardVictory.getScaledInstance(65, 95,
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon card_victory = new ImageIcon(cardVictoryImg);
+	
+	
+	// The constructor class
+	
+	public Board() { 
+		
+		// BUTTONS AND LABELS FOR BUILDING
+		int count = 0;
+		for(ArrayList<Integer> set: hexCorners) {
+			ButtonHandler but = new ButtonHandler();
+			buttons[count] = new JButton();
+			buttons[count].setBounds(set.get(0), set.get(1), 10, 10);
+			buttons[count].addActionListener(but);
+			f.add(buttons[count]);
+			count ++;
+		}	
+			
+		int count2 = 0;
+		for(ArrayList<Integer> set: hexCorners) {
+			labels[count2] = new JLabel();		
+			labels[count2].setBounds(set.get(0),set.get(1), 30, 30);
+			f.add(labels[count2]);		
+			Point c = new Point(set.get(0),set.get(1));			
+			lblCords.put(c,count2);			
+			count2 ++;
+		}
  
-	    //TURN PHASE PANEL
+	    // TURN PHASE PANEL
 	    turn_Phase_Panel = new JPanel();
 		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		turn_Phase_Panel.setBounds(990, 350, 300, 250);
-
-		turn_Phase_Panel.setLayout(null);
-		
-		
+		turn_Phase_Panel.setBounds(997, 350, 300, 250);
+		turn_Phase_Panel.setLayout(null);				
 		
 		JButton btnDevCard = new JButton("Development card");
 		btnDevCard.setBounds(20, 130, 150, 23);
@@ -208,21 +226,18 @@ public class Board {
 		JButton btnTradeBank = new JButton("Trade with bank");
 		btnTradeBank.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Hand hello = new Hand();
-				new TradeBank(hello);
+				handleBankTrade();
 			}
-		});
-		
+		});		
 		btnTradeBank.setBounds(20, 50, 150, 23);
 		turn_Phase_Panel.add(btnTradeBank);
 		
 		JButton btnBuild = new JButton("Build");
 		btnBuild.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				built_elements();
-				
+				built_elements();				
 			}
-		});
+		});		
 		btnBuild.setBounds(20, 170, 150, 23);
 		turn_Phase_Panel.add(btnBuild);
 		
@@ -230,17 +245,16 @@ public class Board {
 		btnTradePlayer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				handlePlayerTrade();
-			}
-			
-		});
+			}			
+		});		
 		btnTradePlayer.setBounds(20, 90, 150, 23);
 		turn_Phase_Panel.add(btnTradePlayer);
 		
 		JLabel lblDiceTitle = new JLabel("Dice result");
-		lblDiceTitle.setBounds(190, 10, 90, 23);
+		lblDiceTitle.setBounds(188, 10, 90, 23);
 		turn_Phase_Panel.add(lblDiceTitle);
 		
-		lblDiceResult.setBounds(190, 35, 49, 14);
+		lblDiceResult.setBounds(205, 35, 49, 14);
 		turn_Phase_Panel.add(lblDiceResult);
 		
 		JButton btnEndTurn = new JButton("End turn");
@@ -255,14 +269,11 @@ public class Board {
 		turn_Phase_Panel.add(btnEndTurn);	
 		
 		f.add(turn_Phase_Panel);
-	    
+		
 	     
-		//RESOURCE NUMBERS
-		//HashMap with resource numbers per location
-		HashMap<String, Integer> rNums = new HashMap<String, Integer>();
-
+		// RESOURCE NUMBERS
 		// Add keys and values (Position, ResourceNumber) 
-		//The numbers in the key represent rows and columns: Pos45 = row 4 and column 5
+		// The numbers in the key represent rows and columns: Pos45 = row 4 and column 5
 		rNums.put("Pos22", 6);
 		rNums.put("Pos23", 3);
 		rNums.put("Pos24", 8);
@@ -282,7 +293,7 @@ public class Board {
 		rNums.put("Pos63", 4);
 		rNums.put("Pos64", 11);
 		
-		//adding the resource numbers
+		// Adding the resource numbers to the frame
         // 2nd row
         JLabel Pos22 = new JLabel();
         Pos22.setBounds(500, 100, 100, 100);
@@ -423,7 +434,7 @@ public class Board {
 	    
 	    
 	    
-	    
+	    // RESOURCE TILES
 	    // Adding the tiles.
         
         //1st row
@@ -655,151 +666,141 @@ public class Board {
         Row7Col4.setSize(100, 100);
         f.add(Row7Col4);  
 
-	    // Cost card
+               
+	    // COST TABLE
 		JLabel CostCard = new JLabel();
 		CostCard.setIcon(cost);
 		CostCard.setBounds(1015, 10, 250, 333);
 		CostCard.setSize(250, 333);
 		f.add(CostCard);
 		
-		// brick card
+		
+		// CARDS
+		// Brick card
 		JLabel BrickCard = new JLabel();
 		BrickCard.setIcon(card_brick);
-		BrickCard.setBounds(320, 590, 65, 95);
+		BrickCard.setBounds(302, 590, 65, 95);
 		BrickCard.setSize(65, 95);
 		f.add(BrickCard);
 		
-		// forest card
+		// Forest card
 		JLabel ForestCard = new JLabel();
 		ForestCard.setIcon(card_forest);
-		ForestCard.setBounds(390, 590, 65, 95);
+		ForestCard.setBounds(372, 590, 65, 95);
 		ForestCard.setSize(65, 95);
 		f.add(ForestCard);
 
-		// ore card
+		// Ore card
 		JLabel OreCard = new JLabel();
 		OreCard.setIcon(card_ore);
-		OreCard.setBounds(460, 590, 65, 95);
+		OreCard.setBounds(442, 590, 65, 95);
 		OreCard.setSize(65, 95);
 		f.add(OreCard);
 		
-		// sheep card
+		// Sheep card
 		JLabel SheepCard = new JLabel();
 		SheepCard.setIcon(card_sheep);
-		SheepCard.setBounds(530, 590, 65, 95);
+		SheepCard.setBounds(512, 590, 65, 95);
 		SheepCard.setSize(65, 95);
 		f.add(SheepCard);
 		
-		// wheat card
+		// Wheat card
 		JLabel WheatCard = new JLabel();
 		WheatCard.setIcon(card_wheat);
-		WheatCard.setBounds(600, 590, 65, 95);
+		WheatCard.setBounds(582, 590, 65, 95);
 		WheatCard.setSize(65, 95);
 		f.add(WheatCard);
 		
 		// Knight card
 		JLabel KnightCard = new JLabel();
 		KnightCard.setIcon(card_knight);
-		KnightCard.setBounds(670, 590, 65, 95);
+		KnightCard.setBounds(652, 590, 65, 95);
 		KnightCard.setSize(65, 95);
 		f.add(KnightCard);
 		
 		// Invention card
 		JLabel InventionCard = new JLabel();
 		InventionCard.setIcon(card_invention);
-		InventionCard.setBounds(740, 590, 65, 95);
+		InventionCard.setBounds(722, 590, 65, 95);
 		InventionCard.setSize(65, 95);
 		f.add(InventionCard);
 		
 		// Monopoly card
 		JLabel MonopolyCard = new JLabel();
 		MonopolyCard.setIcon(card_monopoly);
-		MonopolyCard.setBounds(810, 590, 65, 95);
+		MonopolyCard.setBounds(792, 590, 65, 95);
 		MonopolyCard.setSize(65, 95);
 		f.add(MonopolyCard);
 		
 		// Two roads card
 		JLabel TwoRoadsCard = new JLabel();
 		TwoRoadsCard.setIcon(card_two_roads);
-		TwoRoadsCard.setBounds(880, 590, 65, 95);
+		TwoRoadsCard.setBounds(862, 590, 65, 95);
 		TwoRoadsCard.setSize(65, 95);
 		f.add(TwoRoadsCard);
 		
 		// Victory card
 		JLabel VictoryCard = new JLabel();
 		VictoryCard.setIcon(card_victory);
-		VictoryCard.setBounds(950, 590, 65, 95);
+		VictoryCard.setBounds(932, 590, 65, 95);
 		VictoryCard.setSize(65, 95);
-		f.add(VictoryCard);
+		f.add(VictoryCard);		
 		
 		// To fix the problem of the last JLabel location
 		JLabel last = new JLabel();
 		f.add(last);
-    	
+		    		
+		
 		// Settings of the JFrame
         f.setVisible(true);
         f.setResizable(false);
 	    f.setSize(1920,1080);  
+	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 	
 	
-    //action handlers
+    // Action handlers
     
-    //handle the hex buttons
-	//First button press works, second doesn't :(
-	
+    // Handle the build buttons on the board
     private class ButtonHandler implements ActionListener{
 
         @Override
-
+    
         public void actionPerformed(ActionEvent e){
-        	Point cords = ((JButton)e.getSource()).getLocation();
-        	int x0 = cords.x-4;
-        	int y0 = cords.y+15;
-        	
-            ImageIcon Img_village = new ImageIcon("Images/Building_Village.png");
-    		Image imageVillage = Img_village.getImage(); // "transform" it to an Image
-    	    Image villageImg = imageVillage.getScaledInstance(30, 30,
-    	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-    	    ImageIcon village  = new ImageIcon(villageImg);
-        	
-        	JLabel Village = new JLabel();
-        	Village.setIcon(village);
-        	Village.setBounds(x0, y0, 30, 30);
-        	f.add(Village);
-        	
-        	JLabel empty = new JLabel();
-        	empty.setBounds(10, 10, 0, 0);
-        	f.add(empty);      	
-        	f.remove(empty);       	        
-        	
-        	SwingUtilities.updateComponentTreeUI(f);
-        	f.setComponentZOrder(Village, 0);
-        	
-            System.out.println( ((JButton)e.getSource()).getLocation() );
-            System.out.println(cords);
-            System.out.println(x0);
-            System.out.println(y0);
+        	Point buildingCord = ((JButton)e.getSource()).getLocation();
+        	int lblNum = lblCords.get(buildingCord);      	
+ 
+        	labels[lblNum].setIcon(village);
+        	labels[lblNum].setBounds(buildingCord.x-8,buildingCord.y-12,30,30);
+
+            System.out.println(buildingCord);
+            System.out.println(lblCords.get(buildingCord));
         }
     }
-	protected void handleDiceroll () {
+    
+	protected void handleDiceroll () {		// Handle dice roll
 		diceRoll.setSum();
 		int output = diceRoll.getSum();
 		String outputString = Integer.toString(output);
 		lblDiceResult.setText(outputString);			
 	}
 	
-     protected void built_elements() {
+    protected void built_elements() {		// Handle building
     	 BuildingSelectionMenu.main(null);
-     }
+    }
 		
-    // closing this window closes the board as well
-	protected void handlePlayerTrade() {	
+	protected void handlePlayerTrade() {	// Handle player trading (closing this window closes the board as well, fix)
 		TradePlayer.main(null);	
 	} 
 	
+	protected void handleBankTrade() {		// Handle bank trading
+		Hand hello = new Hand();
+		new TradeBank(hello);
+	}
+	
+	
 	// main
     public static void main(String[] args) {  
-    new Board();  
+    new Board2();  
     }
 }
