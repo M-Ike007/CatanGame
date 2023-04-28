@@ -752,6 +752,16 @@ public class Board {
 		JLabel last = new JLabel();
 		f.add(last);
 		
+		updateActivePlayer();
+		
+		// Settings of the JFrame
+        f.setVisible(true);
+        f.setResizable(false);
+	    f.setSize(1920,1080);  
+	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+	public void updateActivePlayer() {
 		Hand mees = new Hand();
 	    mees.setCard("resource", "brick", 10);
 	    
@@ -762,13 +772,7 @@ public class Board {
 
 	    p = new HandActivePlayer(mees, p).plotHand();
 	    f.add(p);
-		
-		// Settings of the JFrame
-        f.setVisible(true);
-        f.setResizable(false);
-	    f.setSize(1920,1080);  
-	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+	}
 	
 	
     // Action handlers
