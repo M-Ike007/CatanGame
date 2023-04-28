@@ -1,4 +1,4 @@
-package trade_player;
+package tradeplayer;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;

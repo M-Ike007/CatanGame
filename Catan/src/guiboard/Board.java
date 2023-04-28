@@ -2,8 +2,8 @@ package guiboard;
 
 import java.awt.*;
 import location.LocationJunction;
-import trade_player.TradePlayer;
 import tradebank.TradeBank;
+import tradeplayer.TradePlayer;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
