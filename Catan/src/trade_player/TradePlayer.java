@@ -60,7 +60,7 @@ public class TradePlayer {
 
 				frame.setVisible(true);
 				frame.setSize(700, 200);
-				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			}
 		});
 
