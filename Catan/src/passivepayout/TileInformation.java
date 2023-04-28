@@ -39,7 +39,7 @@ public class TileInformation {
 		
 	}
 	
-	public void SetHouseOnTile() {
+	public void setHouseOnTile() {
 		housesPlayers.put(1, "2-5-6-14-15-18");
 		housesPlayers.put(2, "7-10-11-12-13");
 	}

@@ -11,7 +11,7 @@ public class TileInformationTest extends TestCase {
 		TileInformation information = new TileInformation();
 		information.setTileNumber();
 		information.SetResourceOfTile();
-		information.SetHouseOnTile();
+		information.setHouseOnTile();
 		information.SetPassivePayoutInformation();
 		
 		information.SetTilesInformation(11);

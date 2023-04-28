@@ -19,7 +19,7 @@ public class PassivePayout {
 	public void SetPayout() {
 		information.setTileNumber();
 		information.SetResourceOfTile();
-		information.SetHouseOnTile();
+		information.setHouseOnTile();
 		information.SetPassivePayoutInformation();
 		information.SetTilesInformation(11);
 		System.out.println(dice_number);
