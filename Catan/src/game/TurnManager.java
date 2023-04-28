@@ -40,8 +40,8 @@ public class TurnManager {
 	
 		if (activeplayer == players.get(0)) {
 			this.activeplayer = players.get(1);
-		}
-		if (activeplayer == players.get(1)) {
+		}  	
+		else {
 			this.activeplayer = players.get(0);
 		}
 	}
