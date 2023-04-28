@@ -1,4 +1,4 @@
-package gui_menu;
+package guimenu;
 import javax.swing.JFrame;
 
 import javax.swing.JLabel;
@@ -8,9 +8,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
-import gui_board.*;
 import player.*;
 import game.*;
+import guiboard.*;
+
 import javax.swing.JPanel;
 import java.util.Hashtable;
 

@@ -3,7 +3,7 @@ import hand.Hand;
 
 import player.*;
 import dice.*;
-import gui_board.*;
+import guiboard.*;
 
 import java.util.*;
 import java.util.Map.Entry;

@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-import gui_board.Board;
+import guiboard.Board;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

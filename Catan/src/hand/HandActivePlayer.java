@@ -121,7 +121,7 @@ public class HandActivePlayer  {
 	    p.add(t9);
 	    
 	    t10=new JTextField(Integer.toString(currentHand.getCard("development", 
-	    		"vpc")));  
+	    		"vcp")));  
 	    t10.setBounds(950,590, 65,30);
 	    t10.setEditable(false);
 	    t10.setHorizontalAlignment(JTextField.CENTER);

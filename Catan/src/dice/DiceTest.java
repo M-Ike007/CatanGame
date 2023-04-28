@@ -8,7 +8,7 @@ public class DiceTest extends TestCase
 	 * Test if the sum of the dice throws falls in the 
 	 * correct range (minimum value 2 and maximum value of 12).
 	 */
-	public void testCreation()
+	public void testDiceRoll()
 	{
 		int numTests = 10000000;
 		int error = 0;
