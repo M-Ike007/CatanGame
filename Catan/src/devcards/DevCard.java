@@ -51,6 +51,10 @@ public class DevCard {
 	 */
 	public void increaseHand(Hand myHand, String card) {		
 		myHand.setCard("development",card, 1);
+		myHand.setCard("resource", "wool", -1);
+		myHand.setCard("resource", "wheat", -1);
+		myHand.setCard("resource", "ore", -1);
+		
 	}
 }
 
