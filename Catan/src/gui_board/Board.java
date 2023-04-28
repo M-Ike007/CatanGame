@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 import dice.Dice;
 import gui_menu.BuildingSelectionMenu;
 import hand.Hand;
+import hand.HandActivePlayer;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,6 +27,7 @@ public class Board {
 	private Dice diceRoll = new Dice();
 	private String outputString = new String("");
 	private JLabel lblDiceResult = new JLabel(outputString); 
+	private JPanel p;
 	
 	LocationJunction loc = new LocationJunction();
 	HashSet<ArrayList<Integer>> hexCorners = loc.getLocationJunction();		//HashSet with all the coordinates for building
@@ -749,7 +751,17 @@ public class Board {
 		// To fix the problem of the last JLabel location
 		JLabel last = new JLabel();
 		f.add(last);
-		    		
+		
+		Hand mees = new Hand();
+	    mees.setCard("resource", "brick", 10);
+	    
+	    p = new JPanel();
+		p.setBorder(new EmptyBorder(5, 5, 5, 5));
+		p.setBounds(300, 590, 260, 20);
+		p.setLayout(null);
+
+	    p = new HandActivePlayer(mees, p).plotHand();
+	    f.add(p);
 		
 		// Settings of the JFrame
         f.setVisible(true);
