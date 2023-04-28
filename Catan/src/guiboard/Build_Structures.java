@@ -1,4 +1,4 @@
-package gui_board;
+package guiboard;
 
 import java.awt.Image;
 
