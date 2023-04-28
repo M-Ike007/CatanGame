@@ -9,7 +9,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 import dice.Dice;
-import gui_menu.BuildingSelectionMenu;
+import guimenu.BuildingSelectionMenu;
 import hand.Hand;
 import hand.HandActivePlayer;
 
