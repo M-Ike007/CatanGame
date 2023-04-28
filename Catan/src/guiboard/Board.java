@@ -110,6 +110,20 @@ public class Board {
 	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
 	    ImageIcon cost = new ImageIcon(costImg);
 	    
+	    // Red Village image loading and preparing (player 1)
+	    ImageIcon Img_village_red=new ImageIcon("Images/Village_Red.png");
+		Image imageVillage_Red = Img_village_red.getImage(); // "transform" it to an Image
+	    Image Red_Village_Img = imageVillage_Red.getScaledInstance(30, 30,
+	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
+	    ImageIcon Red_Village = new ImageIcon(Red_Village_Img);
+	    
+	 // Blue Village image loading and preparing (player 2)
+		ImageIcon Img_village_blue=new ImageIcon("Images/Village_Blue.png");
+		Image imageVillage_Blue = Img_village_blue.getImage(); // "transform" it to an Image
+	    Image Blue_Village_Img = imageVillage_Blue.getScaledInstance(30, 30,
+	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
+	    ImageIcon Blue_Village = new ImageIcon(Blue_Village_Img);
+	    
 	    // Card brick image loading and preparing
 	    ImageIcon Img_card_brick=new ImageIcon("Images/Card_Brick.jpg");
 		Image imageCardBrick = Img_card_brick.getImage(); // "transform" it to an Image
@@ -754,6 +768,8 @@ public class Board {
 		
 		updateActivePlayer();
 		
+		showHouses();
+		
 		// Settings of the JFrame
         f.setVisible(true);
         f.setResizable(false);
@@ -761,6 +777,22 @@ public class Board {
 	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+	public void showHouses() {
+    	labels[1].setIcon(Blue_Village);
+    	labels[1].setBounds(795-8,270-12,30,30);
+    	
+    	labels[9].setIcon(Blue_Village);
+    	labels[9].setBounds(545-8,345-12,30,30);
+    	
+    	labels[11].setIcon(Red_Village);
+    	labels[11].setBounds(645-8,195-12,30,30);
+    	
+    	labels[2].setIcon(Red_Village);
+    	labels[2].setBounds(745-8,395-12,30,30);
+    	
+	}
+	
+	
 	public void updateActivePlayer() {
 		Hand player1 = new Hand();
 	    player1.setCard("resource", "brick", 10);
