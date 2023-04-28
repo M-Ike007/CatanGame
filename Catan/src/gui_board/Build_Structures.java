@@ -1,4 +1,4 @@
-package turn_player_action;
+package gui_board;
 
 import java.awt.Image;
 
