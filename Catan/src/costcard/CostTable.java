@@ -1,4 +1,4 @@
-package cost_card;
+package costcard;
 
 import java.util.*;
 
