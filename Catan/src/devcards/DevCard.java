@@ -10,7 +10,7 @@ public class DevCard {
 	/**
 	 * HashMap emulates the distribution of cards in the game.
 	 * right now there is infinite card so it is possible to draw more cards than are normally available (like 3 monopoly cards).
-	 * Return random Development Card from the HashMap
+	 * @Return random Development Card from the HashMap
 	 */
 	public String drawDevCard() {
 		Random generator = new Random();	
@@ -29,11 +29,11 @@ public class DevCard {
 			distribution.put(12, "knight");
 			distribution.put(13, "knight");
 			distribution.put(14, "knight");
-			distribution.put(15, "vpc");
-			distribution.put(16, "vpc");
-			distribution.put(17, "vpc");
-			distribution.put(18, "vpc");
-			distribution.put(19, "vpc");
+			distribution.put(15, "vcp");
+			distribution.put(16, "vcp");
+			distribution.put(17, "vcp");
+			distribution.put(18, "vcp");
+			distribution.put(19, "vcp");
 			distribution.put(20, "twoRoads");
 			distribution.put(21, "twoRoads");		
 			distribution.put(22, "invention");
@@ -44,7 +44,11 @@ public class DevCard {
 			String drawnCard = distribution.get(result);	
 		return drawnCard;
 	}
-	
+	/**
+	 * increases development card in hand
+	 * @param myHand is the hand of the player.
+	 * @param card is the type development card.
+	 */
 	public void increaseHand(Hand myHand, String card) {		
 		myHand.setCard("development",card, 1);
 	}
