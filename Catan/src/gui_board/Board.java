@@ -762,15 +762,15 @@ public class Board {
     }
 
 	public void updateActivePlayer() {
-		Hand mees = new Hand();
-	    mees.setCard("resource", "brick", 10);
+		Hand player1 = new Hand();
+	    player1.setCard("resource", "brick", 10);
 	    
 	    p = new JPanel();
 		p.setBorder(new EmptyBorder(5, 5, 5, 5));
 		p.setBounds(300, 590, 260, 20);
 		p.setLayout(null);
 
-	    p = new HandActivePlayer(mees, p).plotHand();
+	    p = new HandActivePlayer(player1, p).plotHand();
 	    f.add(p);
 	}
 	
