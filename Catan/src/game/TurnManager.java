@@ -9,7 +9,7 @@ import player.Player;
  * This class is called by the board and the MainGameLoop.
  */
 
-public class TemporaryMain {
+public class TurnManager {
 	public ArrayList<Player> players;
 	public Player activeplayer;
 	
@@ -17,7 +17,7 @@ public class TemporaryMain {
  * @param players ArrayList of players of the Player objects.
  *
  */
-	public TemporaryMain(ArrayList<Player> players){ 
+	public TurnManager(ArrayList<Player> players){ 
 		this.players = players;
 		
 	}

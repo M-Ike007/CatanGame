@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import hand.Hand;
-public class TemporaryMainTest extends TestCase {
+public class TurnManagerTest extends TestCase {
 	
 	public void testSetGetTurn() {
 		Hand hand1 = new Hand();
@@ -17,7 +17,7 @@ public class TemporaryMainTest extends TestCase {
 		ArrayList<Player> players = new ArrayList<>(
                 Arrays.asList(player1, player2));
 	
-		TemporaryMain main = new TemporaryMain(players);
+		TurnManager main = new TurnManager(players);
 		main.setActiveplayer(player2);
 		main.setTurn();
 		Player act = main.getTurn();
