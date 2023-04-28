@@ -1,4 +1,4 @@
-package cost_card;
+package costcard;
 
 import junit.framework.TestCase;
 import java.util.*;

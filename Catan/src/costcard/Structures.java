@@ -1,4 +1,4 @@
-package cost_card;
+package costcard;
 
 /** Enum to track the different kinds of Catan structures.
  */
