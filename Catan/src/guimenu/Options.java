@@ -1,4 +1,4 @@
-package gui_menu;
+package guimenu;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
