@@ -6,7 +6,9 @@ public class PassivePayoutTest {
 		PassivePayout test = new PassivePayout();
 		test.GetDiceThrow();
 		test.SetPayout();
-
+		test.GetPayout();
 	}
+	
+	
 
 }
