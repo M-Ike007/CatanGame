@@ -4,13 +4,13 @@ import junit.framework.TestCase;
 import java.util.ArrayList;
 import java.util.List;
 import hand.Hand;
-import devcards.*;
+
 
 public class TheTestDev extends TestCase{
 	
 	public void testDrawCard() {
 		DevCard testDevCard = new DevCard();
-		List options = new ArrayList();
+		List<String> options = new ArrayList<String>();
 		options.add("knight");
 		options.add("vcp");
 		options.add("monopoly");
@@ -60,9 +60,11 @@ public class TheTestDev extends TestCase{
 		int sum = knight + twoRoads + invention + monopoly + vcp + wheat + ore + wood + brick + wool;
 		System.out.println(sum);
 		assertEquals(sum, 4);
-		
-		
-		
 	}
-	
 }
+
+
+
+
+
+

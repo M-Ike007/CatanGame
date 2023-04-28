@@ -1,5 +1,10 @@
 package devcards;
+import hand.Hand;
 
 public class DevVicPoint extends DevCard{
-	//method to increase victory points
+	DevVicPoint card = new DevVicPoint();
+	
+	public void increaseInvention(Hand myHand) {
+		card.increaseHand(myHand, "vcp");
+	}
 }

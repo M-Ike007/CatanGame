@@ -1,5 +1,10 @@
 package devcards;
+import hand.Hand;
 
 public class DevKnight extends DevCard{
-	// method for the knight or biggest army
+	DevKnight card = new DevKnight();
+	
+	public void increaseInvention(Hand myHand) {
+		card.increaseHand(myHand, "knight");
+	}
 }
