@@ -2,6 +2,9 @@ package guiboard;
 
 import java.awt.*;
 import location.LocationJunction;
+import passivepayout.PassivePayout;
+import player.Player;
+import player.PlayerColour;
 import tradebank.TradeBank;
 import tradeplayer.TradePlayer;
 
@@ -12,10 +15,12 @@ import dice.Dice;
 import guimenu.BuildingSelectionMenu;
 import hand.Hand;
 import hand.HandActivePlayer;
+import game.TurnManager;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -27,7 +32,15 @@ public class Board {
 	private Dice diceRoll = new Dice();
 	private String outputString = new String("");
 	private JLabel lblDiceResult = new JLabel(outputString); 
-	private JPanel p;
+	private JPanel p = new JPanel();
+	private int round = 0;
+	public Player player1 = new Player(new Hand(), PlayerColour.BLUE, "1");
+	public Player player2 = new Player(new Hand(), PlayerColour.RED, "2"); 
+	public ArrayList<Player> playerList = new ArrayList<>(Arrays.asList(player1, player2));
+	public TurnManager manager = new TurnManager(playerList);
+	private Player activePlayer = player1;
+
+	
 	
 	LocationJunction loc = new LocationJunction();
 	HashSet<ArrayList<Integer>> hexCorners = loc.getLocationJunction();		//HashSet with all the coordinates for building
@@ -198,6 +211,7 @@ public class Board {
 	// The constructor class
 	
 	public Board() { 
+		manager.setActiveplayer(activePlayer);
 		
 		// BUTTONS AND LABELS FOR BUILDING
 		int count = 0;
@@ -234,8 +248,13 @@ public class Board {
 		btnThrowDice.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				handleDiceroll();
+				PassivePayout payout = new PassivePayout();
+				payout.SetPayout(diceRoll.getSum());
+				payout.GetPayout();
+				activePlayer.getHand().setCard("resource", "ore", 5);
+				updateActivePlayer();
 				}
-		});
+			});
 		btnThrowDice.setBounds(20, 10, 150, 23);
 		turn_Phase_Panel.add(btnThrowDice);
 		
@@ -257,10 +276,13 @@ public class Board {
 		btnBuild.setBounds(20, 170, 150, 23);
 		turn_Phase_Panel.add(btnBuild);
 		
-		JButton btnTradePlayer = new JButton("Trade with player");
+//		JButton btnTradePlayer = new JButton("Trade with player");
+		JButton btnTradePlayer = new JButton("Update hand");
 		btnTradePlayer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				handlePlayerTrade();
+				lblDiceResult.setText("");
+				activePlayer.getHand().setCard("resource", "brick", 10);
+				updateActivePlayer();
 			}			
 		});		
 		btnTradePlayer.setBounds(20, 90, 150, 23);
@@ -276,9 +298,15 @@ public class Board {
 		JButton btnEndTurn = new JButton("End turn");
 		btnEndTurn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// Likely have to implement a code that calls a method which exits the system and
-				// calls another method to process the end of a turn.
-				// handleEndTurn();
+				if (round < 9) {
+					manager.setTurn();
+					activePlayer = manager.getTurn();
+					System.out.println(activePlayer.getName());
+					round += 1;
+				}
+				else {
+					f.dispose();
+				}
 			}
 		});
 		btnEndTurn.setBounds(20, 210, 150, 23);
@@ -793,17 +821,14 @@ public class Board {
 	}
 	
 	
-	public void updateActivePlayer() {
-		Hand player1 = new Hand();
-	    player1.setCard("resource", "brick", 10);
-	    
-	    p = new JPanel();
+	private void updateActivePlayer() {
 		p.setBorder(new EmptyBorder(5, 5, 5, 5));
 		p.setBounds(300, 590, 260, 20);
 		p.setLayout(null);
 
-	    p = new HandActivePlayer(player1, p).plotHand();
+	    p = new HandActivePlayer(activePlayer.getHand(), p).plotHand();
 	    f.add(p);
+	    p.setVisible(true);
 	}
 	
 	
@@ -830,7 +855,7 @@ public class Board {
 		diceRoll.setSum();
 		int output = diceRoll.getSum();
 		String outputString = Integer.toString(output);
-		lblDiceResult.setText(outputString);			
+		lblDiceResult.setText(outputString);		
 	}
 	
     protected void built_elements() {		// Handle building
@@ -842,8 +867,7 @@ public class Board {
 	} 
 	
 	protected void handleBankTrade() {		// Handle bank trading
-		Hand hello = new Hand();
-		new TradeBank(hello);
+		new TradeBank(activePlayer.getHand());
 	}
 	
 	

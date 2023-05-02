@@ -16,13 +16,13 @@ public class PassivePayout {
 		return dice_number;
 	}
 	
-	public void SetPayout() {
+	public void SetPayout(int dice_number) {
 		information.setTileNumber();
 		information.SetResourceOfTile();
 		information.setHouseOnTile();
 		information.SetPassivePayoutInformation();
-		information.SetTilesInformation(11);
-		System.out.println(dice_number);
+		information.SetTilesInformation(dice_number);
+//		System.out.println(dice_number);
 	}
 	
 	public void GetPayout() {

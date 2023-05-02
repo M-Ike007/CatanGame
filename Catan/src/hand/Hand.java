@@ -25,7 +25,7 @@ public class Hand {
 		this.development_cards.put("monopoly",0);
 		this.development_cards.put("invention", 0);
 		this.development_cards.put("twoRoads", 0);
-		this.development_cards.put("vcp", 0);
+		this.development_cards.put("vcp", 2);
 	}
 	
 	/** Sets the cards in a hand
