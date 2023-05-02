@@ -30,7 +30,7 @@ public class HandActivePlayer  {
 	    // resource cards
 	    t1=new JTextField(Integer.toString(currentHand.getCard("resource",
 	    		"brick")));  
-	    t1.setBounds(320,590, 65,30);
+	    t1.setBounds(320,590, 30,30);
 	    t1.setEditable(false);
 	    t1.setHorizontalAlignment(JTextField.CENTER);
 	    t1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -40,7 +40,7 @@ public class HandActivePlayer  {
 	    
 	    t2=new JTextField(Integer.toString(currentHand.getCard("resource",
 	    		"wood")));
-	    t2.setBounds(390,590, 65,30);
+	    t2.setBounds(390,590, 30,30);
 	    t2.setEditable(false);
 	    t2.setHorizontalAlignment(JTextField.CENTER);
 	    t2.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -50,7 +50,7 @@ public class HandActivePlayer  {
 	    
 	    t3=new JTextField(Integer.toString(currentHand.getCard("resource", 
 	    		"ore")));  
-	    t3.setBounds(460,590, 65,30);
+	    t3.setBounds(460,590, 30,30);
 	    t3.setEditable(false);
 	    t3.setHorizontalAlignment(JTextField.CENTER);
 	    t3.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -60,7 +60,7 @@ public class HandActivePlayer  {
 	    	    
 	    t4=new JTextField(Integer.toString(currentHand.getCard("resource", 
 	    		"wool")));  
-	    t4.setBounds(530,590, 65,30);
+	    t4.setBounds(530,590, 30,30);
 	    t4.setEditable(false);
 	    t4.setHorizontalAlignment(JTextField.CENTER);
 	    t4.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -70,7 +70,7 @@ public class HandActivePlayer  {
 	    
 	    t5=new JTextField(Integer.toString(currentHand.getCard("resource",
 	    		"wheat")));  
-	    t5.setBounds(600,590, 65,30);
+	    t5.setBounds(600,590, 30,30);
 	    t5.setEditable(false);
 	    t5.setHorizontalAlignment(JTextField.CENTER);
 	    t5.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -82,7 +82,7 @@ public class HandActivePlayer  {
 	    // development cards
 	    t6=new JTextField(Integer.toString(currentHand.getCard("development",
 	    		"knight")));  
-	    t6.setBounds(670,590, 65,30);
+	    t6.setBounds(670,590, 30,30);
 	    t6.setEditable(false);
 	    t6.setHorizontalAlignment(JTextField.CENTER);
 	    t6.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -92,7 +92,7 @@ public class HandActivePlayer  {
 	    
 	    t7=new JTextField(Integer.toString(currentHand.getCard("development", 
 	    		"invention")));  
-	    t7.setBounds(740,590, 65,30);
+	    t7.setBounds(740,590, 30,30);
 	    t7.setEditable(false);
 	    t7.setHorizontalAlignment(JTextField.CENTER);
 	    t7.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -102,7 +102,7 @@ public class HandActivePlayer  {
 	    
 	    t8=new JTextField(Integer.toString(currentHand.getCard("development",
 	    		"monopoly")));  
-	    t8.setBounds(810,590, 65,30);
+	    t8.setBounds(810,590, 30,30);
 	    t8.setEditable(false);
 	    t8.setHorizontalAlignment(JTextField.CENTER);
 	    t8.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -112,7 +112,7 @@ public class HandActivePlayer  {
 	    	    
 	    t9=new JTextField(Integer.toString(currentHand.getCard("development", 
 	    		"twoRoads")));  
-	    t9.setBounds(880,590, 65,30);
+	    t9.setBounds(880,590, 30,30);
 	    t9.setEditable(false);
 	    t9.setHorizontalAlignment(JTextField.CENTER);
 	    t9.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -122,7 +122,7 @@ public class HandActivePlayer  {
 	    
 	    t10=new JTextField(Integer.toString(currentHand.getCard("development", 
 	    		"vcp")));  
-	    t10.setBounds(950,590, 65,30);
+	    t10.setBounds(950,590, 30,30);
 	    t10.setEditable(false);
 	    t10.setHorizontalAlignment(JTextField.CENTER);
 	    t10.setBorder(javax.swing.BorderFactory.createEmptyBorder());
