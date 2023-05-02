@@ -190,17 +190,9 @@ public class Board {
 		JButton btnEndTurn = new JButton("End turn");
 		btnEndTurn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (round < 9) {
-					manager.setTurn();
-					activePlayer = manager.getTurn();
-					lblDiceResult.setText("");
-					updateActivePlayer();
-					round += 1;
-				}
-				else {
-					f.dispose();
-				}
+				handleEndTurn();
 			}
+
 		});
 		btnEndTurn.setBounds(20, 210, 150, 23);
 		turn_Phase_Panel.add(btnEndTurn);	
@@ -801,6 +793,19 @@ public class Board {
 		lblDiceResult.setText("");
 		updateActivePlayer();
 		lblDiceResult.setText(" ");
+	}
+	
+	private void handleEndTurn() {
+		if (round < 9) {
+			manager.setTurn();
+			activePlayer = manager.getTurn();
+			lblDiceResult.setText("");
+			updateActivePlayer();
+			round += 1;
+		}
+		else {
+			f.dispose();
+		}
 	}
 	
 	// main
