@@ -18,5 +18,4 @@ public class PassivePayout {
 	public Hand GetPayout() {
 		return payout_result;
 	}
-
 }

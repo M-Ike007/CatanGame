@@ -1,8 +1,6 @@
 package test;
 
-import java.util.ArrayList;
 import hand.*;
-
 import junit.framework.TestCase;
 import passivepayout.TileInformation;
 
@@ -28,5 +26,4 @@ public class TileInformationTest extends TestCase {
 		assertEquals(testHand2.getCard("resource", "brick"), 0);
 		assertEquals(testHand2.getCard("resource", "ore"), 1);
 	}
-
 }
