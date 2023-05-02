@@ -63,7 +63,7 @@ public class TileInformation {
 		resourceTile.put(18, "brick");
 	}
 	
-	public void SetPassivePayoutInformation() {
+	public void setPassivePayoutInformation() {
 		for (int i=1; i <= rNums.size(); i++) {
 			results.put(i, Integer.toString(rNums.get(i)) + '-' + resourceTile.get(i));
 		}

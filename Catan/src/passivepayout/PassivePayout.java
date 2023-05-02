@@ -22,7 +22,7 @@ public class PassivePayout {
 		information.setTileNumber();
 		information.setResourceOfTile();
 		information.setHouseOnTile();
-		information.SetPassivePayoutInformation();
+		information.setPassivePayoutInformation();
 		information.SetTilesInformation(dice_number, hand, playerNumber);
 		payout_result = information.getTilesInformation();
 	}
