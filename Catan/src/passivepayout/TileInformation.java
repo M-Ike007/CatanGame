@@ -1,7 +1,6 @@
 package passivepayout;
 
 import java.util.HashMap;
-import java.util.ArrayList;
 import hand.*;
 
 public class TileInformation {
@@ -9,12 +8,8 @@ public class TileInformation {
 	private HashMap<Integer, String> resourceTile = new HashMap<Integer, String>();
 	private HashMap<Integer, String> results = new HashMap<Integer, String>();
 	private HashMap<Integer, String> housesPlayers = new HashMap<Integer, String>();
-	private ArrayList<String> payout_result = new ArrayList<String>();
-	private String resources;
 	private Hand hand;
-	
-	
-	
+
 	public void setTileNumber() {
 		rNums.put(1, 6);
 		rNums.put(2, 3);
@@ -33,8 +28,7 @@ public class TileInformation {
 		rNums.put(15, 12);
 		rNums.put(16, 8);
 		rNums.put(17, 4);
-		rNums.put(18, 11);
-		
+		rNums.put(18, 11);	
 	}
 	
 	public void setHouseOnTile() {
@@ -42,7 +36,7 @@ public class TileInformation {
 		housesPlayers.put(2, "7-9-10-11-12-13");
 	}
 	
-	public void SetResourceOfTile() {
+	public void setResourceOfTile() {
 		resourceTile.put(1, "wood");
 		resourceTile.put(2, "wool");
 		resourceTile.put(3, "wool");
@@ -54,7 +48,7 @@ public class TileInformation {
 		resourceTile.put(9, "brick");
 		resourceTile.put(10, "ore");
 		resourceTile.put(11, "wheat");
-		resourceTile.put(12, "what");
+		resourceTile.put(12, "wheat");
 		resourceTile.put(13, "ore");
 		resourceTile.put(14, "wood");
 		resourceTile.put(15, "wool");
@@ -63,32 +57,27 @@ public class TileInformation {
 		resourceTile.put(18, "brick");
 	}
 	
-	public void SetPassivePayoutInformation() {
+	public void setPassivePayoutInformation() {
 		for (int i=1; i <= rNums.size(); i++) {
 			results.put(i, Integer.toString(rNums.get(i)) + '-' + resourceTile.get(i));
 		}
 	}
 	
-	public void SetTilesInformation(int number_dice, Hand hand, int playerNumber) {
+	public void setTilesInformation(int number_dice, Hand hand, int playerNumber) {
 		String player1houses = housesPlayers.get(playerNumber);
 		String[] splitString = player1houses.split("-");
-		resources = "";
 		for (int j=0; j < splitString.length; j++) {
 			String resourceAndNumber = results.get(Integer.parseInt(splitString[j]));
 			String[] splitString2 = resourceAndNumber.split("-");
 			if (number_dice == Integer.parseInt(splitString2[0])) {
-				resources += "-"+splitString2[1];
 				hand.setCard("resource",splitString2[1] , 1);
 			}			
 		}
-		payout_result.add("Player"+playerNumber+ " gets "+resources);
-		System.out.println(payout_result);
 		this.hand = hand;
 	}
 	
 	public Hand getTilesInformation() {
 		return hand;
-
 	}
 
 }
