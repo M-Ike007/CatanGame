@@ -276,7 +276,6 @@ public class Board {
 		btnTradePlayer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				lblDiceResult.setText("");
-				activePlayer.getHand().setCard("resource", "brick", 10);
 				updateActivePlayer();
 			}			
 		});		
@@ -853,9 +852,9 @@ public class Board {
 		lblDiceResult.setText(outputString);	
 		
 		PassivePayout payout = new PassivePayout();
-		payout.SetPayout(diceRoll.getSum(), player1.getHand());
+		payout.SetPayout(diceRoll.getSum(), player1.getHand(), 1);
+		payout.SetPayout(diceRoll.getSum(), player2.getHand(), 2);
 		payout.GetPayout();
-		activePlayer.getHand().setCard("resource", "ore", 5);
 		updateActivePlayer();
 	}
 	
