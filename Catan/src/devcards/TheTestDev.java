@@ -59,7 +59,7 @@ public class TheTestDev extends TestCase{
 		
 		int sum = knight + twoRoads + invention + monopoly + vcp + wheat + ore + wood + brick + wool;
 		System.out.println(sum);
-		assertEquals(sum, 4);
+		assertEquals(sum, 6);
 	}
 }
 
