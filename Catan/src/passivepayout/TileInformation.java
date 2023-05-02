@@ -42,7 +42,7 @@ public class TileInformation {
 		housesPlayers.put(2, "7-9-10-11-12-13");
 	}
 	
-	public void SetResourceOfTile() {
+	public void setResourceOfTile() {
 		resourceTile.put(1, "wood");
 		resourceTile.put(2, "wool");
 		resourceTile.put(3, "wool");

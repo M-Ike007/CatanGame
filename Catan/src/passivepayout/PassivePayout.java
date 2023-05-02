@@ -20,7 +20,7 @@ public class PassivePayout {
 	
 	public void SetPayout(int dice_number, Hand hand, int playerNumber) {
 		information.setTileNumber();
-		information.SetResourceOfTile();
+		information.setResourceOfTile();
 		information.setHouseOnTile();
 		information.SetPassivePayoutInformation();
 		information.SetTilesInformation(dice_number, hand, playerNumber);
