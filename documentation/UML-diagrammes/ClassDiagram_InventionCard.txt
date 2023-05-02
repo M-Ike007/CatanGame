@@ -1,0 +1,16 @@
+classDiagram
+DevCards <|-- DevInvention
+    class DevCards{
+        + int result
+        # boolean can_invent
+        + int resource_result
+        + drawDevCard() String
+        + increaseHand(Hand, String) void
+        + invent(Hand) void
+        + draw_random_resource(String) void
+    }
+    class DevInvention{
+        +invent(Hand) void
+        +increaseInvention (Hand, String) void
+    }
+
