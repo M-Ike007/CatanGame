@@ -1,4 +1,4 @@
-package game;
+package test;
 
 import junit.framework.TestCase;
 import player.Player;
@@ -6,6 +6,7 @@ import player.Player;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import game.TurnManager;
 import hand.Hand;
 public class TurnManagerTest extends TestCase {
 	

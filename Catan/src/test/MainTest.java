@@ -1,9 +1,12 @@
-package game;
+package test;
 import player.*;
 import hand.*;
 import player.*;
 
 import java.util.*;
+
+import game.GameStatus;
+import game.Main;
 import junit.framework.TestCase;
 
 public class MainTest extends TestCase {
