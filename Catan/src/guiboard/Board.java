@@ -748,6 +748,7 @@ public class Board {
 		diceRoll.setSum();
 		int output = diceRoll.getSum();
 		String outputString = Integer.toString(output);
+		lblDiceResult.setText("   ");
 		lblDiceResult.setText(outputString);	
 		
 		PassivePayout payout = new PassivePayout();
