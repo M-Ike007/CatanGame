@@ -1,5 +1,6 @@
 package guiboard;
 
+import java.io.File;
 import java.awt.*;
 import location.LocationJunction;
 import passivepayout.PassivePayout;
@@ -51,161 +52,50 @@ public class Board {
 	
 	
 	// PREPARING ALL THE IMAGES
-	// Outside of the constructor class so the event handlers can access the images (needed for building and the robber)
-
-		// Brick image loading and preparing
-		ImageIcon Img_brick=new ImageIcon("Images/Tile_Brick.png");
-		Image imageBrick = Img_brick.getImage(); // "transform" it to an Image
-	    Image brickImg = imageBrick.getScaledInstance(100, 100,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way 
-	    ImageIcon brick = new ImageIcon(brickImg);
-	    
-	    // Wood image loading and preparing
-	    ImageIcon Img_wood=new ImageIcon("Images/Tile_Wood.png");
-		Image imageWood = Img_wood.getImage(); // "transform" it to an Image
-	    Image woodImg = imageWood.getScaledInstance(100, 100,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon wood = new ImageIcon(woodImg);
-	    
-	    // Ore image loading and preparing
-	    ImageIcon Img_ore=new ImageIcon("Images/Tile_Ore.png");
-		Image imageOre = Img_ore.getImage(); // "transform" it to an Image
-	    Image oreImg = imageOre.getScaledInstance(100, 100,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon ore = new ImageIcon(oreImg);
-	    
-	    // Wool image loading and preparing
-	    ImageIcon Img_wool=new ImageIcon("Images/Tile_Wool.png");
-		Image imageWool = Img_wool.getImage(); // "transform" it to an Image
-	    Image woolImg = imageWool.getScaledInstance(100, 100,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon wool = new ImageIcon(woolImg);
-	    
-	    // Wheat image loading and preparing	
-	    ImageIcon Img_wheat=new ImageIcon("Images/Tile_Wheat.png");
-		Image imageWheat = Img_wheat.getImage(); // "transform" it to an Image
-	    Image wheatImg = imageWheat.getScaledInstance(100, 100,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon wheat = new ImageIcon(wheatImg);
-	    
-	    // Desert image loading and preparing
-	    ImageIcon Img_desert=new ImageIcon("Images/Tile_Desert.png");
-		Image imageDesert = Img_desert.getImage(); // "transform" it to an Image
-	    Image desertImg = imageDesert.getScaledInstance(100, 100,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon desert = new ImageIcon(desertImg);
-	
-	    // Sea image loading and preparing
-	    ImageIcon Img_sea=new ImageIcon("Images/Tile_Sea.png");
-	    Image imageSea = Img_sea.getImage(); // "transform" it to an Image
-	    Image seaImg = imageSea.getScaledInstance(100, 100,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon sea = new ImageIcon(seaImg);
-	    
-	    // Village image loading and preparing
-	    ImageIcon Img_village=new ImageIcon("Images/Building_Village.png");
-		Image imageVillage = Img_village.getImage(); // "transform" it to an Image
-	    Image villageImg = imageVillage.getScaledInstance(25, 25,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon village = new ImageIcon(villageImg);
-	    
-	    // City image loading and preparing
-	    ImageIcon Img_city=new ImageIcon("Images/Building_City.png");
-		Image imageCity = Img_city.getImage(); // "transform" it to an Image
-	    Image cityImg = imageCity.getScaledInstance(25, 25,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon city = new ImageIcon(cityImg);
-	    
-	    // Cost image loading and preparing
-	    ImageIcon Img_cost=new ImageIcon("Images/Cost_Table.jpg");
-		Image imageCost = Img_cost.getImage(); // "transform" it to an Image
-	    Image costImg = imageCost.getScaledInstance(250, 333,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon cost = new ImageIcon(costImg);
-	    
-	    // Red Village image loading and preparing (player 1)
-	    ImageIcon Img_village_red=new ImageIcon("Images/Village_Red.png");
-		Image imageVillage_Red = Img_village_red.getImage(); // "transform" it to an Image
-	    Image Red_Village_Img = imageVillage_Red.getScaledInstance(30, 30,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon Red_Village = new ImageIcon(Red_Village_Img);
-	    
-	 // Blue Village image loading and preparing (player 2)
-		ImageIcon Img_village_blue=new ImageIcon("Images/Village_Blue.png");
-		Image imageVillage_Blue = Img_village_blue.getImage(); // "transform" it to an Image
-	    Image Blue_Village_Img = imageVillage_Blue.getScaledInstance(30, 30,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon Blue_Village = new ImageIcon(Blue_Village_Img);
-	    
-	    // Card brick image loading and preparing
-	    ImageIcon Img_card_brick=new ImageIcon("Images/Card_Brick.jpg");
-		Image imageCardBrick = Img_card_brick.getImage(); // "transform" it to an Image
-	    Image cardBrickImg = imageCardBrick.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_brick = new ImageIcon(cardBrickImg);
-	    
-	    // Card forest image loading and preparing
-	    ImageIcon Img_card_forest=new ImageIcon("Images/Card_Forest.jpg");
-	    Image imageCardForest = Img_card_forest.getImage(); // "transform" it to an Image
-	    Image cardForestImg = imageCardForest.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_forest = new ImageIcon(cardForestImg);
-	    
-	    // Card ore image loading and preparing
-	    ImageIcon Img_card_ore=new ImageIcon("Images/Card_Ore.jpg");
-	    Image imageCardOre = Img_card_ore.getImage(); // "transform" it to an Image
-	    Image cardOreImg = imageCardOre.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_ore = new ImageIcon(cardOreImg);
-	    
-	    // Card sheep image loading and preparing
-	    ImageIcon Img_card_sheep=new ImageIcon("Images/Card_Sheep.jpg");
-	    Image imageCardSheep = Img_card_sheep.getImage(); // "transform" it to an Image
-	    Image cardSheepImg = imageCardSheep.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_sheep = new ImageIcon(cardSheepImg);
-	    
-	    // Card wheat image loading and preparing
-	    ImageIcon Img_card_wheat=new ImageIcon("Images/Card_Wheat.jpg");
-	    Image imageCardWheat = Img_card_wheat.getImage(); // "transform" it to an Image
-	    Image cardWheatImg = imageCardWheat.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_wheat = new ImageIcon(cardWheatImg);
-	    
-	    // Card invention image loading and preparing
-	    ImageIcon Img_card_invention=new ImageIcon("Images/Card_Invention.jpg");
-	    Image imageCardInvention = Img_card_invention.getImage(); // "transform" it to an Image
-	    Image cardInventionImg = imageCardInvention.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_invention = new ImageIcon(cardInventionImg); 
-	    
-	 	// Card knight image loading and preparing
-	    ImageIcon Img_card_knight=new ImageIcon("Images/Card_Knight.jpg");
-	    Image imageCardKnight = Img_card_knight.getImage(); // "transform" it to an Image
-	    Image cardKnightImg = imageCardKnight.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_knight = new ImageIcon(cardKnightImg);
-	    
-	    // Card monopoly image loading and preparing
-	    ImageIcon Img_card_monopoly=new ImageIcon("Images/Card_Monopoly.jpg");
-	    Image imageCardMonopoly = Img_card_monopoly.getImage(); // "transform" it to an Image
-	    Image cardMonopolyImg = imageCardMonopoly.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_monopoly = new ImageIcon(cardMonopolyImg);
-	    
-	    // Card two roads image loading and preparing
-	    ImageIcon Img_card_two_roads=new ImageIcon("Images/Card_TwoRoads.jpg");
-	    Image imageCardTwoRoads = Img_card_two_roads.getImage(); // "transform" it to an Image
-	    Image cardTwoRoadsImg = imageCardTwoRoads.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_two_roads = new ImageIcon(cardTwoRoadsImg);
-	    
-	    // Card victory image loading and preparing
-	    ImageIcon Img_card_victory=new ImageIcon("Images/Card_VP.jpg");
-	    Image imageCardVictory = Img_card_victory.getImage(); // "transform" it to an Image
-	    Image cardVictoryImg = imageCardVictory.getScaledInstance(65, 95,
-	    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way
-	    ImageIcon card_victory = new ImageIcon(cardVictoryImg);
+    // Wood image loading and preparing 
+    ImageIcon wood = loadImageIcon("Images/Tile_Wood.png", 100, 100);
+    // brick image loading and preparing 
+    ImageIcon brick = loadImageIcon("Images/Tile_Brick.png", 100, 100);
+    // Ore image loading and preparing
+    ImageIcon ore = loadImageIcon("Images/Tile_Ore.png" , 100, 100);
+    // Wool image loading and preparing
+    ImageIcon wool = loadImageIcon("Images/Tile_Wool.png" , 100, 100);
+    // Wheat image loading and preparing	
+    ImageIcon wheat = loadImageIcon("Images/Tile_Wheat.png", 100, 100);    
+    // Desert image loading and preparing
+    ImageIcon desert = loadImageIcon("Images/Tile_Desert.png", 100, 100);
+    // Sea image loading and preparing
+    ImageIcon sea = loadImageIcon("Images/Tile_Sea.png" , 100, 100); 
+    // Village image loading and preparing
+    ImageIcon village = loadImageIcon("Images/Building_Village.png", 25, 25);	    
+    // City image loading and preparing
+    ImageIcon city = loadImageIcon("Images/Building_City.png", 25, 25);	    
+    // Cost image loading and preparing
+    ImageIcon cost = loadImageIcon("Images/Cost_Table.jpg", 250, 333);	    
+    // Red Village image loading and preparing (player 1)
+    ImageIcon Red_Village = loadImageIcon("Images/Village_Red.png", 25, 25);
+    // Blue Village image loading and preparing (player 2)
+    ImageIcon Blue_Village = loadImageIcon("Images/Village_Blue.png", 25, 25);
+    // Card brick image loading and preparing
+    ImageIcon card_brick = loadImageIcon("Images/Card_Brick.jpg", 65, 95);
+    // Card forest image loading and preparing
+    ImageIcon card_forest = loadImageIcon("Images/Card_Forest.jpg", 65, 95);
+    // Card ore image loading and preparing
+    ImageIcon card_ore = loadImageIcon("Images/Card_Ore.jpg", 65, 95);
+    // Card sheep image loading and preparing
+    ImageIcon card_sheep = loadImageIcon("Images/Card_Sheep.jpg", 65, 95);
+    // Card wheat image loading and preparing
+    ImageIcon card_wheat = loadImageIcon("Images/Card_Wheat.jpg", 65, 95);
+    // Card invention image loading and preparing
+    ImageIcon card_invention = loadImageIcon("Images/Card_Invention.jpg", 65, 95);
+ 	// Card knight image loading and preparing
+    ImageIcon card_knight = loadImageIcon("Images/Card_Knight.jpg", 65, 95);
+    // Card monopoly image loading and preparing
+    ImageIcon card_monopoly = loadImageIcon("Images/Card_Monopoly.jpg", 65, 95);
+    // Card two roads image loading and preparing
+    ImageIcon card_two_roads = loadImageIcon("Images/Card_TwoRoads.jpg", 65, 95);
+    // Card victory image loading and preparing
+    ImageIcon card_victory = loadImageIcon("Images/Card_VP.jpg", 65, 95);
 	
 	
 	// The constructor class
@@ -871,6 +761,29 @@ public class Board {
 		new TradeBank(activePlayer.getHand());
 	}
 	
+	/** Loading in a image icon from a file.
+	 * @param filePath File from which the icon must be loaded
+	 * @param scale1 First scale factor.
+	 * @param scale2 Second scale factor.
+	 * @return ImageIcon
+	 */
+	private ImageIcon loadImageIcon(String filePath, 
+			int scale1,
+			int scale2) {
+		File file = new File(filePath);
+		if (file.exists()) {
+			ImageIcon Img = new ImageIcon(filePath);
+			Image image = Img.getImage(); // "transform" it to an Image
+		    Image iconImg = image.getScaledInstance(scale1, scale2,
+		    		java.awt.Image.SCALE_SMOOTH); // scale it the "smooth" way 
+		    ImageIcon icon = new ImageIcon(iconImg);
+		    return icon;
+		} else {
+			String errMsg = filePath + " does not exist.";
+			System.out.println(errMsg);
+		}
+		return null;		
+	}
 	
 	// main
     public static void main(String[] args) {  
