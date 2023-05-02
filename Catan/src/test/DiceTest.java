@@ -1,5 +1,6 @@
-package dice;
+package test;
 
+import dice.Dice;
 import junit.framework.TestCase;
 
 public class DiceTest extends TestCase 

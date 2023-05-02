@@ -1,5 +1,6 @@
-package hand;
+package test;
 
+import hand.Hand;
 import junit.framework.TestCase;
 
 public class HandTest extends TestCase {

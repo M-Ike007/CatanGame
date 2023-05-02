@@ -1,7 +1,10 @@
-package costcard;
+package test;
 
 import junit.framework.TestCase;
 import java.util.*;
+
+import costcard.CostTable;
+import costcard.Structures;
 
 public class CostTableTest extends TestCase {
 	
