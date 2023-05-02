@@ -22,7 +22,7 @@ import javax.swing.ImageIcon;
  * @return None
  */
 //The constructor class
-public class Build_Structures {
+public class BuildStructures {
 	
 	// Importing village images
 	// Red Village image loading and preparing
