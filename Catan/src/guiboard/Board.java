@@ -15,7 +15,6 @@ import dice.Dice;
 import guimenu.BuildingSelectionMenu;
 import hand.Hand;
 import hand.HandActivePlayer;
-import guiboard.testLoop;
 import game.TurnManager;
 
 import java.awt.event.ActionEvent;
