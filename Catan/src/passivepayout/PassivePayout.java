@@ -18,12 +18,12 @@ public class PassivePayout {
 		return dice_number;
 	}
 	
-	public void SetPayout(int dice_number, Hand hand) {
+	public void SetPayout(int dice_number, Hand hand, int playerNumber) {
 		information.setTileNumber();
 		information.SetResourceOfTile();
 		information.setHouseOnTile();
 		information.SetPassivePayoutInformation();
-		information.SetTilesInformation(dice_number, hand);
+		information.SetTilesInformation(dice_number, hand, playerNumber);
 		payout_result = information.getTilesInformation();
 	}
 	

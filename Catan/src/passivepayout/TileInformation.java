@@ -69,22 +69,19 @@ public class TileInformation {
 		}
 	}
 	
-	public void SetTilesInformation(int number_dice, Hand hand) {
-		for (int i=1; i <= housesPlayers.size(); i++) {
-			String player1houses = housesPlayers.get(i);
-			String[] splitString = player1houses.split("-");
-			resources = "";
-			for (int j=0; j < splitString.length; j++) {
-				String resourceAndNumber = results.get(Integer.parseInt(splitString[j]));
-				String[] splitString2 = resourceAndNumber.split("-");
-				if (number_dice == Integer.parseInt(splitString2[0])) {
-					resources += "-"+splitString2[1];
-					hand.setCard("resource",splitString2[1] , 1);
-				}
-					
-			}
-			payout_result.add("Player"+i+ " gets "+resources);
+	public void SetTilesInformation(int number_dice, Hand hand, int playerNumber) {
+		String player1houses = housesPlayers.get(playerNumber);
+		String[] splitString = player1houses.split("-");
+		resources = "";
+		for (int j=0; j < splitString.length; j++) {
+			String resourceAndNumber = results.get(Integer.parseInt(splitString[j]));
+			String[] splitString2 = resourceAndNumber.split("-");
+			if (number_dice == Integer.parseInt(splitString2[0])) {
+				resources += "-"+splitString2[1];
+				hand.setCard("resource",splitString2[1] , 1);
+			}			
 		}
+		payout_result.add("Player"+playerNumber+ " gets "+resources);
 		System.out.println(payout_result);
 		this.hand = hand;
 	}
