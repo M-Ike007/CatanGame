@@ -32,7 +32,6 @@ public class TradeBank extends JFrame {
 	private int counter = 0;
 	
 	public TradeBank(Hand myHand) {  
-		
 		JFrame frame=new JFrame("Trade");  
 	    JTextField tf;
 	    tf = new JTextField("Do you want to trade?");
@@ -42,6 +41,11 @@ public class TradeBank extends JFrame {
 	    b2.setBounds(350,200,300,30);
 	    tf.setEditable(false);
 	    tf.setBounds(50,100,600,30);
+	    b2.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent e) {
+	    		frame.dispose();
+	    	}
+	    });
 	    b1.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				tf.setText("What do you want to give four resources of?");	
@@ -198,8 +202,7 @@ public class TradeBank extends JFrame {
 						
 			}
 	    	
-	    });  
-				
+	    });   
 	    frame.add(tf);
 	    frame.add(b1);
 	    frame.add(b2);
