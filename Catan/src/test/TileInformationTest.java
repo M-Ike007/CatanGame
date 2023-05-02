@@ -1,8 +1,9 @@
-package passivepayout;
+package test;
 
 import java.util.ArrayList;
 
 import junit.framework.TestCase;
+import passivepayout.TileInformation;
 
 public class TileInformationTest extends TestCase {
 	private ArrayList<String> payout_test = new ArrayList<String>();

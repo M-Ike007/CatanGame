@@ -1,10 +1,12 @@
-package player;
+package test;
 import hand.*;
 import dice.*;
 
 import java.util.Random;
 
 import junit.framework.TestCase;
+import player.Player;
+import player.PlayerColour;
 
 public class PlayerTest extends TestCase {
 	public void testGetHand() {

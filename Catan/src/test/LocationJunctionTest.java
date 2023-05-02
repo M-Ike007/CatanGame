@@ -1,8 +1,9 @@
-package location;
+package test;
 
 import java.util.ArrayList;
 
 import junit.framework.TestCase;
+import location.LocationJunction;
 
 public class LocationJunctionTest extends TestCase {
 	public void testGetX() {
