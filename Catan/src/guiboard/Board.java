@@ -17,6 +17,7 @@ import guimenu.BuildingSelectionMenu;
 import hand.Hand;
 import hand.HandActivePlayer;
 import game.TurnManager;
+import devcards.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -132,7 +133,18 @@ public class Board {
 		
 		JButton btnDevCard = new JButton("Development card");
 		btnDevCard.setBounds(20, 130, 150, 23);
+		btnDevCard.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DevCard devCard = new DevCard();
+				String drawnCard = devCard.drawDevCard();
+				devCard.increaseHand(activePlayer.getHand(), drawnCard);
+				lblDiceResult.setText("");
+				updateActivePlayer();
+				lblDiceResult.setText(" ");
+				}
+			});
 		turn_Phase_Panel.add(btnDevCard);
+		
 		
 		JButton btnThrowDice = new JButton("Throw dice");
 		btnThrowDice.addActionListener(new ActionListener() {
@@ -167,6 +179,7 @@ public class Board {
 			public void actionPerformed(ActionEvent e) {
 				lblDiceResult.setText("");
 				updateActivePlayer();
+				lblDiceResult.setText(" ");
 			}			
 		});		
 		btnTradePlayer.setBounds(20, 90, 150, 23);
