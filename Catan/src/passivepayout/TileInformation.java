@@ -69,7 +69,7 @@ public class TileInformation {
 		}
 	}
 	
-	public void SetTilesInformation(int number_dice, Hand hand, int playerNumber) {
+	public void setTilesInformation(int number_dice, Hand hand, int playerNumber) {
 		String player1houses = housesPlayers.get(playerNumber);
 		String[] splitString = player1houses.split("-");
 		resources = "";
