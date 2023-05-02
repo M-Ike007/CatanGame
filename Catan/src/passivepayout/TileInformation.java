@@ -78,7 +78,6 @@ public class TileInformation {
 	
 	public Hand getTilesInformation() {
 		return hand;
-
 	}
 
 }

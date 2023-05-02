@@ -27,9 +27,6 @@ public class TileInformationTest extends TestCase {
 		testHand2 = information.getTilesInformation();		
 		assertEquals(testHand2.getCard("resource", "brick"), 0);
 		assertEquals(testHand2.getCard("resource", "ore"), 1);
-		
-		
-		
 	}
 
 }
