@@ -295,7 +295,8 @@ public class Board {
 				if (round < 9) {
 					manager.setTurn();
 					activePlayer = manager.getTurn();
-					System.out.println(activePlayer.getName());
+					lblDiceResult.setText("");
+					updateActivePlayer();
 					round += 1;
 				}
 				else {
