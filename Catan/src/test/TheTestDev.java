@@ -1,8 +1,10 @@
-package devcards;
+package test;
 
 import junit.framework.TestCase;
 import java.util.ArrayList;
 import java.util.List;
+
+import devcards.DevCard;
 import hand.Hand;
 
 
