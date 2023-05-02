@@ -131,7 +131,7 @@ public class Board {
 		turn_Phase_Panel.setBounds(997, 350, 300, 250);
 		turn_Phase_Panel.setLayout(null);				
 		
-		JButton btnDevCard = new JButton("Development card");
+		JButton btnDevCard = new JButton("Buy DEV card");
 		btnDevCard.setBounds(20, 130, 150, 23);
 		btnDevCard.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
