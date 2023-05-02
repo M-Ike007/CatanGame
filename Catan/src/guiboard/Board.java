@@ -135,12 +135,7 @@ public class Board {
 		btnDevCard.setBounds(20, 130, 150, 23);
 		btnDevCard.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				DevCard devCard = new DevCard();
-				String drawnCard = devCard.drawDevCard();
-				devCard.increaseHand(activePlayer.getHand(), drawnCard);
-				lblDiceResult.setText("");
-				updateActivePlayer();
-				lblDiceResult.setText(" ");
+				handleBuyDevCard();
 				}
 			});
 		turn_Phase_Panel.add(btnDevCard);
@@ -796,6 +791,15 @@ public class Board {
 			System.out.println(errMsg);
 		}
 		return null;		
+	}
+	
+	private void handleBuyDevCard() {
+		DevCard devCard = new DevCard();
+		String drawnCard = devCard.drawDevCard();
+		devCard.increaseHand(activePlayer.getHand(), drawnCard);
+		lblDiceResult.setText("");
+		updateActivePlayer();
+		lblDiceResult.setText(" ");
 	}
 	
 	// main
