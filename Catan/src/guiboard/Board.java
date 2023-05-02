@@ -248,11 +248,6 @@ public class Board {
 		btnThrowDice.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				handleDiceroll();
-				PassivePayout payout = new PassivePayout();
-				payout.SetPayout(diceRoll.getSum());
-				payout.GetPayout();
-				activePlayer.getHand().setCard("resource", "ore", 5);
-				updateActivePlayer();
 				}
 			});
 		btnThrowDice.setBounds(20, 10, 150, 23);
@@ -855,7 +850,13 @@ public class Board {
 		diceRoll.setSum();
 		int output = diceRoll.getSum();
 		String outputString = Integer.toString(output);
-		lblDiceResult.setText(outputString);		
+		lblDiceResult.setText(outputString);	
+		
+		PassivePayout payout = new PassivePayout();
+		payout.SetPayout(diceRoll.getSum(), player1.getHand());
+		payout.GetPayout();
+		activePlayer.getHand().setCard("resource", "ore", 5);
+		updateActivePlayer();
 	}
 	
     protected void built_elements() {		// Handle building

@@ -2,18 +2,16 @@ package passivepayout;
 
 import java.util.HashMap;
 import java.util.ArrayList;
+import hand.*;
 
 public class TileInformation {
-	private String house1Player1;
-	private String house2Player1;
-	private String house1Player2;
-	private String house2Player2;
 	private HashMap<Integer, Integer> rNums = new HashMap<Integer, Integer>();
 	private HashMap<Integer, String> resourceTile = new HashMap<Integer, String>();
 	private HashMap<Integer, String> results = new HashMap<Integer, String>();
 	private HashMap<Integer, String> housesPlayers = new HashMap<Integer, String>();
 	private ArrayList<String> payout_result = new ArrayList<String>();
 	private String resources;
+	private Hand hand;
 	
 	
 	
@@ -41,7 +39,7 @@ public class TileInformation {
 	
 	public void setHouseOnTile() {
 		housesPlayers.put(1, "2-5-6-14-15-18");
-		housesPlayers.put(2, "7-10-11-12-13");
+		housesPlayers.put(2, "7-9-10-11-12-13");
 	}
 	
 	public void SetResourceOfTile() {
@@ -71,7 +69,7 @@ public class TileInformation {
 		}
 	}
 	
-	public void SetTilesInformation(int number_dice) {
+	public void SetTilesInformation(int number_dice, Hand hand) {
 		for (int i=1; i <= housesPlayers.size(); i++) {
 			String player1houses = housesPlayers.get(i);
 			String[] splitString = player1houses.split("-");
@@ -81,16 +79,18 @@ public class TileInformation {
 				String[] splitString2 = resourceAndNumber.split("-");
 				if (number_dice == Integer.parseInt(splitString2[0])) {
 					resources += "-"+splitString2[1];
+					hand.setCard("resource",splitString2[1] , 1);
 				}
 					
 			}
 			payout_result.add("Player"+i+ " gets "+resources);
 		}
 		System.out.println(payout_result);
+		this.hand = hand;
 	}
 	
-	public ArrayList<String> getTilesInformation() {
-		return payout_result;
+	public Hand getTilesInformation() {
+		return hand;
 
 	}
 

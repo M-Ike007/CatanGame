@@ -1,27 +1,29 @@
 package test;
 
 import java.util.ArrayList;
+import hand.*;
 
 import junit.framework.TestCase;
 import passivepayout.TileInformation;
 
 public class TileInformationTest extends TestCase {
-	private ArrayList<String> payout_test = new ArrayList<String>();
 	
 	public void testSetTilesInformation() {
+		Hand testHand = new Hand();
+		
 		TileInformation information = new TileInformation();
 		information.setTileNumber();
 		information.SetResourceOfTile();
 		information.setHouseOnTile();
 		information.SetPassivePayoutInformation();
 		
-		information.SetTilesInformation(11);
-		ArrayList<String> payout_result = information.getTilesInformation();
+		information.SetTilesInformation(11, testHand);
+		testHand = information.getTilesInformation();
 		
-		payout_test.add("Player1 gets -brick");
-		payout_test.add("Player2 gets -ore");
 		
-		assertEquals(payout_result, payout_test);
+		assertEquals(testHand.getCard("resource", "brick"), 1);
+		assertEquals(testHand.getCard("resource", "ore"), 1);
+
 	}
 
 }

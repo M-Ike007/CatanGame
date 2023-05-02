@@ -1,12 +1,14 @@
 package passivepayout;
 
 import java.util.ArrayList;
+import hand.*;
 
 import dice.*;
 
 public class PassivePayout {
 	private int dice_number;
 	private TileInformation information = new TileInformation();
+	private Hand payout_result;
 	
 	public int GetDiceThrow() {
 		Dice dice = new Dice();
@@ -16,17 +18,17 @@ public class PassivePayout {
 		return dice_number;
 	}
 	
-	public void SetPayout(int dice_number) {
+	public void SetPayout(int dice_number, Hand hand) {
 		information.setTileNumber();
 		information.SetResourceOfTile();
 		information.setHouseOnTile();
 		information.SetPassivePayoutInformation();
-		information.SetTilesInformation(dice_number);
-//		System.out.println(dice_number);
+		information.SetTilesInformation(dice_number, hand);
+		payout_result = information.getTilesInformation();
 	}
 	
-	public void GetPayout() {
-		ArrayList<String> payout_result = information.getTilesInformation();
+	public Hand GetPayout() {
+		return payout_result;
 	}
 
 }
