@@ -1,4 +1,4 @@
-package devcards;
+package cards;
 
 import hand.Hand;
 

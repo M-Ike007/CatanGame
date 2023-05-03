@@ -1,8 +1,7 @@
 package test;
 
 import junit.framework.TestCase;
-
-import devcards.DevCard;
+import cards.DevCard;
 import hand.Hand;
 
 public class DevTest extends TestCase {

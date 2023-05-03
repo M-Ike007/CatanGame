@@ -1,9 +1,9 @@
 package test;
 
 import junit.framework.TestCase;
+import cards.DevCard;
+import cards.DevInvention;
 import hand.Hand;
-import devcards.DevCard;
-import devcards.DevInvention;
 
 public class DevInventionTest extends TestCase {
 	public void testIncreaseTest() {

@@ -1,4 +1,4 @@
-package devcards;
+package cards;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -7,7 +7,7 @@ import hand.Hand;
 public class DevCard {
 	protected boolean can_invent = false;
 	private int resource_result = 0;
-	private Distribution dist = new Distribution();
+	private DistributionDevelopmentCards dist = new DistributionDevelopmentCards();
 
 	/**
 	 * HashMap emulates the distribution of cards in the game. right now there is
