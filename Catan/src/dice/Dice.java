@@ -3,11 +3,9 @@ package dice;
 import java.util.Random;
 
 /**
- * @author SDH, IVV.
  * This class simulates two dice throws and sums the results.
  */
-public class Dice 
-{
+public class Dice {
 	private int die1;
 	private int die2;
 	private int sum;
@@ -15,20 +13,19 @@ public class Dice
 	/**
 	 * sets the sum of the two dice throws.
 	 */
-	public void setSum()
-	{
+	public void setSum() {
 		Random random = new Random();
-		die1 = random.nextInt(1,7);
-		die2 = random.nextInt(1,7);
+		die1 = random.nextInt(1, 7);
+		die2 = random.nextInt(1, 7);
 		this.sum = die1 + die2;
 	}
-	
+
 	/**
 	 * gets the sum of the two dice throws.
+	 * 
 	 * @return int: sum.
 	 */
-	public int getSum()
-	{
+	public int getSum() {
 		return sum;
 	}
 }
