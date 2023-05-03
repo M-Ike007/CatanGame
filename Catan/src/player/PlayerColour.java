@@ -20,16 +20,4 @@ public enum PlayerColour {
 			return "red";
 		}
 	},
-	GREEN {
-		@Override
-		public String toString() {
-			return "green";
-		}
-	},
-	YELLOW {
-		@Override
-		public String toString() {
-			return "yellow";
-		}
-	},
 }

@@ -3,12 +3,12 @@ package test;
 import java.util.ArrayList;
 import java.util.List;
 import devcards.*;
-import devcards.DevCard;
 import junit.framework.TestCase;
 
 public class DistributionTest extends TestCase {
-	
-	/**Test whether the cards of the distribution are of the expected name
+
+	/**
+	 * Test whether the cards of the distribution are of the expected name
 	 * 
 	 */
 	public void testgetCard() {
@@ -22,9 +22,9 @@ public class DistributionTest extends TestCase {
 		options.add("monopoly");
 		options.add("twoRoads");
 		options.add("invention");
-		if(options.contains(result))		
-			assertEquals(1, 1);		
+		if (options.contains(result))
+			assertEquals(1, 1);
 		else
-			assertEquals(1,2);
+			assertEquals(1, 2);
 	}
 }
