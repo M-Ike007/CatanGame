@@ -1,65 +1,53 @@
 package passivepayout;
 
 import java.util.HashMap;
+import java.util.Map.Entry;
+
 import hand.*;
+import guiboard.TilesNumbers;
 
 public class TileInformation {
-	private HashMap<Integer, Integer> rNums = new HashMap<Integer, Integer>();
-	private HashMap<Integer, String> resourceTile = new HashMap<Integer, String>();
-	private HashMap<Integer, String> results = new HashMap<Integer, String>();
+	private TilesNumbers tilesNumbers = new TilesNumbers();
+	private HashMap<String, Integer> rNums;
+	private HashMap<String, String> resourceTile = new HashMap<String, String>();
+	private HashMap<String, String> results = new HashMap<String, String>();
 	private HashMap<Integer, String> housesPlayers = new HashMap<Integer, String>();
 	private Hand hand;
 
 	public void setTileNumber() {
-		rNums.put(1, 6);
-		rNums.put(2, 3);
-		rNums.put(3, 8);
-		rNums.put(4, 2);
-		rNums.put(5, 4);
-		rNums.put(6, 5);
-		rNums.put(7, 10);
-		rNums.put(8, 5);
-		rNums.put(9, 9);
-		rNums.put(10, 6);
-		rNums.put(11, 9);
-		rNums.put(12, 10);
-		rNums.put(13, 11);
-		rNums.put(14, 3);
-		rNums.put(15, 12);
-		rNums.put(16, 8);
-		rNums.put(17, 4);
-		rNums.put(18, 11);	
+		tilesNumbers.setTileNumbers();
+		rNums = tilesNumbers.getTileNumbers();
 	}
 	
 	public void setHouseOnTile() {
-		housesPlayers.put(1, "2-5-6-14-15-18");
-		housesPlayers.put(2, "7-9-10-11-12-13");
+		housesPlayers.put(1, "Pos22-Pos33-Pos34-Pos54-Pos55-Pos64");
+		housesPlayers.put(2, "Pos35-Pos42-Pos43-Pos45-Pos52-Pos53");
 	}
 	
 	public void setResourceOfTile() {
-		resourceTile.put(1, "wood");
-		resourceTile.put(2, "wool");
-		resourceTile.put(3, "wool");
-		resourceTile.put(4, "wheat");
-		resourceTile.put(5, "ore");
-		resourceTile.put(6, "wheat");
-		resourceTile.put(7, "wood");
-		resourceTile.put(8, "wood");
-		resourceTile.put(9, "brick");
-		resourceTile.put(10, "ore");
-		resourceTile.put(11, "wheat");
-		resourceTile.put(12, "wheat");
-		resourceTile.put(13, "ore");
-		resourceTile.put(14, "wood");
-		resourceTile.put(15, "wool");
-		resourceTile.put(16, "brick");
-		resourceTile.put(17, "wool");
-		resourceTile.put(18, "brick");
+		resourceTile.put("Pos22", "wood");
+		resourceTile.put("Pos23", "wool");
+		resourceTile.put("Pos24", "wool");
+		resourceTile.put("Pos32", "wheat");
+		resourceTile.put("Pos33", "ore");
+		resourceTile.put("Pos34", "wheat");
+		resourceTile.put("Pos35", "wood");
+		resourceTile.put("Pos42", "wood");
+		resourceTile.put("Pos43", "brick");
+		resourceTile.put("Pos45", "ore");
+		resourceTile.put("Pos46", "wheat");
+		resourceTile.put("Pos52", "wheat");
+		resourceTile.put("Pos53", "ore");
+		resourceTile.put("Pos54", "wood");
+		resourceTile.put("Pos55", "wool");
+		resourceTile.put("Pos62", "brick");
+		resourceTile.put("Pos63", "wool");
+		resourceTile.put("Pos64", "brick");
 	}
 	
 	public void setPassivePayoutInformation() {
-		for (int i=1; i <= rNums.size(); i++) {
-			results.put(i, Integer.toString(rNums.get(i)) + '-' + resourceTile.get(i));
+		for (Entry<String, Integer> set : rNums.entrySet()) {
+			results.put(set.getKey(), Integer.toString(rNums.get(set.getKey())) + '-' + resourceTile.get(set.getKey()));
 		}
 	}
 	
@@ -67,7 +55,7 @@ public class TileInformation {
 		String player1houses = housesPlayers.get(playerNumber);
 		String[] splitString = player1houses.split("-");
 		for (int j=0; j < splitString.length; j++) {
-			String resourceAndNumber = results.get(Integer.parseInt(splitString[j]));
+			String resourceAndNumber = results.get(splitString[j]);
 			String[] splitString2 = resourceAndNumber.split("-");
 			if (number_dice == Integer.parseInt(splitString2[0])) {
 				hand.setCard("resource",splitString2[1] , 1);
