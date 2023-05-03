@@ -3,9 +3,7 @@ package player;
 /**
  * Enum to store player colour.
  * 
- * 
- * 
- * Colours stored are blue, red, green and yellow.
+ * Colours stored are blue, red.
  */
 public enum PlayerColour {
 	BLUE {
