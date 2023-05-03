@@ -35,12 +35,12 @@ public class DevCard {
 
 	}
 
-	public void invent(Hand myHand) {
+	public void invent(Hand hand) {
 		if (can_invent) {
 			System.out.println("hi");
-			myHand.setCard("resource", draw_random_resource(), 1);
-			myHand.setCard("resource", draw_random_resource(), 1);
-			myHand.setCard("development", "invention", -1);
+			hand.setCard("resource", draw_random_resource(), 1);
+			hand.setCard("resource", draw_random_resource(), 1);
+			hand.setCard("development", "invention", -1);
 		}
 	}
 
