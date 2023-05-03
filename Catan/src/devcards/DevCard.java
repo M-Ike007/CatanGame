@@ -24,14 +24,14 @@ public class DevCard {
 	/**
 	 * increases development card in hand
 	 * 
-	 * @param myHand is the hand of the player.
+	 * @param hand is the hand of the player.
 	 * @param card   is the type development card.
 	 */
-	public void increaseHand(Hand myHand, String card) {
-		myHand.setCard("development", card, 1);
-		myHand.setCard("resource", "wool", -1);
-		myHand.setCard("resource", "wheat", -1);
-		myHand.setCard("resource", "ore", -1);
+	public void increaseHand(Hand hand, String card) {
+		hand.setCard("development", card, 1);
+		hand.setCard("resource", "wool", -1);
+		hand.setCard("resource", "wheat", -1);
+		hand.setCard("resource", "ore", -1);
 
 	}
 
