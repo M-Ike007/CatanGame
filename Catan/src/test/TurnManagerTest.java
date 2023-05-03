@@ -2,6 +2,7 @@ package test;
 
 import junit.framework.TestCase;
 import player.Player;
+import player.PlayerColour;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,8 +14,8 @@ public class TurnManagerTest extends TestCase {
 	public void testSetGetTurn() {
 		Hand hand1 = new Hand();
 		Hand hand2 = new Hand();
-		Player player1 = new Player(hand2);
-		Player player2 = new Player(hand1);
+		Player player1 = new Player(hand2, PlayerColour.RED, "test1");
+		Player player2 = new Player(hand1, PlayerColour.BLUE, "test2");
 		ArrayList<Player> players = new ArrayList<>(
                 Arrays.asList(player1, player2));
 	

@@ -1,4 +1,4 @@
-package devcards;
+package cards;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -8,7 +8,7 @@ import java.util.Random;
  * 
  *
  */
-public class Distribution {
+public class DistributionDevelopmentCards {
 	private Random generator = new Random();
 	private int result;
 	private HashMap<Integer, String> distribution = new HashMap<Integer, String>();
@@ -17,7 +17,7 @@ public class Distribution {
 	 * Make a distribution of cards.
 	 * 
 	 */
-	public Distribution() {
+	public DistributionDevelopmentCards() {
 		distribution.put(1, "knight");
 		distribution.put(2, "knight");
 		distribution.put(3, "knight");

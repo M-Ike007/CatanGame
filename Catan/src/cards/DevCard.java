@@ -1,4 +1,4 @@
-package devcards;
+package cards;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -7,7 +7,7 @@ import hand.Hand;
 public class DevCard {
 	protected boolean can_invent = false;
 	private int resource_result = 0;
-	private Distribution dist = new Distribution();
+	private DistributionDevelopmentCards dist = new DistributionDevelopmentCards();
 
 	/**
 	 * HashMap emulates the distribution of cards in the game. right now there is
@@ -16,18 +16,18 @@ public class DevCard {
 	 * 
 	 * @Return random Development Card from the HashMap
 	 */
-	public String drawDevCard() {
+	public String getDevCard() {
 		this.dist.setResult();
 		return this.dist.getCard();
 	}
 
 	/**
-	 * increases development card in hand
+	 * increases development card in hand after buying a card.
 	 * 
 	 * @param hand is the hand of the player.
 	 * @param card   is the type development card.
 	 */
-	public void increaseHand(Hand hand, String card) {
+	public void transactDevelopmentCardPurchase(Hand hand, String card) {
 		hand.setCard("development", card, 1);
 		hand.setCard("resource", "wool", -1);
 		hand.setCard("resource", "wheat", -1);
@@ -39,11 +39,10 @@ public class DevCard {
 	 * 
 	 * @param hand The hand that is given a new resource. 
 	 */
-	public void invent(Hand hand) {
+	public void setInventReward(Hand hand) {
 		if (can_invent) {
-			System.out.println("hi");
-			hand.setCard("resource", draw_random_resource(), 1);
-			hand.setCard("resource", draw_random_resource(), 1);
+			hand.setCard("resource", getResourceDraw(), 1);
+			hand.setCard("resource", getResourceDraw(), 1);
 			hand.setCard("development", "invention", -1);
 		}
 	}
@@ -52,7 +51,7 @@ public class DevCard {
 	 * 
 	 * @return String A random resource.
 	 */
-	public String draw_random_resource() {
+	public String getResourceDraw() {
 		HashMap<Integer, String> resource = new HashMap<Integer, String>();
 
 		resource.put(1, "wool");
