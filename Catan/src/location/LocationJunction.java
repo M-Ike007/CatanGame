@@ -1,13 +1,30 @@
 package location;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
+
+
+/**
+ * This method calculate all coordinates for each Hexagon.
+ *
+ */
+
 public class LocationJunction {
+	public HashSet<ArrayList<Integer>> all_xy = new HashSet<ArrayList<Integer>>();
 	
-	public HashSet<ArrayList<Integer>> getLocationJunction() {
+	/**
+	 * This methods g
+	 *
+	 */
+	
+	public HashSet<ArrayList<Integer>>getLocationJunction(){
+		setLocationJunction();
+		return all_xy;
+		}
+	
+	private void setLocationJunction() {
 		LocationJunction loc = new LocationJunction();
 		ArrayList<Integer>[][] t = new ArrayList[19][2];
 		
@@ -22,12 +39,12 @@ public class LocationJunction {
 			t = loc.getAllCor(x,y,t,i);
 		}
 		HashSet<ArrayList<Integer>> s = loc.removeReplicates(t);
-		return s;
+		this.all_xy = s;
+
 	}
 	public ArrayList<Integer> getCorX(int x){
 		ArrayList<Integer> cor = new ArrayList<Integer>();
 		int width= 100;
-		int height= 100;
 		
 		int x_lt = x;		
 		cor.add(x_lt -5);
@@ -53,7 +70,6 @@ public class LocationJunction {
 	}
 	public ArrayList<Integer> getCorY(int y){
 		ArrayList<Integer> cor = new ArrayList<Integer>();
-		int width= 100;
 		int height= 100;
 		
 		int y_lt = (int)(y + (0.25*height));
@@ -77,14 +93,13 @@ public class LocationJunction {
 		return cor;
 	
 	}
-	public ArrayList<Integer>[][] getAllCor(ArrayList<Integer> x, ArrayList<Integer> y, ArrayList<Integer> [][] all_cor, int hex_number){
-//		System.out.println(Arrays.deepToString(all_cor));
+	private ArrayList<Integer>[][] getAllCor(ArrayList<Integer> x, ArrayList<Integer> y, ArrayList<Integer> [][] all_cor, int hex_number){
 		all_cor[hex_number][0] = x;
 		all_cor[hex_number][1] = y;
 		return all_cor;
 		};
 		
-	public HashSet<ArrayList<Integer>> removeReplicates(ArrayList<Integer>[][] all_cor){
+	private HashSet<ArrayList<Integer>> removeReplicates(ArrayList<Integer>[][] all_cor){
 		HashSet<ArrayList<Integer>> set = new HashSet<ArrayList<Integer>>();
 		for (int r=0; r < all_cor.length; r++) {
 			for(int e = 0; e< 6 ; e++) {
