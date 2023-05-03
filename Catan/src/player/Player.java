@@ -1,50 +1,53 @@
 package player;
+
 import hand.*;
 import dice.*;
 
-public class Player{
+public class Player {
 	public Dice dice = new Dice();
 	private final Hand hand;
 	private PlayerColour colour;
 	private String name;
-	
+
 	public Player(Hand hand) {
 		this.hand = hand;
 		this.colour = PlayerColour.RED;
 		this.name = "test";
 	}
-	
-	public Player(Hand hand, PlayerColour col_assigned, String name){
-		
-		
+
+	public Player(Hand hand, PlayerColour col_assigned, String name) {
+
 		this.hand = hand;
 		this.colour = col_assigned;
 		this.name = name;
 	}
-	/**A getter for hand
+
+	/**
+	 * A getter for hand
+	 * 
 	 * @return Hand
 	 */
 	public Hand getHand() {
 		return hand;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
-	/** A getter for colour
+
+	/**
+	 * A getter for colour
+	 * 
 	 * @return PlayerColour
 	 */
 	public PlayerColour getColour() {
 		return colour;
 	}
-	
+
 	public int throwDice() {
 		dice.setSum();
 		int throwdice = dice.getSum();
 		return throwdice;
 	}
-	
+
 }
-
-
