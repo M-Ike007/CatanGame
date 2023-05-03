@@ -14,6 +14,8 @@ public class MainTest extends TestCase {
 
 	public MainTest() {
 		player_info.put("1", PlayerColour.BLUE);
+		player_info.put("2", PlayerColour.BLUE);
+		player_info.put("3", PlayerColour.BLUE);
 		player_info.put("4", PlayerColour.RED);
 	}
 
