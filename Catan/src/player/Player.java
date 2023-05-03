@@ -9,12 +9,13 @@ public class Player {
 	private PlayerColour colour;
 	private String name;
 
-	public Player(Hand hand) {
-		this.hand = hand;
-		this.colour = PlayerColour.RED;
-		this.name = "test";
-	}
-
+	/**
+	 * Sets player information
+	 * 
+	 * @param hand         is a Hand object
+	 * @param col_assigned is the PlayerColour enum RED or BLUE
+	 * @param name         is the entered name of the player
+	 */
 	public Player(Hand hand, PlayerColour col_assigned, String name) {
 
 		this.hand = hand;
@@ -31,6 +32,11 @@ public class Player {
 		return hand;
 	}
 
+	/**
+	 * A getter for name
+	 * 
+	 * @return name
+	 */
 	public String getName() {
 		return name;
 	}
@@ -42,12 +48,6 @@ public class Player {
 	 */
 	public PlayerColour getColour() {
 		return colour;
-	}
-
-	public int throwDice() {
-		dice.setSum();
-		int throwdice = dice.getSum();
-		return throwdice;
 	}
 
 }
