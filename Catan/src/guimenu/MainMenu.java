@@ -15,8 +15,6 @@ public class MainMenu {
 	
 	private JButton bScore = new JButton("Game score");
 	
-	private JButton bOptions = new JButton("options");
-	
 	public MainMenu() {
 	
 		f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -37,14 +35,7 @@ public class MainMenu {
 			}
 		});
 		
-		f.getContentPane().add(bOptions, BorderLayout.WEST);
-		
-		bOptions.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent ae) {
-				f.dispose();
-				new Options();
-			}
-		});
+	
 		f.setSize(500,200);
 		f.setVisible(true);
 	}
