@@ -8,18 +8,10 @@ import hand.*;
 import player.*;
    
 /**
- * @author TEK, SDH.
  * The trade button the active player will see when it is their turn.
  * 
- * This class opens a window that asks the players whether they want to trade and if so what.
- * Later future iterations should include how much of the given resources should be traded.
- * The idea is to include arrows above the resources indicating the number to be traded.
- * Then the active player can iterate over the non-active players to trade with.
- * The non-active players can either return no, yes, or change request. 
- * 
+ * This class opens a window that asks the player whether they want to trade with the bank and if so, what.
  */
-
-
 
 public class TradeBank extends JFrame {
 
@@ -34,6 +26,14 @@ public class TradeBank extends JFrame {
 	private JButton wood;
 	private JButton wheat;
 	
+	/**
+	 * This method creates a frame and asks the active player if he will trade with the bank. 
+	 * If the player wants to trade, the first choice is which resource he want to give to the bank.
+	 * The second choice is which resource he want to receive. Then the player can trade again or
+	 * leave the screen. 
+	 * 
+	 * @param myHand: The hand of the active player
+	 */
 	public TradeBank(Hand myHand) {
 		// Making the frame
 		JFrame frame=new JFrame("Trade");  
@@ -130,10 +130,22 @@ public class TradeBank extends JFrame {
 	}
 
 
+	/**
+	 * This method changes the amounts of cards in the active player hand. 
+	 * @param myHand: the hand of the active player.
+	 * @param resource: String "resource"
+	 * @param card: the resource card for the trade.
+	 * @param amount: the amount of resource that change in the active player hand.
+	 */
 	private void Banktax(Hand myHand, String resource, String card, int amount) {
 		myHand.setCard(resource, card, amount);
 	} 
 	
+	/**
+	 * This method trades the wool resource with the bank. The first click on the button
+	 * removes 4 wool resources of the active player hand. The second click on the button
+	 * add 1 wool resource of the active player hand.
+	 */
 	private void actionListenerWool() {
 		// counter add 1
 		counter += 1;
@@ -156,6 +168,11 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
+	/**
+	 * This method trades the ore resource with the bank. The first click on the button
+	 * removes 4 ore resources of the active player hand. The second click on the button
+	 * add 1 ore resource of the active player hand.
+	 */
 	private void actionListenerOre(Hand myHand) {
 		// counter add 1
 		counter += 1;
@@ -178,6 +195,11 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
+	/**
+	 * This method trades the brick resource with the bank. The first click on the button
+	 * removes 4 brick resources of the active player hand. The second click on the button
+	 * add 1 brick resource of the active player hand.
+	 */
 	private void actionListenerBrick(Hand myHand) {
 		// counter add 1
 		counter += 1;
@@ -200,6 +222,11 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
+	/**
+	 * This method trades the wood resource with the bank. The first click on the button
+	 * removes 4 wood resources of the active player hand. The second click on the button
+	 * add 1 wood resource of the active player hand.
+	 */
 	private void actionListenerWood(Hand myHand) {
 		// counter add 1
 		counter += 1;
@@ -222,6 +249,11 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
+	/**
+	 * This method trades the wheat resource with the bank. The first click on the button
+	 * removes 4 wheat resources of the active player hand. The second click on the button
+	 * add 1 wheat resource of the active player hand.
+	 */
 	private void actionListenerWheat(Hand myHand) {
 		// counter add 1
 		counter += 1;
