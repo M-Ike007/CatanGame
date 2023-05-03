@@ -16,7 +16,7 @@ public class PlayerTest extends TestCase {
 	public void testGetName() {
 		Hand hand = new Hand();
 		String name = "Piet van PieterBurg";
-		Player player = new Player(hand, PlayerColour.YELLOW, name);
+		Player player = new Player(hand, PlayerColour.BLUE, name);
 		String result = player.getName();
 		assertEquals(name, result);
 	}
