@@ -137,7 +137,7 @@ public class TradeBank extends JFrame {
 	 * @param card: the resource card for the trade.
 	 * @param amount: the amount of resource that change in the active player hand.
 	 */
-	private void Banktax(Hand myHand, String resource, String card, int amount) {
+	private void bankTax(Hand myHand, String resource, String card, int amount) {
 		myHand.setCard(resource, card, amount);
 	} 
 	
@@ -151,11 +151,11 @@ public class TradeBank extends JFrame {
 		counter += 1;
 		// remove four wool from hand
 		if (counter == 1) {
-			Banktax(myHand, "resource", "wool", -4);
+			bankTax(myHand, "resource", "wool", -4);
 			tf.setText("What do you want to receive one resource of");
 		}
 		if (counter == 2) {
-			Banktax(myHand, "resource", "wool", 1);
+			bankTax(myHand, "resource", "wool", 1);
 			wool.setVisible(false);
 			ore.setVisible(false);
 			brick.setVisible(false);
@@ -178,11 +178,11 @@ public class TradeBank extends JFrame {
 		counter += 1;
 		// remove four ore from hand
 		if (counter == 1) {
-			Banktax(myHand, "resource", "ore", -4);
+			bankTax(myHand, "resource", "ore", -4);
 			tf.setText("What do you want to receive one resource of");
 		}
 		if (counter == 2) {
-			Banktax(myHand, "resource", "ore", 1);
+			bankTax(myHand, "resource", "ore", 1);
 			wool.setVisible(false);
 			ore.setVisible(false);
 			brick.setVisible(false);
@@ -205,11 +205,11 @@ public class TradeBank extends JFrame {
 		counter += 1;
 		// remove four brick from hand
 		if (counter == 1) {
-			Banktax(myHand, "resource", "brick", -4);
+			bankTax(myHand, "resource", "brick", -4);
 			tf.setText("What do you want to receive one resource of");
 		}
 		if (counter == 2) {
-			Banktax(myHand, "resource", "brick", 1);
+			bankTax(myHand, "resource", "brick", 1);
 			wool.setVisible(false);
 			ore.setVisible(false);
 			brick.setVisible(false);
@@ -232,11 +232,11 @@ public class TradeBank extends JFrame {
 		counter += 1;
 		// remove four wood from hand
 		if (counter == 1) {
-			Banktax(myHand, "resource", "wood", -4);
+			bankTax(myHand, "resource", "wood", -4);
 			tf.setText("What do you want to receive one resource of");
 		}
 		if (counter == 2) {
-			Banktax(myHand, "resource", "wood", 1);
+			bankTax(myHand, "resource", "wood", 1);
 			wool.setVisible(false);
 			ore.setVisible(false);
 			brick.setVisible(false);
@@ -259,11 +259,11 @@ public class TradeBank extends JFrame {
 		counter += 1;
 		// remove four wheat from hand
 		if (counter == 1) {
-			Banktax(myHand, "resource", "wheat", -4);
+			bankTax(myHand, "resource", "wheat", -4);
 			tf.setText("What do you want to receive one resource of");
 		}
 		if (counter == 2) {
-			Banktax(myHand, "resource", "wheat", 1);
+			bankTax(myHand, "resource", "wheat", 1);
 			wool.setVisible(false);
 			ore.setVisible(false);
 			brick.setVisible(false);
