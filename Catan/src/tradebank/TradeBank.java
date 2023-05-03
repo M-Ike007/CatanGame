@@ -87,26 +87,7 @@ public class TradeBank extends JFrame {
 		brick.setBounds(250,200,80,20);
 		brick.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// counter add 1
-				counter += 1;
-				// remove four brick from hand
-				if (counter == 1) {
-					Banktax(myHand, "resource", "brick", -4);
-					tf.setText("What do you want to receive one resource of");
-				}
-				if (counter == 2) {
-					Banktax(myHand, "resource", "brick", 1);
-					wool.setVisible(false);
-					ore.setVisible(false);
-					brick.setVisible(false);
-					wood.setVisible(false);
-					wheat.setVisible(false);
-					b1.setVisible(true);
-					b2.setVisible(true);
-					tf.setText("Do you want to trade?");
-					counter = 0;
-				}
-				System.out.println(myHand.getCard("resource", "brick"));			
+				actionListenerBrick(myHand);			
 			}
 		
 		});
@@ -232,6 +213,28 @@ public class TradeBank extends JFrame {
 		}
 		if (counter == 2) {
 			Banktax(myHand, "resource", "ore", 1);
+			wool.setVisible(false);
+			ore.setVisible(false);
+			brick.setVisible(false);
+			wood.setVisible(false);
+			wheat.setVisible(false);
+			b1.setVisible(true);
+			b2.setVisible(true);
+			tf.setText("Do you want to trade?");
+			counter = 0;
+		}
+	}
+	
+	public void actionListenerBrick(Hand myHand) {
+		// counter add 1
+		counter += 1;
+		// remove four brick from hand
+		if (counter == 1) {
+			Banktax(myHand, "resource", "brick", -4);
+			tf.setText("What do you want to receive one resource of");
+		}
+		if (counter == 2) {
+			Banktax(myHand, "resource", "brick", 1);
 			wool.setVisible(false);
 			ore.setVisible(false);
 			brick.setVisible(false);
