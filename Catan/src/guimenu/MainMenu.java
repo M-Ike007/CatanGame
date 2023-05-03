@@ -1,6 +1,9 @@
 package guimenu;
 
 import javax.swing.JFrame;
+
+import guiboard.Board;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -22,7 +25,7 @@ public class MainMenu {
 		bStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				f.dispose();
-				new StartGame();
+				new Board();
 			}
 		});
 		
