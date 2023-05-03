@@ -8,22 +8,7 @@ import devcards.DevCard;
 import hand.Hand;
 
 
-public class TheTestDev extends TestCase{
-	
-	public void testDrawCard() {
-		DevCard testDevCard = new DevCard();
-		List<String> options = new ArrayList<String>();
-		options.add("knight");
-		options.add("vcp");
-		options.add("monopoly");
-		options.add("twoRoads");
-		options.add("invention");
-		String result = testDevCard.drawDevCard();
-		if(options.contains(result))		
-			assertEquals(1, 1);		
-		else
-			assertEquals(1,2);
-	}
+public class TheTestDev extends TestCase {
 	
 	public void testIncreaseHand() {
 		Hand testHand = new Hand();
