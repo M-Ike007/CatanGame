@@ -8,7 +8,11 @@ public class DevCard {
 	private int result = 0;
 	protected boolean can_invent = false;
 	private int resource_result = 0;
+<<<<<<< HEAD
+	private Distribution dist = new Distribution();
+=======
 
+>>>>>>> 7bf62ac1dfbf1c36833feea20b77c0be3cd17dbd
 	/**
 	 * HashMap emulates the distribution of cards in the game. right now there is
 	 * infinite card so it is possible to draw more cards than are normally
@@ -16,6 +20,11 @@ public class DevCard {
 	 * 
 	 * @Return random Development Card from the HashMap
 	 */
+<<<<<<< HEAD
+	public String drawDevCard() {	
+		this.dist.setResult();
+		return this.dist.getCard();
+=======
 	public String drawDevCard() {
 		Random generator = new Random();
 		HashMap<Integer, String> distribution = new HashMap<Integer, String>();
@@ -47,6 +56,7 @@ public class DevCard {
 		result = generator.nextInt(1, 26);
 		String drawnCard = distribution.get(result);
 		return drawnCard;
+>>>>>>> 7bf62ac1dfbf1c36833feea20b77c0be3cd17dbd
 	}
 
 	/**
