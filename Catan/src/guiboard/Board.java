@@ -34,8 +34,10 @@ public class Board {
 	private Dice diceRoll = new Dice();
 	private String outputString = new String("");
 	private JLabel lblDiceResult = new JLabel(outputString); 
+	private JLabel TurnTitle = new JLabel();
+	private JLabel WhoseTurnIsIt = new JLabel();
 	private JPanel p = new JPanel();
-	private int round = 0;
+	private int round = 1;
 	public Player player1 = new Player(new Hand(), PlayerColour.BLUE, "1");
 	public Player player2 = new Player(new Hand(), PlayerColour.RED, "2"); 
 	public ArrayList<Player> playerList = new ArrayList<>(Arrays.asList(player1, player2));
@@ -199,6 +201,21 @@ public class Board {
 		
 		f.add(turn_Phase_Panel);
 		
+		
+		//TURN TRACKER
+		TurnTitle.setBounds(1020, 565, 140, 120);
+		TurnTitle.setHorizontalAlignment(JLabel.CENTER);
+		TurnTitle.setFont(new Font("arial", Font.PLAIN, 16));
+		TurnTitle.setText("Current turn: "+ round + "/10");
+        f.add(TurnTitle);
+		
+        WhoseTurnIsIt.setBounds(1028, 600, 100, 100);
+        WhoseTurnIsIt.setHorizontalAlignment(JLabel.CENTER);
+        WhoseTurnIsIt.setText("Player 1");
+        WhoseTurnIsIt.setForeground(Color.RED);
+        WhoseTurnIsIt.setFont(new Font("arial", Font.PLAIN, 25));
+        f.add(WhoseTurnIsIt);
+  
 	     
 		// RESOURCE NUMBERS
 		// Add keys and values (Position, ResourceNumber) 
@@ -796,12 +813,21 @@ public class Board {
 	}
 	
 	private void handleEndTurn() {
-		if (round < 9) {
+		if (round < 10) {
 			manager.setTurn();
 			activePlayer = manager.getTurn();
 			lblDiceResult.setText("");
 			updateActivePlayer();
+			lblDiceResult.setText(" ");
+			WhoseTurnIsIt.setText("Player " + activePlayer.getName());
 			round += 1;
+			TurnTitle.setText("Current turn: " + round + "/10");
+			if (activePlayer.getName() == "1") {
+			    WhoseTurnIsIt.setForeground(Color.RED);
+			}
+			else {
+				WhoseTurnIsIt.setForeground(Color.BLUE);
+			}
 		}
 		else {
 			f.dispose();
