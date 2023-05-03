@@ -15,9 +15,9 @@ public class DevInventionTest extends TestCase {
 		
 		
 		DevCard testDevCard2 = new DevCard();
-		testDevCard2.increaseHand(testHand, "invention");
+		testDevCard2.transactDevelopmentCardPurchase(testHand, "invention");
 		
-		hi.invent(testHand);
+		hi.setInventReward(testHand);
 		
 		int knight = testHand.getCard("development", "knight");
 		System.out.println(knight + "knight");
