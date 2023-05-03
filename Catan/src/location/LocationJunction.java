@@ -4,9 +4,27 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
+
+
+/**
+ * This method calculate all coordinates for each Hexagon.
+ *
+ */
+
 public class LocationJunction {
+	public HashSet<ArrayList<Integer>> all_xy = new HashSet<ArrayList<Integer>>();
 	
-	public HashSet<ArrayList<Integer>> getLocationJunction() {
+	/**
+	 * This methods g
+	 *
+	 */
+	
+	public HashSet<ArrayList<Integer>>getLocationJunction(){
+		setLocationJunction();
+		return all_xy;
+		}
+	
+	private void setLocationJunction() {
 		LocationJunction loc = new LocationJunction();
 		ArrayList<Integer>[][] t = new ArrayList[19][2];
 		
@@ -21,7 +39,8 @@ public class LocationJunction {
 			t = loc.getAllCor(x,y,t,i);
 		}
 		HashSet<ArrayList<Integer>> s = loc.removeReplicates(t);
-		return s;
+		this.all_xy = s;
+
 	}
 	public ArrayList<Integer> getCorX(int x){
 		ArrayList<Integer> cor = new ArrayList<Integer>();
