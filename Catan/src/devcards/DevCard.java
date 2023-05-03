@@ -35,6 +35,10 @@ public class DevCard {
 
 	}
 
+	/** Giving a hand a new resource based on the invent rule.
+	 * 
+	 * @param hand The hand that is given a new resource. 
+	 */
 	public void invent(Hand hand) {
 		if (can_invent) {
 			System.out.println("hi");
@@ -44,6 +48,10 @@ public class DevCard {
 		}
 	}
 
+	/** Drawing a random resource.
+	 * 
+	 * @return String A random resource.
+	 */
 	public String draw_random_resource() {
 		HashMap<Integer, String> resource = new HashMap<Integer, String>();
 
