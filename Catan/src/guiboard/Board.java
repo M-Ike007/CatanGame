@@ -51,9 +51,7 @@ public class Board {
 	JButton[] buttons = new JButton[hexCorners.size()];						//List of JButtons for building
 	JLabel[] labels = new JLabel[hexCorners.size()];						//List of JLabels for building
 	HashMap<Point, Integer> lblCords = new HashMap<Point, Integer>();		//HashMap for labels and location for building
-	HashMap<String, Integer> rNums = new HashMap<String, Integer>();		//HashMap for resource numbers and locations
-	
-	
+	TilesNumbers data = new TilesNumbers();
 	// PREPARING ALL THE IMAGES
     // Wood image loading and preparing 
     ImageIcon wood = loadImageIcon("Images/Tile_Wood.png", 100, 100);
@@ -218,26 +216,8 @@ public class Board {
   
 	     
 		// RESOURCE NUMBERS
-		// Add keys and values (Position, ResourceNumber) 
-		// The numbers in the key represent rows and columns: Pos45 = row 4 and column 5
-		rNums.put("Pos22", 6);
-		rNums.put("Pos23", 3);
-		rNums.put("Pos24", 8);
-		rNums.put("Pos32", 2);
-		rNums.put("Pos33", 4);
-		rNums.put("Pos34", 5);
-		rNums.put("Pos35", 10);
-		rNums.put("Pos42", 5);
-		rNums.put("Pos43", 9);
-		rNums.put("Pos45", 6);
-		rNums.put("Pos46", 9);
-		rNums.put("Pos52", 10);
-		rNums.put("Pos53", 11);
-		rNums.put("Pos54", 3);
-		rNums.put("Pos55", 12);
-		rNums.put("Pos62", 8);
-		rNums.put("Pos63", 4);
-		rNums.put("Pos64", 11);
+        data.setTileNumbers();
+        HashMap<String, Integer> rNums = data.getTileNumbers();
 		
 		// Adding the resource numbers to the frame
         // 2nd row
