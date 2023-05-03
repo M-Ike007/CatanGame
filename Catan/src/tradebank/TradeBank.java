@@ -22,13 +22,8 @@ import player.*;
 
 
 public class TradeBank extends JFrame {
-	
-//	public static void main(String[] args) {
-//		TradeBank frame = new TradeBank();
-//		//frame.setVisible(true);
-//	}
 
-	public Hand myHand;
+	private Hand myHand;
 	private int counter = 0;
 	private JTextField tf;
 	private JButton b1;
