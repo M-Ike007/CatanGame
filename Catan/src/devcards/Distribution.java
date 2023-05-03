@@ -3,7 +3,8 @@ package devcards;
 import java.util.HashMap;
 import java.util.Random;
 
-/** Use a distribution of cards.
+/**
+ * Use a distribution of cards.
  * 
  *
  */
@@ -12,7 +13,8 @@ public class Distribution {
 	private int result;
 	private HashMap<Integer, String> distribution = new HashMap<Integer, String>();
 
-	/** Make a distribution of cards.
+	/**
+	 * Make a distribution of cards.
 	 * 
 	 */
 	public Distribution() {
