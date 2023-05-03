@@ -7,7 +7,6 @@ import passivepayout.PassivePayout;
 import player.Player;
 import player.PlayerColour;
 import tradebank.TradeBank;
-import tradeplayer.TradePlayer;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -750,10 +749,6 @@ public class Board {
     protected void built_elements() {		// Handle building
     	 BuildingSelectionMenu.main(null);
     }
-		
-	protected void handlePlayerTrade() {	// Handle player trading (closing this window closes the board as well, fix)
-		TradePlayer.main(null);	
-	} 
 	
 	protected void handleBankTrade() {		// Handle bank trading
 		new TradeBank(activePlayer.getHand());
