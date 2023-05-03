@@ -4,19 +4,21 @@ import hand.Hand;
 
 public class DevInvention extends DevCard {
 
-	public void increaseInvention(DevCard card, Hand myHand) {
-		card.increaseHand(myHand, "invention");
+	public void increaseInvention(DevCard card, Hand hand) {
+		card.increaseHand(hand, "invention");
 	}
 
+	/** The enabled version of the invent class.
+	 * 
+	 * @param hand The to be given extra resources based on the invention rules. 
+	 */
 	@Override
-	public void invent(Hand myHand) {
+	public void invent(Hand hand) {
 		can_invent = true;
-		System.out.println("i am working");
 		if (can_invent) {
-			System.out.println("hi");
-			myHand.setCard("resource", draw_random_resource(), 1);
-			myHand.setCard("resource", draw_random_resource(), 1);
-			myHand.setCard("development", "invention", -1);
+			hand.setCard("resource", draw_random_resource(), 1);
+			hand.setCard("resource", draw_random_resource(), 1);
+			hand.setCard("development", "invention", -1);
 		}
 	}
 }

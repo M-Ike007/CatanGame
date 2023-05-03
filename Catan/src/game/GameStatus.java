@@ -11,7 +11,6 @@ package game;
  * their first resources. THIRDPHASE: Players are granted their turn counter
  * clockwise, until the end of the game is reached, this is the END state.
  * 
- * @author TEK, SB
  */
 public enum GameStatus {
 	FIRSTPHASE, SECONDPHASE, THIRDPHASE, END,

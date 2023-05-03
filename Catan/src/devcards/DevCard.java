@@ -24,26 +24,34 @@ public class DevCard {
 	/**
 	 * increases development card in hand
 	 * 
-	 * @param myHand is the hand of the player.
+	 * @param hand is the hand of the player.
 	 * @param card   is the type development card.
 	 */
-	public void increaseHand(Hand myHand, String card) {
-		myHand.setCard("development", card, 1);
-		myHand.setCard("resource", "wool", -1);
-		myHand.setCard("resource", "wheat", -1);
-		myHand.setCard("resource", "ore", -1);
+	public void increaseHand(Hand hand, String card) {
+		hand.setCard("development", card, 1);
+		hand.setCard("resource", "wool", -1);
+		hand.setCard("resource", "wheat", -1);
+		hand.setCard("resource", "ore", -1);
 
 	}
 
-	public void invent(Hand myHand) {
+	/** Giving a hand a new resource based on the invent rule.
+	 * 
+	 * @param hand The hand that is given a new resource. 
+	 */
+	public void invent(Hand hand) {
 		if (can_invent) {
 			System.out.println("hi");
-			myHand.setCard("resource", draw_random_resource(), 1);
-			myHand.setCard("resource", draw_random_resource(), 1);
-			myHand.setCard("development", "invention", -1);
+			hand.setCard("resource", draw_random_resource(), 1);
+			hand.setCard("resource", draw_random_resource(), 1);
+			hand.setCard("development", "invention", -1);
 		}
 	}
 
+	/** Drawing a random resource.
+	 * 
+	 * @return String A random resource.
+	 */
 	public String draw_random_resource() {
 		HashMap<Integer, String> resource = new HashMap<Integer, String>();
 

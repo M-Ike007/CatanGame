@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import devcards.DevCard;
 import hand.Hand;
 
-public class TheTestDev extends TestCase {
+public class DevTest extends TestCase {
 
 	public void testIncreaseHand() {
 		Hand testHand = new Hand();
