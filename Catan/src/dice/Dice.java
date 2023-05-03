@@ -3,7 +3,6 @@ package dice;
 import java.util.Random;
 
 /**
- * @author SDH, IVV.
  * This class simulates two dice throws and sums the results.
  */
 public class Dice 
