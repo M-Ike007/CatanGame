@@ -3,7 +3,6 @@ package game;
 import hand.Hand;
 
 import player.*;
-import dice.*;
 import guiboard.*;
 
 import java.util.*;
@@ -26,8 +25,6 @@ public class Main {
 	private Map<Player, Integer> tempmap = new LinkedHashMap<>();
 	private GameStatus status;
 	private Player activeplayer;
-
-	private ArrayList<Player> turnlist = new ArrayList<Player>();
 
 	/**
 	 * Constructing the main and show the board.
