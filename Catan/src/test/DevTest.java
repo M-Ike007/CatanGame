@@ -6,7 +6,7 @@ import hand.Hand;
 
 public class DevTest extends TestCase {
 
-	public void testIncreaseHand() {
+	public void testTransactDevelopmentCardPurchase() {
 		Hand testHand = new Hand();
 		testHand.setCard("development", "knight", 3);
 		testHand.setCard("resource", "wheat", 1);
@@ -14,8 +14,8 @@ public class DevTest extends TestCase {
 		testHand.setCard("resource", "wool", 1);
 
 		DevCard testDevCard2 = new DevCard();
-		String result = testDevCard2.drawDevCard();
-		testDevCard2.increaseHand(testHand, result);
+		String result = testDevCard2.getDevCard();
+		testDevCard2.transactDevelopmentCardPurchase(testHand, result);
 
 		int knight = testHand.getCard("development", "knight");
 		System.out.println(knight + "knight");

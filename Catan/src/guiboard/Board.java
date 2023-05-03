@@ -780,7 +780,7 @@ public class Board {
 	
 	private void handleBuyDevCard() {
 		DevCard devCard = new DevCard();
-		String drawnCard = devCard.drawDevCard();
+		String drawnCard = devCard.getDevCard();
 		devCard.increaseHand(activePlayer.getHand(), drawnCard);
 		lblDiceResult.setText("");
 		updateActivePlayer();
