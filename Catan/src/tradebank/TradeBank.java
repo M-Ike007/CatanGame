@@ -51,7 +51,6 @@ public class TradeBank extends JFrame {
 	    b1.setBounds(50,200,300,30);
 	    b1.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent e) {
-				// Methode voor het traden
 	    		b1.setVisible(false);
 	    		b2.setVisible(false);
 	    		wool.setVisible(true);
@@ -68,6 +67,7 @@ public class TradeBank extends JFrame {
 	    		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 	    	}
 	    });
+	    // Button wool
 	    wool =new JButton("wool");
 	    wool.setBounds(50,200,80,20);
 	    wool.addActionListener(new ActionListener() {
@@ -76,6 +76,7 @@ public class TradeBank extends JFrame {
 			}
 			
 		});
+	    // Button ore
 		ore =new JButton("ore");  
 		ore.setBounds(150,200,80,20);
 		ore.addActionListener(new ActionListener() {
@@ -83,6 +84,7 @@ public class TradeBank extends JFrame {
 				actionListenerOre(myHand);
 			}
 		});
+		// Button brick
 		brick =new JButton("brick"); 
 		brick.setBounds(250,200,80,20);
 		brick.addActionListener(new ActionListener() {
@@ -91,6 +93,7 @@ public class TradeBank extends JFrame {
 			}
 		
 		});
+		// Button wood
 		wood =new JButton("wood");
 		wood.setBounds(350,200,80,20);
 		wood.addActionListener(new ActionListener() {
@@ -99,6 +102,7 @@ public class TradeBank extends JFrame {
 			}
 		
 		});
+		// Button wheat
 		wheat =new JButton("wheat");
 		wheat.setBounds(450,200,80,20);
 		wheat.addActionListener(new ActionListener() {
@@ -107,15 +111,8 @@ public class TradeBank extends JFrame {
 			}
 		});
 	    
-	    
 	    tf.setEditable(false);
 	    tf.setBounds(50,100,600,30);
-	    b2.addActionListener(new ActionListener() {
-	    	public void actionPerformed(ActionEvent e) {
-	    		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-	    	}
-	    });
-	    
 	    tf.setEditable(false);
 	    tf.setBounds(50,100,600,30);
 	 // add to JFrame
@@ -138,11 +135,11 @@ public class TradeBank extends JFrame {
 	}
 
 
-	public void Banktax(Hand myHand, String resource, String card, int amount) {
+	private void Banktax(Hand myHand, String resource, String card, int amount) {
 		myHand.setCard(resource, card, amount);
 	} 
 	
-	public void actionListenerWool() {
+	private void actionListenerWool() {
 		// counter add 1
 		counter += 1;
 		// remove four wool from hand
@@ -164,7 +161,7 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
-	public void actionListenerOre(Hand myHand) {
+	private void actionListenerOre(Hand myHand) {
 		// counter add 1
 		counter += 1;
 		// remove four ore from hand
@@ -186,7 +183,7 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
-	public void actionListenerBrick(Hand myHand) {
+	private void actionListenerBrick(Hand myHand) {
 		// counter add 1
 		counter += 1;
 		// remove four brick from hand
@@ -208,7 +205,7 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
-	public void actionListenerWood(Hand myHand) {
+	private void actionListenerWood(Hand myHand) {
 		// counter add 1
 		counter += 1;
 		// remove four wood from hand
@@ -230,7 +227,7 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
-	public void actionListenerWheat(Hand myHand) {
+	private void actionListenerWheat(Hand myHand) {
 		// counter add 1
 		counter += 1;
 		// remove four wheat from hand
