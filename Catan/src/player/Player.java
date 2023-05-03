@@ -10,7 +10,7 @@ public class Player {
 	private String name;
 
 	/**
-	 * Sets player information
+	 * Constructs player
 	 * 
 	 * @param hand         is a Hand object
 	 * @param col_assigned is the PlayerColour enum RED or BLUE

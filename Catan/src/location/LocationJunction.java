@@ -1,6 +1,5 @@
 package location;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -27,7 +26,6 @@ public class LocationJunction {
 	public ArrayList<Integer> getCorX(int x){
 		ArrayList<Integer> cor = new ArrayList<Integer>();
 		int width= 100;
-		int height= 100;
 		
 		int x_lt = x;		
 		cor.add(x_lt -5);
@@ -53,7 +51,6 @@ public class LocationJunction {
 	}
 	public ArrayList<Integer> getCorY(int y){
 		ArrayList<Integer> cor = new ArrayList<Integer>();
-		int width= 100;
 		int height= 100;
 		
 		int y_lt = (int)(y + (0.25*height));
@@ -77,14 +74,13 @@ public class LocationJunction {
 		return cor;
 	
 	}
-	public ArrayList<Integer>[][] getAllCor(ArrayList<Integer> x, ArrayList<Integer> y, ArrayList<Integer> [][] all_cor, int hex_number){
-//		System.out.println(Arrays.deepToString(all_cor));
+	private ArrayList<Integer>[][] getAllCor(ArrayList<Integer> x, ArrayList<Integer> y, ArrayList<Integer> [][] all_cor, int hex_number){
 		all_cor[hex_number][0] = x;
 		all_cor[hex_number][1] = y;
 		return all_cor;
 		};
 		
-	public HashSet<ArrayList<Integer>> removeReplicates(ArrayList<Integer>[][] all_cor){
+	private HashSet<ArrayList<Integer>> removeReplicates(ArrayList<Integer>[][] all_cor){
 		HashSet<ArrayList<Integer>> set = new HashSet<ArrayList<Integer>>();
 		for (int r=0; r < all_cor.length; r++) {
 			for(int e = 0; e< 6 ; e++) {
