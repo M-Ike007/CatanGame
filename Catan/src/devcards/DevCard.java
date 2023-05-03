@@ -5,10 +5,10 @@ import java.util.Random;
 import hand.Hand;
 
 public class DevCard {
-	private int result = 0;
 	protected boolean can_invent = false;
 	private int resource_result = 0;
 	private Distribution dist = new Distribution();
+
 	/**
 	 * HashMap emulates the distribution of cards in the game. right now there is
 	 * infinite card so it is possible to draw more cards than are normally
@@ -16,10 +16,10 @@ public class DevCard {
 	 * 
 	 * @Return random Development Card from the HashMap
 	 */
-	public String drawDevCard() {	
+	public String drawDevCard() {
 		this.dist.setResult();
 		return this.dist.getCard();
-    }
+	}
 
 	/**
 	 * increases development card in hand
