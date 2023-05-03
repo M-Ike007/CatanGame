@@ -30,6 +30,8 @@ public class TradeBank extends JFrame {
 
 	public Hand myHand;
 	private int counter = 0;
+	private JTextField tf;
+	private JButton b1;
 	private JButton b2;
 	private JButton wool;
 	private JButton ore;
@@ -42,11 +44,10 @@ public class TradeBank extends JFrame {
 		JFrame frame=new JFrame("Trade");  
 		
 		// Making the textfield
-	    JTextField tf;
 	    tf = new JTextField("Do you want to trade?");
 	    
 	    // Making the buttons
-	    JButton b1 =new JButton("Yes");  
+	    b1 =new JButton("Yes");  
 	    b1.setBounds(50,200,300,30);
 	    b1.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent e) {
@@ -71,26 +72,7 @@ public class TradeBank extends JFrame {
 	    wool.setBounds(50,200,80,20);
 	    wool.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// counter add 1
-				counter += 1;
-				// remove four wool from hand
-				if (counter == 1) {
-					Banktax(myHand, "resource", "wool", -4);
-					tf.setText("What do you want to receive one resource of");
-				}
-				if (counter == 2) {
-					Banktax(myHand, "resource", "wool", 1);
-					wool.setVisible(false);
-					ore.setVisible(false);
-					brick.setVisible(false);
-					wood.setVisible(false);
-					wheat.setVisible(false);
-					b1.setVisible(true);
-					b2.setVisible(true);
-					tf.setText("Do you want to trade?");
-					counter = 0;
-				}
-				System.out.println(myHand.getCard("resource", "wool"));
+				actionListenerWool();
 			}
 			
 		});
@@ -236,4 +218,26 @@ public class TradeBank extends JFrame {
 	public void Banktax(Hand myHand, String resource, String card, int amount) {
 		myHand.setCard(resource, card, amount);
 	} 
+	
+	public void actionListenerWool() {
+		// counter add 1
+		counter += 1;
+		// remove four wool from hand
+		if (counter == 1) {
+			Banktax(myHand, "resource", "wool", -4);
+			tf.setText("What do you want to receive one resource of");
+		}
+		if (counter == 2) {
+			Banktax(myHand, "resource", "wool", 1);
+			wool.setVisible(false);
+			ore.setVisible(false);
+			brick.setVisible(false);
+			wood.setVisible(false);
+			wheat.setVisible(false);
+			b1.setVisible(true);
+			b2.setVisible(true);
+			tf.setText("Do you want to trade?");
+			counter = 0;
+		}
+	}
 }  	
