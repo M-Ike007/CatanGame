@@ -51,9 +51,7 @@ public class Board {
 	JButton[] buttons = new JButton[hexCorners.size()];						//List of JButtons for building
 	JLabel[] labels = new JLabel[hexCorners.size()];						//List of JLabels for building
 	HashMap<Point, Integer> lblCords = new HashMap<Point, Integer>();		//HashMap for labels and location for building
-	HashMap<String, Integer> rNums = new HashMap<String, Integer>();		//HashMap for resource numbers and locations
-	
-	
+	TilesNumbers data = new TilesNumbers(new HashMap<String, Integer>());
 	// PREPARING ALL THE IMAGES
     // Wood image loading and preparing 
     ImageIcon wood = loadImageIcon("Images/Tile_Wood.png", 100, 100);
@@ -220,24 +218,24 @@ public class Board {
 		// RESOURCE NUMBERS
 		// Add keys and values (Position, ResourceNumber) 
 		// The numbers in the key represent rows and columns: Pos45 = row 4 and column 5
-		rNums.put("Pos22", 6);
-		rNums.put("Pos23", 3);
-		rNums.put("Pos24", 8);
-		rNums.put("Pos32", 2);
-		rNums.put("Pos33", 4);
-		rNums.put("Pos34", 5);
-		rNums.put("Pos35", 10);
-		rNums.put("Pos42", 5);
-		rNums.put("Pos43", 9);
-		rNums.put("Pos45", 6);
-		rNums.put("Pos46", 9);
-		rNums.put("Pos52", 10);
-		rNums.put("Pos53", 11);
-		rNums.put("Pos54", 3);
-		rNums.put("Pos55", 12);
-		rNums.put("Pos62", 8);
-		rNums.put("Pos63", 4);
-		rNums.put("Pos64", 11);
+		data.getrNums().put("Pos22", 6);
+		data.getrNums().put("Pos23", 3);
+		data.getrNums().put("Pos24", 8);
+		data.getrNums().put("Pos32", 2);
+		data.getrNums().put("Pos33", 4);
+		data.getrNums().put("Pos34", 5);
+		data.getrNums().put("Pos35", 10);
+		data.getrNums().put("Pos42", 5);
+		data.getrNums().put("Pos43", 9);
+		data.getrNums().put("Pos45", 6);
+		data.getrNums().put("Pos46", 9);
+		data.getrNums().put("Pos52", 10);
+		data.getrNums().put("Pos53", 11);
+		data.getrNums().put("Pos54", 3);
+		data.getrNums().put("Pos55", 12);
+		data.getrNums().put("Pos62", 8);
+		data.getrNums().put("Pos63", 4);
+		data.getrNums().put("Pos64", 11);
 		
 		// Adding the resource numbers to the frame
         // 2nd row
@@ -245,21 +243,21 @@ public class Board {
         Pos22.setBounds(500, 100, 100, 100);
         Pos22.setSize(100, 100);
         Pos22.setHorizontalAlignment(JLabel.CENTER);
-        Pos22.setText(Integer.toString(rNums.get("Pos22")));
+        Pos22.setText(Integer.toString(data.getrNums().get("Pos22")));
         f.add(Pos22);
         
       	JLabel Pos23 = new JLabel();
         Pos23.setBounds(600, 100, 100, 100);
         Pos23.setSize(100, 100);
         Pos23.setHorizontalAlignment(JLabel.CENTER);
-        Pos23.setText(Integer.toString(rNums.get("Pos23")));
+        Pos23.setText(Integer.toString(data.getrNums().get("Pos23")));
         f.add(Pos23);
         
         JLabel Pos24 = new JLabel();
         Pos24.setBounds(700, 100, 100, 100);
         Pos24.setSize(100, 100);
         Pos24.setHorizontalAlignment(JLabel.CENTER);
-        Pos24.setText(Integer.toString(rNums.get("Pos24")));
+        Pos24.setText(Integer.toString(data.getrNums().get("Pos24")));
         f.add(Pos24);
        
         // 3th row
@@ -267,28 +265,28 @@ public class Board {
         Pos32.setBounds(450, 175, 100, 100);
         Pos32.setSize(100, 100);
         Pos32.setHorizontalAlignment(JLabel.CENTER);
-        Pos32.setText(Integer.toString(rNums.get("Pos32")));
+        Pos32.setText(Integer.toString(data.getrNums().get("Pos32")));
         f.add(Pos32);
         
         JLabel Pos33 = new JLabel();
         Pos33.setBounds(550, 175, 100, 100);
         Pos33.setSize(100, 100);
         Pos33.setHorizontalAlignment(JLabel.CENTER);
-        Pos33.setText(Integer.toString(rNums.get("Pos33")));
+        Pos33.setText(Integer.toString(data.getrNums().get("Pos33")));
         f.add(Pos33);
         
         JLabel Pos34 = new JLabel();
         Pos34.setBounds(650, 175, 100, 100);
         Pos34.setSize(100, 100);
         Pos34.setHorizontalAlignment(JLabel.CENTER);
-        Pos34.setText(Integer.toString(rNums.get("Pos34")));
+        Pos34.setText(Integer.toString(data.getrNums().get("Pos34")));
         f.add(Pos34);
         
         JLabel Pos35 = new JLabel();
         Pos35.setBounds(750, 175, 100, 100);
         Pos35.setSize(100, 100);
         Pos35.setHorizontalAlignment(JLabel.CENTER);
-        Pos35.setText(Integer.toString(rNums.get("Pos35")));
+        Pos35.setText(Integer.toString(data.getrNums().get("Pos35")));
         f.add(Pos35);
                
         // 4th row
@@ -296,28 +294,28 @@ public class Board {
         Pos42.setBounds(400, 250, 100, 100);
         Pos42.setSize(100, 100);
         Pos42.setHorizontalAlignment(JLabel.CENTER);
-        Pos42.setText(Integer.toString(rNums.get("Pos42")));
+        Pos42.setText(Integer.toString(data.getrNums().get("Pos42")));
         f.add(Pos42);
         
         JLabel Pos43 = new JLabel();
         Pos43.setBounds(500, 250, 100, 100);
         Pos43.setSize(100, 100);
         Pos43.setHorizontalAlignment(JLabel.CENTER);
-        Pos43.setText(Integer.toString(rNums.get("Pos43")));
+        Pos43.setText(Integer.toString(data.getrNums().get("Pos43")));
         f.add(Pos43);
         
         JLabel Pos45 = new JLabel();
         Pos45.setBounds(700, 250, 100, 100);
         Pos45.setSize(100, 100);
         Pos45.setHorizontalAlignment(JLabel.CENTER);
-        Pos45.setText(Integer.toString(rNums.get("Pos45")));
+        Pos45.setText(Integer.toString(data.getrNums().get("Pos45")));
         f.add(Pos45);
         
         JLabel Pos46 = new JLabel();
         Pos46.setBounds(800, 250, 100, 100);
         Pos46.setSize(100, 100);
         Pos46.setHorizontalAlignment(JLabel.CENTER);
-        Pos46.setText(Integer.toString(rNums.get("Pos46")));
+        Pos46.setText(Integer.toString(data.getrNums().get("Pos46")));
         f.add(Pos46);
                  
         // 5th row
@@ -325,28 +323,28 @@ public class Board {
         Pos52.setBounds(450, 325, 100, 100);
         Pos52.setSize(100, 100);
         Pos52.setHorizontalAlignment(JLabel.CENTER);
-        Pos52.setText(Integer.toString(rNums.get("Pos52")));
+        Pos52.setText(Integer.toString(data.getrNums().get("Pos52")));
         f.add(Pos52);
         
         JLabel Pos53 = new JLabel();
         Pos53.setBounds(550, 325, 100, 100);
         Pos53.setSize(100, 100);
         Pos53.setHorizontalAlignment(JLabel.CENTER);
-        Pos53.setText(Integer.toString(rNums.get("Pos53")));
+        Pos53.setText(Integer.toString(data.getrNums().get("Pos53")));
         f.add(Pos53);
         
         JLabel Pos54 = new JLabel();
         Pos54.setBounds(650, 325, 100, 100);
         Pos54.setSize(100, 100);
         Pos54.setHorizontalAlignment(JLabel.CENTER);
-        Pos54.setText(Integer.toString(rNums.get("Pos54")));
+        Pos54.setText(Integer.toString(data.getrNums().get("Pos54")));
         f.add(Pos54);
         
         JLabel Pos55 = new JLabel();
         Pos55.setBounds(750, 325, 100, 100);
         Pos55.setSize(100, 100);
         Pos55.setHorizontalAlignment(JLabel.CENTER);
-        Pos55.setText(Integer.toString(rNums.get("Pos55")));
+        Pos55.setText(Integer.toString(data.getrNums().get("Pos55")));
         f.add(Pos55);
 
         //6th row
@@ -354,21 +352,21 @@ public class Board {
         Pos62.setBounds(500, 400, 100, 100);
         Pos62.setSize(100, 100);
         Pos62.setHorizontalAlignment(JLabel.CENTER);
-        Pos62.setText(Integer.toString(rNums.get("Pos62")));
+        Pos62.setText(Integer.toString(data.getrNums().get("Pos62")));
         f.add(Pos62);
         
         JLabel Pos63 = new JLabel();
         Pos63.setBounds(600, 400, 100, 100);
         Pos63.setSize(100, 100);
         Pos63.setHorizontalAlignment(JLabel.CENTER);
-        Pos63.setText(Integer.toString(rNums.get("Pos63")));
+        Pos63.setText(Integer.toString(data.getrNums().get("Pos63")));
         f.add(Pos63);
         
         JLabel Pos64 = new JLabel();
         Pos64.setBounds(700, 400, 100, 100);
         Pos64.setSize(100, 100);
         Pos64.setHorizontalAlignment(JLabel.CENTER);
-        Pos64.setText(Integer.toString(rNums.get("Pos64")));
+        Pos64.setText(Integer.toString(data.getrNums().get("Pos64")));
         f.add(Pos64);
         
         JLabel Pos0 = new JLabel();
