@@ -2,10 +2,7 @@ package tradebank;
 
 import java.awt.event.*;  
 import javax.swing.*;
-import java.awt.*;
-
-import hand.*;
-import player.*;
+import hand.Hand;
    
 /**
  * The trade button the active player will see when it is their turn.
