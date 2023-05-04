@@ -4,7 +4,7 @@ import dice.Dice;
 import junit.framework.TestCase;
 
 public class DiceTest extends TestCase {
-	private final int NUM_TESTS = 10000000;
+	private static final int NUM_TESTS = 10000000;
 	private int error = 0;
 
 	public void testDiceRoll() {
