@@ -2,14 +2,15 @@ package passivepayout;
 
 import java.util.HashMap;
 
-/** A class to store resource tile information
+/**
+ * A class to store resource tile information
  * 
- *
  */
 public class ResourceTileLocations {
 	private HashMap<String, String> resourceTile = new HashMap<String, String>();
-	
-	/** Creating the resource cards.
+
+	/**
+	 * Creating the resource cards.
 	 * 
 	 */
 	public ResourceTileLocations() {
@@ -32,8 +33,10 @@ public class ResourceTileLocations {
 		resourceTile.put("Pos63", "wool");
 		resourceTile.put("Pos64", "brick");
 	}
-	
-	/** Get the resource type for a tile position.
+
+	/**
+	 * Get the resource type for a tile position.
+	 * 
 	 * @param query
 	 * @return A string of a resource type.
 	 */
