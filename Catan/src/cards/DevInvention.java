@@ -8,9 +8,10 @@ public class DevInvention extends DevCard {
 		card.transactDevelopmentCardPurchase(hand, "invention");
 	}
 
-	/** The enabled version of the invent class.
+	/**
+	 * The enabled version of the invent class.
 	 * 
-	 * @param hand The to be given extra resources based on the invention rules. 
+	 * @param hand The to be given extra resources based on the invention rules.
 	 */
 	@Override
 	public void setInventReward(Hand hand) {
