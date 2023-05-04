@@ -1,10 +1,8 @@
 package player;
 
 import hand.*;
-import dice.*;
 
 public class Player {
-	public Dice dice = new Dice();
 	private final Hand hand;
 	private PlayerColour colour;
 	private String name;

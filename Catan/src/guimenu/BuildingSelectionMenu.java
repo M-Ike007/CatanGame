@@ -12,14 +12,22 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-// add imports to junction and roads grids
 
+/**
+ * This class builds the selection menu for building.
+ * It lists the required resources for building.
+ *
+ */
 public class BuildingSelectionMenu extends JFrame {
-
+	
+	/**
+	 * This field creates the JPanel 
+	 *
+	 */
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
+	 * This method starts the class.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -35,7 +43,7 @@ public class BuildingSelectionMenu extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * This methods creates the menu frame
 	 */
 	public BuildingSelectionMenu() {
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -49,7 +57,7 @@ public class BuildingSelectionMenu extends JFrame {
 		JButton btnVillage = new JButton("Village");
 		btnVillage.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//DORP BOUWN
+			
 			}
 		});
 		btnVillage.setBounds(20, 20, 150, 23);
@@ -58,7 +66,7 @@ public class BuildingSelectionMenu extends JFrame {
 		JButton btnCity = new JButton("City");
 		btnCity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//STAD BOUWn
+			
 			}
 		});
 		btnCity.setBounds(20, 60, 150, 23);
@@ -67,7 +75,7 @@ public class BuildingSelectionMenu extends JFrame {
 		JButton btnRoad = new JButton("Road");
 		btnRoad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// Road bouwn
+			
 			}
 		});
 		btnRoad.setBounds(20, 100, 150, 23);
