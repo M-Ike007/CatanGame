@@ -44,14 +44,7 @@ public class TradeBank extends JFrame {
 		b1.setBounds(50, 200, 300, 30);
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				b1.setVisible(false);
-				b2.setVisible(false);
-				wool.setVisible(true);
-				ore.setVisible(true);
-				brick.setVisible(true);
-				wood.setVisible(true);
-				wheat.setVisible(true);
-				tf.setText("What do you want to give four resource of");
+				changeButtonVisibility();
 			}
 		});
 		b2 = new JButton("No");
@@ -274,5 +267,19 @@ public class TradeBank extends JFrame {
 			tf.setText("Do you want to trade?");
 			counter = 0;
 		}
+	}
+
+	/**
+	 * This method changes the visibility of the buttons
+	 */
+	private void changeButtonVisibility() {
+		b1.setVisible(false);
+		b2.setVisible(false);
+		wool.setVisible(true);
+		ore.setVisible(true);
+		brick.setVisible(true);
+		wood.setVisible(true);
+		wheat.setVisible(true);
+		tf.setText("What do you want to give four resource of");
 	}
 }
