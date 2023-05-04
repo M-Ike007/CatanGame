@@ -37,8 +37,8 @@ public class Board {
 	private JLabel whoseTurnIsIt = new JLabel();
 	private JPanel p = new JPanel();
 	private int round = 1;
-	private Player player1 = new Player(new Hand(), PlayerColour.BLUE, "1", 1);
-	private Player player2 = new Player(new Hand(), PlayerColour.RED, "2", 1); 
+	private Player player1 = new Player(new Hand(), PlayerColour.BLUE, "1");
+	private Player player2 = new Player(new Hand(), PlayerColour.RED, "2"); 
 	private ArrayList<Player> playerList = new ArrayList<>(Arrays.asList(player1, player2));
 	private TurnManager manager = new TurnManager(playerList);
 	private Player activePlayer = player1;
