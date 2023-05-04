@@ -52,7 +52,8 @@ public class Hand {
 	/**
 	 * Checking how many cards of a specific type and name are present.
 	 * 
-	 * @param card_class Whether the card to be check is a development card, or a resource card.
+	 * @param card_class Whether the card to be check is a development card, or a
+	 *                   resource card.
 	 * @param card       Name of the card. For instance wool, or Knight.
 	 * @return int of the number of cards in the hand of the specified card.
 	 */
