@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import junit.framework.TestCase;
 import location.LocationJunction;
+import java.util.Arrays;
+import java.util.HashSet;
 
 public class LocationJunctionTest extends TestCase {
 	public void testGetX() {
@@ -15,8 +17,9 @@ public class LocationJunctionTest extends TestCase {
 		assertEquals(x.get(3), Integer.valueOf(545));
 		assertEquals(x.get(4), Integer.valueOf(495));
 		assertEquals(x.get(5), Integer.valueOf(445));
-		
+
 	}
+
 	public void testGetY() {
 		LocationJunction loc = new LocationJunction();
 		ArrayList<Integer> y = loc.getCorY(25);
@@ -26,6 +29,29 @@ public class LocationJunctionTest extends TestCase {
 		assertEquals(y.get(3), Integer.valueOf(95));
 		assertEquals(y.get(4), Integer.valueOf(120));
 		assertEquals(y.get(5), Integer.valueOf(95));
+
+	}
+	
+	public void testSetAllCorRemoveReplicatesGetUnqiueCor() {
+		LocationJunction loc = new LocationJunction();
+		ArrayList<Integer>[][] all_cor = new ArrayList[2][2];
+		HashSet<ArrayList<Integer>> all_xy = new HashSet<ArrayList<Integer>>();
+		ArrayList<Integer> x = loc.getCorX(500);
+		ArrayList<Integer> y = loc.getCorY(100);
+		
+		ArrayList<Integer> x2 = loc.getCorX(500);
+		ArrayList<Integer> y2 = loc.getCorY(100);
+		loc.setAllCor(x, y, all_cor, 0);
+		loc.setAllCor(x2, y2, all_cor, 1);
+		loc.removeReplicates();
+		all_xy = loc.getUniqueCor();
+		
+		loc.removeReplicates();
+		int expect_size = 6;
+		assertEquals(all_xy.size(), expect_size);
 		
 	}
+
 }
+
+
