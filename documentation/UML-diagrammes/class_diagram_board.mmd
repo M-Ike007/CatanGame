@@ -1,0 +1,67 @@
+classDiagram
+    Board --> LocationJunction
+    Board --> TileNumbers
+    Board --> Player
+    Board --> Dice
+    Board --> TurnManager
+    TurnManager --> Player
+
+    class TurnManager {
+        + getTurn() Player
+        + setActiveplayer(Player activeplayer) void
+        + setTurn() void
+ 
+    }
+
+    class Dice {
+        + getSum() int
+        + setSum() void
+    }
+
+
+    class Player {
+        + getColour() PlayerColour
+        + getColour() Hand
+        + getName() String
+    }
+
+    class LocationJunction {
+        + hash[int] unique_xy
+        + hash[int, int] all_x
+
+        + setLocationJunction() void
+        + getLocationJunction() hash[int]
+        + getCorX(int x) hash[int, int]
+        + getCorY(int y) hash[int, int]
+        + setAllCor(hash[int] x, hash[int] y, hash[int, int] all_col, int hex_number) void
+        + getAllCor() : hash[int]
+        + removeReplicates() : void
+        + getUniqueCor() : hash[int]
+
+    }
+
+    class TileNumbers {
+        %%- HashMap[String, Integer] rNums
+        + HashMap[String, Integer] getTileNumbers()
+
+    }
+
+    class Board {
+        - TurnManager manager
+        - Dice diceRoll
+        - Player activeplayer
+        - Player player1
+        - Player player2
+        - ArrayList~Player~ 
+        - TileNumbers data
+        - LocationJunction loc
+        ~ handleBankTrade()  void
+        ~ handleBuyDevCard()  void
+        ~ handleDiceroll()  void
+        - handleEndTurn()  void
+        -loadImageIcon(String filePath, int scale1, int scale2)  ImageIcon
+        ~ playInventionCard() void
+        ~ showHouses() void
+        - turnTracker() void
+        - updateActivePlayer() void
+    }
