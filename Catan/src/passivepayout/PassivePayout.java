@@ -28,7 +28,7 @@ public class PassivePayout {
 	 * Gets the payout of a player
 	 * @return Hand:, hand of the player
 	 */
-	public Hand GetPayout() {
+	public Hand getPayout() {
 		return payoutResult;
 	}
 }

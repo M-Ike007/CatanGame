@@ -742,7 +742,7 @@ public class Board {
 		PassivePayout payout = new PassivePayout();
 		payout.SetPayout(diceRoll.getSum(), player1.getHand(), 1);
 		payout.SetPayout(diceRoll.getSum(), player2.getHand(), 2);
-		payout.GetPayout();
+		payout.getPayout();
 		updateActivePlayer();
 	}
 	
