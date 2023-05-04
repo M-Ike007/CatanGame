@@ -13,7 +13,6 @@ import javax.swing.border.EmptyBorder;
 
 import cards.*;
 import dice.Dice;
-import guimenu.BuildingSelectionMenu;
 import hand.Hand;
 import hand.HandActivePlayer;
 import game.TurnManager;
@@ -157,10 +156,10 @@ public class Board {
 		btnTradeBank.setBounds(20, 50, 150, 23);
 		turnPhasePanel.add(btnTradeBank);
 		
-		JButton btnBuild = new JButton("Build");
+		JButton btnBuild = new JButton("Play invention card");
 		btnBuild.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buildElements();				
+				playInventionCard();				
 			}
 		});		
 		btnBuild.setBounds(20, 170, 150, 23);
@@ -744,8 +743,12 @@ public class Board {
 		updateActivePlayer();
 	}
 	
-    protected void buildElements() {		// Handle building
-    	 BuildingSelectionMenu.main(null);
+    protected void playInventionCard() {		// Handle play invention card
+    	 DevInvention invention = new DevInvention();
+    	 invention.setInventReward(activePlayer.getHand());
+    	 lblDiceResult.setText("");
+    	 updateActivePlayer();
+    	 lblDiceResult.setText(" ");
     }
 	
 	protected void handleBankTrade() {		// Handle bank trading
