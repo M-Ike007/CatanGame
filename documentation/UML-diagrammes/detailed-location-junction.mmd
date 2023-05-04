@@ -1,0 +1,19 @@
+classDiagram
+    Board --> LocationJunction
+    class LocationJunction {
+        + hash[int] unique_xy
+        + hash[int, int] all_x
+
+        + setLocationJunction() void
+        + getLocationJunction() hash[int]
+        + getCorX(int x) hash[int, int]
+        + getCorY(int y) hash[int, int]
+        + setAllCor(hash[int] x, hash[int] y, hash[int, int] all_col, int hex_number) void
+        + getAllCor() : hash[int]
+        + removeReplicates() : void
+        + getUniqueCor() : hash[int]
+
+    }
+
+
+
