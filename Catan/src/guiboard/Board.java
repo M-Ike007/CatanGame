@@ -37,20 +37,18 @@ public class Board {
 	private JLabel WhoseTurnIsIt = new JLabel();
 	private JPanel p = new JPanel();
 	private int round = 1;
-	public Player player1 = new Player(new Hand(), PlayerColour.BLUE, "1");
-	public Player player2 = new Player(new Hand(), PlayerColour.RED, "2"); 
-	public ArrayList<Player> playerList = new ArrayList<>(Arrays.asList(player1, player2));
-	public TurnManager manager = new TurnManager(playerList);
+	private Player player1 = new Player(new Hand(), PlayerColour.BLUE, "1");
+	private Player player2 = new Player(new Hand(), PlayerColour.RED, "2"); 
+	private ArrayList<Player> playerList = new ArrayList<>(Arrays.asList(player1, player2));
+	private TurnManager manager = new TurnManager(playerList);
 	private Player activePlayer = player1;
-
+	private LocationJunction loc = new LocationJunction();
+	private HashSet<ArrayList<Integer>> hexCorners = loc.getLocationJunction();		//HashSet with all the coordinates for building
+	private JButton[] buttons = new JButton[hexCorners.size()];						//List of JButtons for building
+	private JLabel[] labels = new JLabel[hexCorners.size()];						//List of JLabels for building
+	private HashMap<Point, Integer> lblCords = new HashMap<Point, Integer>();		//HashMap for labels and location for building
+	private TilesNumbers data = new TilesNumbers();
 	
-	
-	LocationJunction loc = new LocationJunction();
-	HashSet<ArrayList<Integer>> hexCorners = loc.getLocationJunction();		//HashSet with all the coordinates for building
-	JButton[] buttons = new JButton[hexCorners.size()];						//List of JButtons for building
-	JLabel[] labels = new JLabel[hexCorners.size()];						//List of JLabels for building
-	HashMap<Point, Integer> lblCords = new HashMap<Point, Integer>();		//HashMap for labels and location for building
-	TilesNumbers data = new TilesNumbers();
 	// PREPARING ALL THE IMAGES
     // Wood image loading and preparing 
     ImageIcon wood = loadImageIcon("Images/Tile_Wood.png", 100, 100);
@@ -686,7 +684,7 @@ public class Board {
 	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-	public void showHouses() {
+	private void showHouses() {
     	labels[1].setIcon(Blue_Village);
     	labels[1].setBounds(795-8,270-12,30,30);
     	
