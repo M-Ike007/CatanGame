@@ -268,7 +268,7 @@ public class TradeBank extends JFrame {
 			counter = 0;
 		}
 	}
-	
+
 	/**
 	 * This method changes the visibility of the buttons
 	 */
