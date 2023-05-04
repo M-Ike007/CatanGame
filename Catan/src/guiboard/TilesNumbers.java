@@ -7,7 +7,7 @@ import java.util.HashMap;
  */
 public class TilesNumbers {
 	private HashMap<String, Integer> rNums = new HashMap<String, Integer>();
-	
+
 	/**
 	 * set tile numbers.
 	 */
@@ -34,6 +34,7 @@ public class TilesNumbers {
 
 	/**
 	 * get tile numbers.
+	 * 
 	 * @return rNums Hashmap of tile numbers.
 	 */
 	public HashMap<String, Integer> getTileNumbers() {
