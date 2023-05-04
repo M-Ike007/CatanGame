@@ -12,7 +12,6 @@ public class TileInformationTest extends TestCase {
 
 		TileInformation information = new TileInformation();
 		information.setTileNumber();
-		information.setResourceOfTile();
 		information.setHouseOnTile();
 		information.setPassivePayoutInformation();
 
