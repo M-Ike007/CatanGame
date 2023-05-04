@@ -49,9 +49,9 @@ public class Table extends JPanel {
 		String data[][] = { { "Laurens", "1000000", "2" }, { "Getalem", "100", "30" } };
 		String column[] = { "Player", "Win", "Total VP" };
 
-		JTable jt = new JTable(data, column);
-		jt.setBounds(30, 40, 200, 300);
-		JScrollPane sp = new JScrollPane(jt);
+		JTable jTable = new JTable(data, column);
+		jTable.setBounds(30, 40, 200, 300);
+		JScrollPane sp = new JScrollPane(jTable);
 		f.getContentPane().add(sp);
 		f.setSize(300, 400);
 		f.setVisible(true);
