@@ -9,8 +9,8 @@ import player.Player;
  */
 
 public class TurnManager {
-	public ArrayList<Player> players;
-	public Player activeplayer;
+	private ArrayList<Player> players;
+	private Player activeplayer;
 
 	/**
 	 * @param players ArrayList of players of the Player objects.
