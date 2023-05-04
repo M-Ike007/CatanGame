@@ -1,4 +1,5 @@
 package test;
+
 import passivepayout.ResourceTileLocations;
 import junit.framework.TestCase;
 
