@@ -73,8 +73,6 @@ public class Board {
 	// Village image loading and preparing
 	ImageIcon village = loadImageIcon("Images/Building_Village.png", 25, 25);
 	// City image loading and preparing
-	ImageIcon city = loadImageIcon("Images/Building_City.png", 25, 25);
-	// Cost image loading and preparing
 	ImageIcon cost = loadImageIcon("Images/Cost_Table.jpg", 250, 333);
 	// Red Village image loading and preparing (player 1)
 	ImageIcon redVillage = loadImageIcon("Images/Village_Red.png", 25, 25);
@@ -201,7 +199,7 @@ public class Board {
 
 		f.add(turnPhasePanel);
 
-		turnTracker(2);
+		turnTracker("ok");
 
 		// RESOURCE NUMBERS
 		data.setTileNumbers();
@@ -673,9 +671,11 @@ public class Board {
 
 	/**
 	 * This method creates a textfield to shown current player and turn number.
+	 * @param s TODO
+	 * @param s TODO
 	 */
-	private void turnTracker(int x) {
-		
+	private void turnTracker(String s) {
+
 		turnTitle.setBounds(1020, 565, 140, 120);
 		turnTitle.setHorizontalAlignment(JLabel.CENTER);
 		turnTitle.setFont(new Font("arial", Font.PLAIN, 16));
@@ -837,5 +837,4 @@ public class Board {
 			f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
 		}
 	}
-
 }

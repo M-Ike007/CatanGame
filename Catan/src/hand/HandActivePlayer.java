@@ -21,7 +21,6 @@ public class HandActivePlayer {
 	 */
 	public HandActivePlayer(Hand currentHand, JPanel p) {
 
-		// JFrame f= new JFrame("TextField Example");
 		JTextField t1, t2, t3, t4, t5, t6, t7, t8, t9, t10;
 		// resource cards
 		t1 = new JTextField(Integer.toString(currentHand.getCard("resource", "brick")));

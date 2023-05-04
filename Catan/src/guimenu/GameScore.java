@@ -21,13 +21,13 @@ public class GameScore {
 	 * The Table displaying the game score.
 	 */
 
-	private Table TableTest = new Table();
+	private Table tableTest = new Table();
 
 	/**
 	 * This method calls the Table displaying the game score.
 	 */
 
 	public GameScore() {
-		f.getContentPane().add(TableTest, BorderLayout.NORTH);
+		f.getContentPane().add(tableTest, BorderLayout.NORTH);
 	}
 }

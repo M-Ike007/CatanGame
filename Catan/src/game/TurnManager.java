@@ -9,8 +9,8 @@ import player.Player;
  */
 
 public class TurnManager {
-	public ArrayList<Player> players;
-	public Player activeplayer;
+	private ArrayList<Player> players;
+	private Player activePlayer;
 
 	/**
 	 * @param players ArrayList of players of the Player objects.
@@ -29,7 +29,7 @@ public class TurnManager {
 	 *
 	 */
 	public void setActiveplayer(Player activeplayer) {
-		this.activeplayer = activeplayer;
+		this.activePlayer = activeplayer;
 	}
 
 	/**
@@ -37,10 +37,10 @@ public class TurnManager {
 	 * Board btnEndTurn to acccess the current player
 	 */
 	public void setTurn() {
-		if (activeplayer == players.get(0)) {
-			this.activeplayer = players.get(1);
+		if (activePlayer == players.get(0)) {
+			this.activePlayer = players.get(1);
 		} else {
-			this.activeplayer = players.get(0);
+			this.activePlayer = players.get(0);
 		}
 	}
 
@@ -50,7 +50,7 @@ public class TurnManager {
 	 *         This method returns the activeplayer set in setTurn.
 	 */
 	public Player getTurn() {
-		return this.activeplayer;
+		return this.activePlayer;
 
 	}
 
