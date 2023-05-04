@@ -26,7 +26,6 @@ public class LocationJunction {
 
 	private ArrayList<Integer>[][] allCor = new ArrayList[19][2];
 
-
 	/**
 	 * This method sets all the coordinates for all the hexagons by calling the
 	 * necessary private methods.
@@ -36,10 +35,10 @@ public class LocationJunction {
 
 		LocationJunction loc = new LocationJunction();
 
-		ArrayList<Integer> allX = new ArrayList<Integer>(Arrays.asList(500, 600, 700, 450, 550, 650, 750, 400, 500,
-				600, 700, 800, 450, 550, 650, 750, 500, 600, 700));
-		ArrayList<Integer> allY = new ArrayList<Integer>(Arrays.asList(100, 100, 100, 175, 175, 175, 175, 250, 250,
-				250, 250, 250, 325, 325, 325, 325, 400, 400, 400));
+		ArrayList<Integer> allX = new ArrayList<Integer>(Arrays.asList(500, 600, 700, 450, 550, 650, 750, 400, 500, 600,
+				700, 800, 450, 550, 650, 750, 500, 600, 700));
+		ArrayList<Integer> allY = new ArrayList<Integer>(Arrays.asList(100, 100, 100, 175, 175, 175, 175, 250, 250, 250,
+				250, 250, 325, 325, 325, 325, 400, 400, 400));
 
 		for (int i = 0; i < allX.size(); i++) {
 			ArrayList<Integer> x = loc.getCorX(allX.get(i));
@@ -52,12 +51,13 @@ public class LocationJunction {
 		this.uniqueXY = uniqueCor;
 
 	}
-	
+
 	/**
 	 * This method gets all the coordinates for all the hexagons by calling
 	 * setLocationJunction.
 	 * 
-	 * @return unique_xy A HashSet containing all the coordinates for all the hexagons
+	 * @return unique_xy A HashSet containing all the coordinates for all the
+	 *         hexagons
 	 */
 
 	public HashSet<ArrayList<Integer>> getLocationJunction() {
@@ -161,7 +161,7 @@ public class LocationJunction {
 	/**
 	 * This method deletes all replicate the x and y coordinate sets.
 	 */
-	
+
 	public void removeReplicates() {
 		HashSet<ArrayList<Integer>> set = new HashSet<ArrayList<Integer>>();
 
