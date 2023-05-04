@@ -201,19 +201,7 @@ public class Board {
 
 		f.add(turnPhasePanel);
 
-		// TURN TRACKER
-		turnTitle.setBounds(1020, 565, 140, 120);
-		turnTitle.setHorizontalAlignment(JLabel.CENTER);
-		turnTitle.setFont(new Font("arial", Font.PLAIN, 16));
-		turnTitle.setText("Current turn: " + round + "/10");
-		f.add(turnTitle);
-
-		whoseTurnIsIt.setBounds(1028, 600, 100, 100);
-		whoseTurnIsIt.setHorizontalAlignment(JLabel.CENTER);
-		whoseTurnIsIt.setText("Player 1");
-		whoseTurnIsIt.setForeground(Color.RED);
-		whoseTurnIsIt.setFont(new Font("arial", Font.PLAIN, 25));
-		f.add(whoseTurnIsIt);
+		turnTracker();
 
 		// RESOURCE NUMBERS
 		data.setTileNumbers();
@@ -681,6 +669,25 @@ public class Board {
 		f.setResizable(false);
 		f.setSize(1920, 1080);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	/**
+	 * 
+	 */
+	private void turnTracker() {
+		// TURN TRACKER
+		turnTitle.setBounds(1020, 565, 140, 120);
+		turnTitle.setHorizontalAlignment(JLabel.CENTER);
+		turnTitle.setFont(new Font("arial", Font.PLAIN, 16));
+		turnTitle.setText("Current turn: " + round + "/10");
+		f.add(turnTitle);
+
+		whoseTurnIsIt.setBounds(1028, 600, 100, 100);
+		whoseTurnIsIt.setHorizontalAlignment(JLabel.CENTER);
+		whoseTurnIsIt.setText("Player 1");
+		whoseTurnIsIt.setForeground(Color.RED);
+		whoseTurnIsIt.setFont(new Font("arial", Font.PLAIN, 25));
+		f.add(whoseTurnIsIt);
 	}
 
 	/**
