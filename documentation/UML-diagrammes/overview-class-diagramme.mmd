@@ -1,0 +1,12 @@
+classDiagram
+    MainMenu --> Board
+    Board  <--  TradeBank
+    Board  <--  Turnmanager
+    Board  <--  DevCard
+    Board  <--  Dice
+    Board "1" <-- "2" Player
+    Board  <--  HandActivePlayer
+    Board  <--  PassivePayout
+    
+    DevCard --|> DevInvention
+
