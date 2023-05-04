@@ -35,9 +35,10 @@ public class DevCard {
 
 	}
 
-	/** Giving a hand a new resource based on the invent rule.
+	/**
+	 * Giving a hand a new resource based on the invent rule.
 	 * 
-	 * @param hand The hand that is given a new resource. 
+	 * @param hand The hand that is given a new resource.
 	 */
 	public void setInventReward(Hand hand) {
 		if (canInvent) {
