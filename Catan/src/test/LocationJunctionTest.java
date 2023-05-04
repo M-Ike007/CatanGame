@@ -8,6 +8,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class LocationJunctionTest extends TestCase {
+	private static final int EXPECT_SIZE = 6;
+
 	public void testGetX() {
 		LocationJunction loc = new LocationJunction();
 		ArrayList<Integer> x = loc.getCorX(450);
@@ -47,8 +49,7 @@ public class LocationJunctionTest extends TestCase {
 		allXY = loc.getUniqueCor();
 
 		loc.removeReplicates();
-		int expect_size = 6;
-		assertEquals(allXY.size(), expect_size);
+		assertEquals(allXY.size(), EXPECT_SIZE);
 
 	}
 
