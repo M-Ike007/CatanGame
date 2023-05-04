@@ -1,0 +1,6 @@
+sequenceDiagram 
+    PassivePayout ->> Dice: Roll dice
+    Dice -->> PassivePayout: Gives rolled number
+    PassivePayout ->> TileInformation: Check number on tiles for rolled number
+    TileInformation -->> PassivePayout: Gives resource type and village
+    PassivePayout ->> Hand: Give Hand resources if they own a village
