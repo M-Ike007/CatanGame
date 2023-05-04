@@ -11,7 +11,7 @@ import javax.swing.*;
  * 
  */
 public class HandActivePlayer {
-	private JPanel p;
+	private JPanel panel;
 
 	/**
 	 * takes current Hand and a Jpanel and creates ten textfields. text is not
@@ -115,7 +115,7 @@ public class HandActivePlayer {
 		t10.setBackground(new java.awt.Color(251, 232, 154));
 		t10.setFont(new Font("Gill Sans Nova Regular", Font.PLAIN, 18));
 		p.add(t10);
-		this.p = p;
+		this.panel = p;
 
 	}
 
@@ -125,7 +125,7 @@ public class HandActivePlayer {
 	 * @return p.
 	 */
 	public JPanel plotHand() {
-		return this.p;
+		return this.panel;
 	}
 
 }
