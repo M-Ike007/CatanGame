@@ -13,11 +13,11 @@ import java.util.HashSet;
 public class LocationJunction {
 
 	/**
-	 * The all_xy field represents a HashSet that stores all the unique x and y
+	 * The unique_xy field represents a HashSet that stores all the unique x and y
 	 * coordinates.
 	 */
 
-	public HashSet<ArrayList<Integer>> all_xy = new HashSet<ArrayList<Integer>>();
+	public HashSet<ArrayList<Integer>> unique_xy = new HashSet<ArrayList<Integer>>();
 
 	/**
 	 * The all_cor field represents an ArrayList that stores all the coordinates for
@@ -47,9 +47,9 @@ public class LocationJunction {
 			loc.setAllCor(x, y, all_cor, i);
 		}
 		loc.removeReplicates();
-		HashSet<ArrayList<Integer>> s = loc.getUniqueCor();
+		HashSet<ArrayList<Integer>> unique_cor = loc.getUniqueCor();
 
-		this.all_xy = s;
+		this.unique_xy = unique_cor;
 
 	}
 	
@@ -57,13 +57,13 @@ public class LocationJunction {
 	 * This method gets all the coordinates for all the hexagons by calling
 	 * setLocationJunction.
 	 * 
-	 * @return all_xy A HashSet containing all the coordinates for all the hexagons
+	 * @return unique_xy A HashSet containing all the coordinates for all the hexagons
 	 */
 
 	public HashSet<ArrayList<Integer>> getLocationJunction() {
 		setLocationJunction();
 
-		return all_xy;
+		return unique_xy;
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class LocationJunction {
 				set.add(xy);
 			}
 		}
-		this.all_xy = set;
+		this.unique_xy = set;
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class LocationJunction {
 	 */
 	public HashSet<ArrayList<Integer>> getUniqueCor() {
 
-		return this.all_xy;
+		return this.unique_xy;
 	}
 
 }
