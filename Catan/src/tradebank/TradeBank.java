@@ -51,6 +51,7 @@ public class TradeBank extends JFrame {
 				brick.setVisible(true);
 				wood.setVisible(true);
 				wheat.setVisible(true);
+				tf.setText("What do you want to give four resource of");
 			}
 		});
 		b2 = new JButton("No");
