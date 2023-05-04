@@ -13,16 +13,6 @@
 
 *Acceptance test:*
 When run, the codes provides a GUI. 
-For now, it should show 3 buttons; 'Start game', 'Options' and 'Game score'. 
-Each 3 of these buttons will open a new frame. 
-In this iteration, the new frames should at least contain a 'back' button so the user can return to the main menu if deemed necessary. 
-When transitioning to a new frame, the old frame should disappear. The 'Start game" GUI should also include a 'Start' button. 
-When clicked it opens the view_board method.
-
-
-| item      | it0   | it1   | it2   | it3   | it4   |
-|-----------|-------|-------|-------|-------|-------|
-| PP        |  --   | 2     |       |       |       |
-| Priority  |  --   | M     |       |       |       |
-| Status    |  N    | C     |       |       |       |
-
+For now, it should show 2 buttons; 'Start game' and 'Game score'. 
+When start game is clicked, it opens the board.
+When game score is clicked, it shows the current score, there is also a back button here to return to the two previous button. 
