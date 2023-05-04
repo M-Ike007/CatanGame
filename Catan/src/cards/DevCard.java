@@ -25,7 +25,7 @@ public class DevCard {
 	 * increases development card in hand after buying a card.
 	 * 
 	 * @param hand is the hand of the player.
-	 * @param card   is the type development card.
+	 * @param card is the type development card.
 	 */
 	public void transactDevelopmentCardPurchase(Hand hand, String card) {
 		hand.setCard("development", card, 1);
@@ -60,9 +60,9 @@ public class DevCard {
 		resource.put(3, "wood");
 		resource.put(4, "brick");
 		resource.put(5, "wheat");
-		Random res_gen = new Random();
-		resourceResult = res_gen.nextInt(1, 6);
-		String drawn_resource = resource.get(resourceResult);
-		return drawn_resource;
+		Random resGen = new Random();
+		resourceResult = resGen.nextInt(1, 6);
+		String drawnResource = resource.get(resourceResult);
+		return drawnResource;
 	}
 }
