@@ -17,14 +17,14 @@ public class LocationJunction {
 	 * coordinates.
 	 */
 
-	public HashSet<ArrayList<Integer>> unique_xy = new HashSet<ArrayList<Integer>>();
+	public HashSet<ArrayList<Integer>> uniqueXY = new HashSet<ArrayList<Integer>>();
 
 	/**
 	 * The all_cor field represents an ArrayList that stores all the coordinates for
 	 * all the hexagons.
 	 */
 
-	private ArrayList<Integer>[][] all_cor = new ArrayList[19][2];
+	private ArrayList<Integer>[][] allCor = new ArrayList[19][2];
 
 
 	/**
@@ -36,20 +36,20 @@ public class LocationJunction {
 
 		LocationJunction loc = new LocationJunction();
 
-		ArrayList<Integer> all_x = new ArrayList<Integer>(Arrays.asList(500, 600, 700, 450, 550, 650, 750, 400, 500,
+		ArrayList<Integer> allX = new ArrayList<Integer>(Arrays.asList(500, 600, 700, 450, 550, 650, 750, 400, 500,
 				600, 700, 800, 450, 550, 650, 750, 500, 600, 700));
-		ArrayList<Integer> all_y = new ArrayList<Integer>(Arrays.asList(100, 100, 100, 175, 175, 175, 175, 250, 250,
+		ArrayList<Integer> allY = new ArrayList<Integer>(Arrays.asList(100, 100, 100, 175, 175, 175, 175, 250, 250,
 				250, 250, 250, 325, 325, 325, 325, 400, 400, 400));
 
-		for (int i = 0; i < all_x.size(); i++) {
-			ArrayList<Integer> x = loc.getCorX(all_x.get(i));
-			ArrayList<Integer> y = loc.getCorY(all_y.get(i));
-			loc.setAllCor(x, y, all_cor, i);
+		for (int i = 0; i < allX.size(); i++) {
+			ArrayList<Integer> x = loc.getCorX(allX.get(i));
+			ArrayList<Integer> y = loc.getCorY(allY.get(i));
+			loc.setAllCor(x, y, allCor, i);
 		}
 		loc.removeReplicates();
-		HashSet<ArrayList<Integer>> unique_cor = loc.getUniqueCor();
+		HashSet<ArrayList<Integer>> uniqueCor = loc.getUniqueCor();
 
-		this.unique_xy = unique_cor;
+		this.uniqueXY = uniqueCor;
 
 	}
 	
@@ -63,7 +63,7 @@ public class LocationJunction {
 	public HashSet<ArrayList<Integer>> getLocationJunction() {
 		setLocationJunction();
 
-		return unique_xy;
+		return uniqueXY;
 	}
 
 	/**
@@ -79,23 +79,23 @@ public class LocationJunction {
 		ArrayList<Integer> cor = new ArrayList<Integer>();
 		int width = 100;
 
-		int x_lt = x;
-		cor.add(x_lt - 5);
+		int xLT = x;
+		cor.add(xLT - 5);
 
-		int x_mt = (int) (0.5 * width + x);
-		cor.add(x_mt - 5);
+		int xMT = (int) (0.5 * width + x);
+		cor.add(xMT - 5);
 
-		int x_rt = width + x;
-		cor.add(x_rt - 5);
+		int xRT = width + x;
+		cor.add(xRT - 5);
 
-		int x_rb = width + x;
-		cor.add(x_rb - 5);
+		int xRB = width + x;
+		cor.add(xRB - 5);
 
-		int x_mb = (int) (0.5 * width + x);
-		cor.add(x_mb - 5);
+		int xMB = (int) (0.5 * width + x);
+		cor.add(xMB - 5);
 
-		int x_lb = x;
-		cor.add(x_lb - 5);
+		int xLB = x;
+		cor.add(xLB - 5);
 
 		return cor;
 
@@ -114,23 +114,23 @@ public class LocationJunction {
 		ArrayList<Integer> cor = new ArrayList<Integer>();
 		int height = 100;
 
-		int y_lt = (int) (y + (0.25 * height));
-		cor.add(y_lt - 5);
+		int yLT = (int) (y + (0.25 * height));
+		cor.add(yLT - 5);
 
-		int y_mt = y;
-		cor.add(y_mt - 5);
+		int yMT = y;
+		cor.add(yMT - 5);
 
-		int y_rt = (int) (y + 0.25 * height);
-		cor.add(y_rt - 5);
+		int yRT = (int) (y + 0.25 * height);
+		cor.add(yRT - 5);
 
-		int y_rb = (int) (y + 0.75 * height);
-		cor.add(y_rb - 5);
+		int yRB = (int) (y + 0.75 * height);
+		cor.add(yRB - 5);
 
-		int y_mb = y + height;
-		cor.add(y_mb - 5);
+		int yMB = y + height;
+		cor.add(yMB - 5);
 
-		int y_lb = (int) (y + 0.75 * height);
-		cor.add(y_lb - 5);
+		int yLB = (int) (y + 0.75 * height);
+		cor.add(yLB - 5);
 
 		return cor;
 
@@ -141,12 +141,12 @@ public class LocationJunction {
 	 * ArrayLsts
 	 */
 
-	public void setAllCor(ArrayList<Integer> x, ArrayList<Integer> y, ArrayList<Integer>[][] all_cor, int hex_number) {
+	public void setAllCor(ArrayList<Integer> x, ArrayList<Integer> y, ArrayList<Integer>[][] allCor, int hex_number) {
 
-		all_cor[hex_number][0] = x;
-		all_cor[hex_number][1] = y;
+		allCor[hex_number][0] = x;
+		allCor[hex_number][1] = y;
 
-		this.all_cor = all_cor;
+		this.allCor = allCor;
 	};
 
 	/**
@@ -155,7 +155,7 @@ public class LocationJunction {
 	 */
 	private ArrayList<Integer>[][] getAllCor() {
 
-		return all_cor;
+		return allCor;
 	};
 
 	/**
@@ -165,17 +165,17 @@ public class LocationJunction {
 	public void removeReplicates() {
 		HashSet<ArrayList<Integer>> set = new HashSet<ArrayList<Integer>>();
 
-		for (int r = 0; r < all_cor.length; r++) {
+		for (int r = 0; r < allCor.length; r++) {
 			for (int e = 0; e < 6; e++) {
-				int x = all_cor[r][0].get(e);
-				int y = all_cor[r][1].get(e);
+				int x = allCor[r][0].get(e);
+				int y = allCor[r][1].get(e);
 				ArrayList<Integer> xy = new ArrayList<Integer>();
 				xy.add(x);
 				xy.add(y);
 				set.add(xy);
 			}
 		}
-		this.unique_xy = set;
+		this.uniqueXY = set;
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class LocationJunction {
 	 */
 	public HashSet<ArrayList<Integer>> getUniqueCor() {
 
-		return this.unique_xy;
+		return this.uniqueXY;
 	}
 
 }
