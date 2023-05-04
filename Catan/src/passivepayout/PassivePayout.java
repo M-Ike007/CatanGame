@@ -18,7 +18,6 @@ public class PassivePayout {
 	 */
 	public void setPayout(int dice_number, Hand hand, int playerNumber) {
 		information.setTileNumber();
-		information.setResourceOfTile();
 		information.setHouseOnTile();
 		information.setPassivePayoutInformation();
 		information.setTilesInformation(dice_number, hand, playerNumber);

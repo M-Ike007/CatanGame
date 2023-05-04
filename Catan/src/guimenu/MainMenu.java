@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.BorderLayout;
 
 /**
- * This class is the MainMenu of the game. It iinitializes the entire game.
+ * This class is the MainMenu of the game. It initializes the entire game.
  *
  */
 public class MainMenu {

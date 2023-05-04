@@ -12,7 +12,7 @@ import guiboard.TilesNumbers;
 public class TileInformation {
 	private TilesNumbers tilesNumbers = new TilesNumbers();
 	private HashMap<String, Integer> rNums;
-	private HashMap<String, String> resourceTile = new HashMap<String, String>();
+	private ResourceTileLocations resourceTile = new ResourceTileLocations();
 	private HashMap<String, String> results = new HashMap<String, String>();
 	private HashMap<Integer, String> housesPlayers = new HashMap<Integer, String>();
 	private Hand hand;
@@ -34,35 +34,12 @@ public class TileInformation {
 	}
 
 	/**
-	 * Sets the resources of the tiles
-	 */
-	public void setResourceOfTile() {
-		resourceTile.put("Pos22", "wood");
-		resourceTile.put("Pos23", "wool");
-		resourceTile.put("Pos24", "wool");
-		resourceTile.put("Pos32", "wheat");
-		resourceTile.put("Pos33", "ore");
-		resourceTile.put("Pos34", "wheat");
-		resourceTile.put("Pos35", "wood");
-		resourceTile.put("Pos42", "wood");
-		resourceTile.put("Pos43", "brick");
-		resourceTile.put("Pos45", "ore");
-		resourceTile.put("Pos46", "wheat");
-		resourceTile.put("Pos52", "wheat");
-		resourceTile.put("Pos53", "ore");
-		resourceTile.put("Pos54", "wood");
-		resourceTile.put("Pos55", "wool");
-		resourceTile.put("Pos62", "brick");
-		resourceTile.put("Pos63", "wool");
-		resourceTile.put("Pos64", "brick");
-	}
-
-	/**
 	 * Sets the passive payout information
 	 */
 	public void setPassivePayoutInformation() {
 		for (Entry<String, Integer> set : rNums.entrySet()) {
-			results.put(set.getKey(), Integer.toString(rNums.get(set.getKey())) + '-' + resourceTile.get(set.getKey()));
+			results.put(set.getKey(),
+					Integer.toString(rNums.get(set.getKey())) + '-' + resourceTile.getResourceLocation(set.getKey()));
 		}
 	}
 
