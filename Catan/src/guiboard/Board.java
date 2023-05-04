@@ -740,8 +740,8 @@ public class Board {
 		lblDiceResult.setText(outputString);	
 		
 		PassivePayout payout = new PassivePayout();
-		payout.SetPayout(diceRoll.getSum(), player1.getHand(), 1);
-		payout.SetPayout(diceRoll.getSum(), player2.getHand(), 2);
+		payout.setPayout(diceRoll.getSum(), player1.getHand(), 1);
+		payout.setPayout(diceRoll.getSum(), player2.getHand(), 2);
 		payout.getPayout();
 		updateActivePlayer();
 	}

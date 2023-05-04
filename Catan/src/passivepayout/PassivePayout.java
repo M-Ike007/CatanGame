@@ -15,7 +15,7 @@ public class PassivePayout {
 	 * @param hand: Hand, hand of a player 
 	 * @param playerNumber: int, player number
 	 */
-	public void SetPayout(int dice_number, Hand hand, int playerNumber) {
+	public void setPayout(int dice_number, Hand hand, int playerNumber) {
 		information.setTileNumber();
 		information.setResourceOfTile();
 		information.setHouseOnTile();
