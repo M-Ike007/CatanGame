@@ -38,7 +38,8 @@ public class TileInformation {
 	 */
 	public void setPassivePayoutInformation() {
 		for (Entry<String, Integer> set : rNums.entrySet()) {
-			results.put(set.getKey(), Integer.toString(rNums.get(set.getKey())) + '-' + resourceTile.getResourceLocation(set.getKey()));
+			results.put(set.getKey(),
+					Integer.toString(rNums.get(set.getKey())) + '-' + resourceTile.getResourceLocation(set.getKey()));
 		}
 	}
 
