@@ -37,7 +37,6 @@ public class TurnManager {
 	 * Board btnEndTurn to acccess the current player
 	 */
 	public void setTurn() {
-
 		if (activeplayer == players.get(0)) {
 			this.activeplayer = players.get(1);
 		} else {

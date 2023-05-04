@@ -2,7 +2,8 @@ package test;
 
 import java.util.ArrayList;
 import java.util.List;
-import devcards.*;
+
+import cards.*;
 import junit.framework.TestCase;
 
 public class DistributionTest extends TestCase {
@@ -12,7 +13,7 @@ public class DistributionTest extends TestCase {
 	 * 
 	 */
 	public void testgetCard() {
-		Distribution dist = new Distribution();
+		DistributionDevelopmentCards dist = new DistributionDevelopmentCards();
 		dist.setResult();
 		dist.getCard();
 		String result = dist.getCard();

@@ -4,7 +4,7 @@ import hand.Hand;
 import junit.framework.TestCase;
 
 public class HandTest extends TestCase {
-	private final int DESIRED = 10;
+	private static final int DESIRED = 10;
 
 	public void testInitialisation() {
 		Hand testHand = new Hand();

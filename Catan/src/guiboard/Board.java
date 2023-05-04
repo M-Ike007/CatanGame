@@ -11,12 +11,12 @@ import tradebank.TradeBank;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import cards.*;
 import dice.Dice;
 import guimenu.BuildingSelectionMenu;
 import hand.Hand;
 import hand.HandActivePlayer;
 import game.TurnManager;
-import devcards.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -740,9 +740,9 @@ public class Board {
 		lblDiceResult.setText(outputString);	
 		
 		PassivePayout payout = new PassivePayout();
-		payout.SetPayout(diceRoll.getSum(), player1.getHand(), 1);
-		payout.SetPayout(diceRoll.getSum(), player2.getHand(), 2);
-		payout.GetPayout();
+		payout.setPayout(diceRoll.getSum(), player1.getHand(), 1);
+		payout.setPayout(diceRoll.getSum(), player2.getHand(), 2);
+		payout.getPayout();
 		updateActivePlayer();
 	}
 	
@@ -780,8 +780,8 @@ public class Board {
 	
 	private void handleBuyDevCard() {
 		DevCard devCard = new DevCard();
-		String drawnCard = devCard.drawDevCard();
-		devCard.increaseHand(activePlayer.getHand(), drawnCard);
+		String drawnCard = devCard.getDevCard();
+		devCard.transactDevelopmentCardPurchase(activePlayer.getHand(), drawnCard);
 		lblDiceResult.setText("");
 		updateActivePlayer();
 		lblDiceResult.setText(" ");
