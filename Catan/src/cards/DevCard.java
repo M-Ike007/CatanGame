@@ -47,7 +47,8 @@ public class DevCard {
 		}
 	}
 
-	/** Drawing a random resource.
+	/**
+	 * Drawing a random resource.
 	 * 
 	 * @return String A random resource.
 	 */
