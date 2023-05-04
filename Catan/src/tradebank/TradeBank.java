@@ -269,6 +269,9 @@ public class TradeBank extends JFrame {
 		}
 	}
 	
+	/**
+	 * This method changes the visibility of the buttons
+	 */
 	private void changeButtonVisibility() {
 		b1.setVisible(false);
 		b2.setVisible(false);
