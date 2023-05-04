@@ -166,7 +166,6 @@ public class Board {
 		btnBuild.setBounds(20, 170, 150, 23);
 		turnPhasePanel.add(btnBuild);
 		
-//		JButton btnTradePlayer = new JButton("Trade with player");
 		JButton btnTradePlayer = new JButton("Update hand");
 		btnTradePlayer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
