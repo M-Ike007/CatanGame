@@ -73,8 +73,6 @@ public class Board {
 	// Village image loading and preparing
 	ImageIcon village = loadImageIcon("Images/Building_Village.png", 25, 25);
 	// City image loading and preparing
-	ImageIcon city = loadImageIcon("Images/Building_City.png", 25, 25);
-	// Cost image loading and preparing
 	ImageIcon cost = loadImageIcon("Images/Cost_Table.jpg", 250, 333);
 	// Red Village image loading and preparing (player 1)
 	ImageIcon redVillage = loadImageIcon("Images/Village_Red.png", 25, 25);
@@ -837,5 +835,4 @@ public class Board {
 			f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
 		}
 	}
-
 }
