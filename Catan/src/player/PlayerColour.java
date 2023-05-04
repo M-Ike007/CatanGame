@@ -3,9 +3,7 @@ package player;
 /**
  * Enum to store player colour.
  * 
- * @author Jan, Sibbe
- * 
- *         Colours stored are blue, red, green and yellow.
+ * Colours stored are blue, red.
  */
 public enum PlayerColour {
 	BLUE {
@@ -18,18 +16,6 @@ public enum PlayerColour {
 		@Override
 		public String toString() {
 			return "red";
-		}
-	},
-	GREEN {
-		@Override
-		public String toString() {
-			return "green";
-		}
-	},
-	YELLOW {
-		@Override
-		public String toString() {
-			return "yellow";
 		}
 	},
 }

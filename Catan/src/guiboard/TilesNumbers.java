@@ -2,9 +2,15 @@ package guiboard;
 
 import java.util.HashMap;
 
+/**
+ * Create hashmap for the tile numbers.
+ */
 public class TilesNumbers {
 	private HashMap<String, Integer> rNums = new HashMap<String, Integer>();
-
+	
+	/**
+	 * set tile numbers.
+	 */
 	public void setTileNumbers() {
 		rNums.put("Pos22", 6);
 		rNums.put("Pos23", 3);
@@ -25,8 +31,12 @@ public class TilesNumbers {
 		rNums.put("Pos63", 4);
 		rNums.put("Pos64", 11);
 	}
-	
-	public HashMap<String, Integer> getTileNumbers(){
+
+	/**
+	 * get tile numbers.
+	 * @return rNums Hashmap of tile numbers.
+	 */
+	public HashMap<String, Integer> getTileNumbers() {
 		return rNums;
 	}
 }

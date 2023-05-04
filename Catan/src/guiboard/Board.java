@@ -11,12 +11,12 @@ import tradebank.TradeBank;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import cards.*;
 import dice.Dice;
 import guimenu.BuildingSelectionMenu;
 import hand.Hand;
 import hand.HandActivePlayer;
 import game.TurnManager;
-import devcards.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -780,8 +780,8 @@ public class Board {
 	
 	private void handleBuyDevCard() {
 		DevCard devCard = new DevCard();
-		String drawnCard = devCard.drawDevCard();
-		devCard.increaseHand(activePlayer.getHand(), drawnCard);
+		String drawnCard = devCard.getDevCard();
+		devCard.transactDevelopmentCardPurchase(activePlayer.getHand(), drawnCard);
 		lblDiceResult.setText("");
 		updateActivePlayer();
 		lblDiceResult.setText(" ");
