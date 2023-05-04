@@ -1,4 +1,4 @@
-![badge](https://img.shields.io/badge/iteration-three-brightgreen 'iteration 3')
+![badge](https://img.shields.io/badge/iteration-four-brightgreen 'iteration 4')
 
 # Description
 
@@ -22,4 +22,4 @@ for more information regarding meetings, design and documentation.
 
 The programme is run though eclipse: Open the project in eclipse and execute
 individual classes as a java application. The main programme is accessed
-though the main menu class (`Catan/src/gui_menu/MainMenu.java`).
+though the main menu class (`Catan/src/guimenu/MainMenu.java`).
