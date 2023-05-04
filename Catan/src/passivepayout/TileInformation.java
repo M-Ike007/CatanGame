@@ -29,8 +29,8 @@ public class TileInformation {
 	 * Sets the houses on tiles of the players
 	 */
 	public void setHouseOnTile() {
-		housesPlayers.put(1, "Pos22-Pos33-Pos34-Pos54-Pos55-Pos64");
-		housesPlayers.put(2, "Pos35-Pos42-Pos43-Pos45-Pos52-Pos53");
+		housesPlayers.put(1, "Pos23-Pos33-Pos34-Pos54-Pos55-Pos64");
+		housesPlayers.put(2, "Pos35-Pos43-Pos45-Pos46-Pos52-Pos53");
 	}
 
 	/**
