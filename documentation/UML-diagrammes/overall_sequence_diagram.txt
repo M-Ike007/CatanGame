@@ -1,0 +1,18 @@
+sequenceDiagram
+Board ->> TurnManager: Set active player
+TurnManager -->> Board: Get active player
+Player ->> Board: Throw dice?
+Board ->> Dice: Yes, throw dice
+Dice -->> Board: Dice result
+Board ->> PassivePayout: Link resources to dice result
+PassivePayout -->> Board: Receive resources
+Player ->> Board: Trade with bank?
+Board ->> TradeBank: Yes, trade with bank
+TradeBank -->> Board: Trade player resources
+Player ->> Board: Update hand
+Player ->> Board: Buy development card?
+Board ->> Cards: Yes, buy development card
+Cards -->> Board: Receive development card
+Player ->> Board: End turn?
+Board ->> TurnManager: Yes, end turn
+TurnManager -->> Board: Set next active player
