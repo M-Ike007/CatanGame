@@ -11,13 +11,13 @@ public class Player {
 	 * Constructs player
 	 * 
 	 * @param hand         is a Hand object
-	 * @param col_assigned is the PlayerColour enum RED or BLUE
+	 * @param colAssigned is the PlayerColour enum RED or BLUE
 	 * @param name         is the entered name of the player
 	 */
-	public Player(Hand hand, PlayerColour col_assigned, String name) {
+	public Player(Hand hand, PlayerColour colAssigned, String name) {
 
 		this.hand = hand;
-		this.colour = col_assigned;
+		this.colour = colAssigned;
 		this.name = name;
 	}
 
