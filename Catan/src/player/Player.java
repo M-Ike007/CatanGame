@@ -10,9 +10,9 @@ public class Player {
 	/**
 	 * Constructs player
 	 * 
-	 * @param hand         is a Hand object
+	 * @param hand        is a Hand object
 	 * @param colAssigned is the PlayerColour enum RED or BLUE
-	 * @param name         is the entered name of the player
+	 * @param name        is the entered name of the player
 	 */
 	public Player(Hand hand, PlayerColour colAssigned, String name) {
 
