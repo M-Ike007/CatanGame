@@ -199,7 +199,7 @@ public class Board {
 
 		f.add(turnPhasePanel);
 
-		turnTracker(2);
+		turnTracker("ok");
 
 		// RESOURCE NUMBERS
 		data.setTileNumbers();
@@ -671,8 +671,10 @@ public class Board {
 
 	/**
 	 * This method creates a textfield to shown current player and turn number.
+	 * @param s TODO
+	 * @param s TODO
 	 */
-	private void turnTracker(int x) {
+	private void turnTracker(String s) {
 
 		turnTitle.setBounds(1020, 565, 140, 120);
 		turnTitle.setHorizontalAlignment(JLabel.CENTER);
