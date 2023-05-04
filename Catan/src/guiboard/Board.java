@@ -673,7 +673,7 @@ public class Board {
 	 * This method creates a textfield to shown current player and turn number.
 	 */
 	private void turnTracker(int x) {
-		
+
 		turnTitle.setBounds(1020, 565, 140, 120);
 		turnTitle.setHorizontalAlignment(JLabel.CENTER);
 		turnTitle.setFont(new Font("arial", Font.PLAIN, 16));
