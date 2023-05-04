@@ -207,374 +207,374 @@ public class Board {
 
 		// Adding the resource numbers to the frame
 		// 2nd row
-		JLabel Pos22 = new JLabel();
-		Pos22.setBounds(500, 100, 100, 100);
-		Pos22.setSize(100, 100);
-		Pos22.setHorizontalAlignment(JLabel.CENTER);
-		Pos22.setText(Integer.toString(rNums.get("Pos22")));
-		f.add(Pos22);
+		JLabel pos22 = new JLabel();
+		pos22.setBounds(500, 100, 100, 100);
+		pos22.setSize(100, 100);
+		pos22.setHorizontalAlignment(JLabel.CENTER);
+		pos22.setText(Integer.toString(rNums.get("Pos22")));
+		f.add(pos22);
 
-		JLabel Pos23 = new JLabel();
-		Pos23.setBounds(600, 100, 100, 100);
-		Pos23.setSize(100, 100);
-		Pos23.setHorizontalAlignment(JLabel.CENTER);
-		Pos23.setText(Integer.toString(rNums.get("Pos23")));
-		f.add(Pos23);
+		JLabel pos23 = new JLabel();
+		pos23.setBounds(600, 100, 100, 100);
+		pos23.setSize(100, 100);
+		pos23.setHorizontalAlignment(JLabel.CENTER);
+		pos23.setText(Integer.toString(rNums.get("Pos23")));
+		f.add(pos23);
 
-		JLabel Pos24 = new JLabel();
-		Pos24.setBounds(700, 100, 100, 100);
-		Pos24.setSize(100, 100);
-		Pos24.setHorizontalAlignment(JLabel.CENTER);
-		Pos24.setText(Integer.toString(rNums.get("Pos24")));
-		f.add(Pos24);
+		JLabel pos24 = new JLabel();
+		pos24.setBounds(700, 100, 100, 100);
+		pos24.setSize(100, 100);
+		pos24.setHorizontalAlignment(JLabel.CENTER);
+		pos24.setText(Integer.toString(rNums.get("Pos24")));
+		f.add(pos24);
 
 		// 3th row
-		JLabel Pos32 = new JLabel();
-		Pos32.setBounds(450, 175, 100, 100);
-		Pos32.setSize(100, 100);
-		Pos32.setHorizontalAlignment(JLabel.CENTER);
-		Pos32.setText(Integer.toString(rNums.get("Pos32")));
-		f.add(Pos32);
+		JLabel pos32 = new JLabel();
+		pos32.setBounds(450, 175, 100, 100);
+		pos32.setSize(100, 100);
+		pos32.setHorizontalAlignment(JLabel.CENTER);
+		pos32.setText(Integer.toString(rNums.get("Pos32")));
+		f.add(pos32);
 
-		JLabel Pos33 = new JLabel();
-		Pos33.setBounds(550, 175, 100, 100);
-		Pos33.setSize(100, 100);
-		Pos33.setHorizontalAlignment(JLabel.CENTER);
-		Pos33.setText(Integer.toString(rNums.get("Pos33")));
-		f.add(Pos33);
+		JLabel pos33 = new JLabel();
+		pos33.setBounds(550, 175, 100, 100);
+		pos33.setSize(100, 100);
+		pos33.setHorizontalAlignment(JLabel.CENTER);
+		pos33.setText(Integer.toString(rNums.get("Pos33")));
+		f.add(pos33);
 
-		JLabel Pos34 = new JLabel();
-		Pos34.setBounds(650, 175, 100, 100);
-		Pos34.setSize(100, 100);
-		Pos34.setHorizontalAlignment(JLabel.CENTER);
-		Pos34.setText(Integer.toString(rNums.get("Pos34")));
-		f.add(Pos34);
+		JLabel pos34 = new JLabel();
+		pos34.setBounds(650, 175, 100, 100);
+		pos34.setSize(100, 100);
+		pos34.setHorizontalAlignment(JLabel.CENTER);
+		pos34.setText(Integer.toString(rNums.get("Pos34")));
+		f.add(pos34);
 
-		JLabel Pos35 = new JLabel();
-		Pos35.setBounds(750, 175, 100, 100);
-		Pos35.setSize(100, 100);
-		Pos35.setHorizontalAlignment(JLabel.CENTER);
-		Pos35.setText(Integer.toString(rNums.get("Pos35")));
-		f.add(Pos35);
+		JLabel pos35 = new JLabel();
+		pos35.setBounds(750, 175, 100, 100);
+		pos35.setSize(100, 100);
+		pos35.setHorizontalAlignment(JLabel.CENTER);
+		pos35.setText(Integer.toString(rNums.get("Pos35")));
+		f.add(pos35);
 
 		// 4th row
-		JLabel Pos42 = new JLabel();
-		Pos42.setBounds(400, 250, 100, 100);
-		Pos42.setSize(100, 100);
-		Pos42.setHorizontalAlignment(JLabel.CENTER);
-		Pos42.setText(Integer.toString(rNums.get("Pos42")));
-		f.add(Pos42);
+		JLabel pos42 = new JLabel();
+		pos42.setBounds(400, 250, 100, 100);
+		pos42.setSize(100, 100);
+		pos42.setHorizontalAlignment(JLabel.CENTER);
+		pos42.setText(Integer.toString(rNums.get("Pos42")));
+		f.add(pos42);
 
-		JLabel Pos43 = new JLabel();
-		Pos43.setBounds(500, 250, 100, 100);
-		Pos43.setSize(100, 100);
-		Pos43.setHorizontalAlignment(JLabel.CENTER);
-		Pos43.setText(Integer.toString(rNums.get("Pos43")));
-		f.add(Pos43);
+		JLabel pos43 = new JLabel();
+		pos43.setBounds(500, 250, 100, 100);
+		pos43.setSize(100, 100);
+		pos43.setHorizontalAlignment(JLabel.CENTER);
+		pos43.setText(Integer.toString(rNums.get("Pos43")));
+		f.add(pos43);
 
-		JLabel Pos45 = new JLabel();
-		Pos45.setBounds(700, 250, 100, 100);
-		Pos45.setSize(100, 100);
-		Pos45.setHorizontalAlignment(JLabel.CENTER);
-		Pos45.setText(Integer.toString(rNums.get("Pos45")));
-		f.add(Pos45);
+		JLabel pos45 = new JLabel();
+		pos45.setBounds(700, 250, 100, 100);
+		pos45.setSize(100, 100);
+		pos45.setHorizontalAlignment(JLabel.CENTER);
+		pos45.setText(Integer.toString(rNums.get("Pos45")));
+		f.add(pos45);
 
-		JLabel Pos46 = new JLabel();
-		Pos46.setBounds(800, 250, 100, 100);
-		Pos46.setSize(100, 100);
-		Pos46.setHorizontalAlignment(JLabel.CENTER);
-		Pos46.setText(Integer.toString(rNums.get("Pos46")));
-		f.add(Pos46);
+		JLabel pos46 = new JLabel();
+		pos46.setBounds(800, 250, 100, 100);
+		pos46.setSize(100, 100);
+		pos46.setHorizontalAlignment(JLabel.CENTER);
+		pos46.setText(Integer.toString(rNums.get("Pos46")));
+		f.add(pos46);
 
 		// 5th row
-		JLabel Pos52 = new JLabel();
-		Pos52.setBounds(450, 325, 100, 100);
-		Pos52.setSize(100, 100);
-		Pos52.setHorizontalAlignment(JLabel.CENTER);
-		Pos52.setText(Integer.toString(rNums.get("Pos52")));
-		f.add(Pos52);
+		JLabel pos52 = new JLabel();
+		pos52.setBounds(450, 325, 100, 100);
+		pos52.setSize(100, 100);
+		pos52.setHorizontalAlignment(JLabel.CENTER);
+		pos52.setText(Integer.toString(rNums.get("Pos52")));
+		f.add(pos52);
 
-		JLabel Pos53 = new JLabel();
-		Pos53.setBounds(550, 325, 100, 100);
-		Pos53.setSize(100, 100);
-		Pos53.setHorizontalAlignment(JLabel.CENTER);
-		Pos53.setText(Integer.toString(rNums.get("Pos53")));
-		f.add(Pos53);
+		JLabel pos53 = new JLabel();
+		pos53.setBounds(550, 325, 100, 100);
+		pos53.setSize(100, 100);
+		pos53.setHorizontalAlignment(JLabel.CENTER);
+		pos53.setText(Integer.toString(rNums.get("Pos53")));
+		f.add(pos53);
 
-		JLabel Pos54 = new JLabel();
-		Pos54.setBounds(650, 325, 100, 100);
-		Pos54.setSize(100, 100);
-		Pos54.setHorizontalAlignment(JLabel.CENTER);
-		Pos54.setText(Integer.toString(rNums.get("Pos54")));
-		f.add(Pos54);
+		JLabel pos54 = new JLabel();
+		pos54.setBounds(650, 325, 100, 100);
+		pos54.setSize(100, 100);
+		pos54.setHorizontalAlignment(JLabel.CENTER);
+		pos54.setText(Integer.toString(rNums.get("Pos54")));
+		f.add(pos54);
 
-		JLabel Pos55 = new JLabel();
-		Pos55.setBounds(750, 325, 100, 100);
-		Pos55.setSize(100, 100);
-		Pos55.setHorizontalAlignment(JLabel.CENTER);
-		Pos55.setText(Integer.toString(rNums.get("Pos55")));
-		f.add(Pos55);
+		JLabel pos55 = new JLabel();
+		pos55.setBounds(750, 325, 100, 100);
+		pos55.setSize(100, 100);
+		pos55.setHorizontalAlignment(JLabel.CENTER);
+		pos55.setText(Integer.toString(rNums.get("Pos55")));
+		f.add(pos55);
 
 		// 6th row
-		JLabel Pos62 = new JLabel();
-		Pos62.setBounds(500, 400, 100, 100);
-		Pos62.setSize(100, 100);
-		Pos62.setHorizontalAlignment(JLabel.CENTER);
-		Pos62.setText(Integer.toString(rNums.get("Pos62")));
-		f.add(Pos62);
+		JLabel pos62 = new JLabel();
+		pos62.setBounds(500, 400, 100, 100);
+		pos62.setSize(100, 100);
+		pos62.setHorizontalAlignment(JLabel.CENTER);
+		pos62.setText(Integer.toString(rNums.get("Pos62")));
+		f.add(pos62);
 
-		JLabel Pos63 = new JLabel();
-		Pos63.setBounds(600, 400, 100, 100);
-		Pos63.setSize(100, 100);
-		Pos63.setHorizontalAlignment(JLabel.CENTER);
-		Pos63.setText(Integer.toString(rNums.get("Pos63")));
-		f.add(Pos63);
+		JLabel pos63 = new JLabel();
+		pos63.setBounds(600, 400, 100, 100);
+		pos63.setSize(100, 100);
+		pos63.setHorizontalAlignment(JLabel.CENTER);
+		pos63.setText(Integer.toString(rNums.get("Pos63")));
+		f.add(pos63);
 
-		JLabel Pos64 = new JLabel();
-		Pos64.setBounds(700, 400, 100, 100);
-		Pos64.setSize(100, 100);
-		Pos64.setHorizontalAlignment(JLabel.CENTER);
-		Pos64.setText(Integer.toString(rNums.get("Pos64")));
-		f.add(Pos64);
+		JLabel pos64 = new JLabel();
+		pos64.setBounds(700, 400, 100, 100);
+		pos64.setSize(100, 100);
+		pos64.setHorizontalAlignment(JLabel.CENTER);
+		pos64.setText(Integer.toString(rNums.get("Pos64")));
+		f.add(pos64);
 
-		JLabel Pos0 = new JLabel();
-		Pos0.setBounds(500, 100, 100, 100);
-		Pos0.setSize(100, 100);
-		Pos0.setHorizontalAlignment(JLabel.CENTER);
-		Pos0.setText("");
-		f.add(Pos0);
+		JLabel pos0 = new JLabel();
+		pos0.setBounds(500, 100, 100, 100);
+		pos0.setSize(100, 100);
+		pos0.setHorizontalAlignment(JLabel.CENTER);
+		pos0.setText("");
+		f.add(pos0);
 
 		// RESOURCE TILES
 		// Adding the tiles.
 
 		// 1st row
-		JLabel Row1Col1 = new JLabel();
-		Row1Col1.setIcon(sea);
-		Row1Col1.setBounds(450, 25, 100, 100);
-		Row1Col1.setSize(100, 100);
-		f.add(Row1Col1);
+		JLabel row1Col1 = new JLabel();
+		row1Col1.setIcon(sea);
+		row1Col1.setBounds(450, 25, 100, 100);
+		row1Col1.setSize(100, 100);
+		f.add(row1Col1);
 
-		JLabel Row1Col2 = new JLabel();
-		Row1Col2.setIcon(sea);
-		Row1Col2.setBounds(550, 25, 100, 100);
-		Row1Col2.setSize(100, 100);
-		f.add(Row1Col2);
+		JLabel row1Col2 = new JLabel();
+		row1Col2.setIcon(sea);
+		row1Col2.setBounds(550, 25, 100, 100);
+		row1Col2.setSize(100, 100);
+		f.add(row1Col2);
 
-		JLabel Row1Col3 = new JLabel();
-		Row1Col3.setIcon(sea);
-		Row1Col3.setBounds(650, 25, 100, 100);
-		Row1Col3.setSize(100, 100);
-		f.add(Row1Col3);
+		JLabel row1Col3 = new JLabel();
+		row1Col3.setIcon(sea);
+		row1Col3.setBounds(650, 25, 100, 100);
+		row1Col3.setSize(100, 100);
+		f.add(row1Col3);
 
-		JLabel Row1Col4 = new JLabel();
-		Row1Col4.setIcon(sea);
-		Row1Col4.setBounds(750, 25, 100, 100);
-		Row1Col4.setSize(100, 100);
-		f.add(Row1Col4);
+		JLabel row1Col4 = new JLabel();
+		row1Col4.setIcon(sea);
+		row1Col4.setBounds(750, 25, 100, 100);
+		row1Col4.setSize(100, 100);
+		f.add(row1Col4);
 
 		// 2nd row
-		JLabel Row2Col1 = new JLabel();
-		Row2Col1.setIcon(sea);
-		Row2Col1.setBounds(400, 100, 100, 100);
-		Row2Col1.setSize(100, 100);
-		f.add(Row2Col1);
+		JLabel row2Col1 = new JLabel();
+		row2Col1.setIcon(sea);
+		row2Col1.setBounds(400, 100, 100, 100);
+		row2Col1.setSize(100, 100);
+		f.add(row2Col1);
 
-		JLabel Row2Col2 = new JLabel();
-		Row2Col2.setIcon(wood);
-		Row2Col2.setBounds(500, 100, 100, 100);
-		Row2Col2.setSize(100, 100);
-		f.add(Row2Col2);
+		JLabel row2Col2 = new JLabel();
+		row2Col2.setIcon(wood);
+		row2Col2.setBounds(500, 100, 100, 100);
+		row2Col2.setSize(100, 100);
+		f.add(row2Col2);
 
-		JLabel Row2Col3 = new JLabel();
-		Row2Col3.setIcon(wool);
-		Row2Col3.setBounds(600, 100, 100, 100);
-		Row2Col3.setSize(100, 100);
-		f.add(Row2Col3);
+		JLabel row2Col3 = new JLabel();
+		row2Col3.setIcon(wool);
+		row2Col3.setBounds(600, 100, 100, 100);
+		row2Col3.setSize(100, 100);
+		f.add(row2Col3);
 
-		JLabel Row2Col4 = new JLabel();
-		Row2Col4.setIcon(wool);
-		Row2Col4.setBounds(700, 100, 100, 100);
-		Row2Col4.setSize(100, 100);
-		f.add(Row2Col4);
+		JLabel row2Col4 = new JLabel();
+		row2Col4.setIcon(wool);
+		row2Col4.setBounds(700, 100, 100, 100);
+		row2Col4.setSize(100, 100);
+		f.add(row2Col4);
 
-		JLabel Row2Col5 = new JLabel();
-		Row2Col5.setIcon(sea);
-		Row2Col5.setBounds(800, 100, 100, 100);
-		Row2Col5.setSize(100, 100);
-		f.add(Row2Col5);
+		JLabel row2Col5 = new JLabel();
+		row2Col5.setIcon(sea);
+		row2Col5.setBounds(800, 100, 100, 100);
+		row2Col5.setSize(100, 100);
+		f.add(row2Col5);
 
 		// 3th row
-		JLabel Row3Col1 = new JLabel();
-		Row3Col1.setIcon(sea);
-		Row3Col1.setBounds(350, 175, 100, 100);
-		Row3Col1.setSize(100, 100);
-		f.add(Row3Col1);
+		JLabel row3Col1 = new JLabel();
+		row3Col1.setIcon(sea);
+		row3Col1.setBounds(350, 175, 100, 100);
+		row3Col1.setSize(100, 100);
+		f.add(row3Col1);
 
-		JLabel Row3Col2 = new JLabel();
-		Row3Col2.setIcon(wheat);
-		Row3Col2.setBounds(450, 175, 100, 100);
-		Row3Col2.setSize(100, 100);
-		f.add(Row3Col2);
+		JLabel row3Col2 = new JLabel();
+		row3Col2.setIcon(wheat);
+		row3Col2.setBounds(450, 175, 100, 100);
+		row3Col2.setSize(100, 100);
+		f.add(row3Col2);
 
-		JLabel Row3Col3 = new JLabel();
-		Row3Col3.setIcon(ore);
-		Row3Col3.setBounds(550, 175, 100, 100);
-		Row3Col3.setSize(100, 100);
-		f.add(Row3Col3);
+		JLabel row3Col3 = new JLabel();
+		row3Col3.setIcon(ore);
+		row3Col3.setBounds(550, 175, 100, 100);
+		row3Col3.setSize(100, 100);
+		f.add(row3Col3);
 
-		JLabel Row3Col4 = new JLabel();
-		Row3Col4.setIcon(wheat);
-		Row3Col4.setBounds(650, 175, 100, 100);
-		Row3Col4.setSize(100, 100);
-		f.add(Row3Col4);
+		JLabel row3Col4 = new JLabel();
+		row3Col4.setIcon(wheat);
+		row3Col4.setBounds(650, 175, 100, 100);
+		row3Col4.setSize(100, 100);
+		f.add(row3Col4);
 
-		JLabel Row3Col5 = new JLabel();
-		Row3Col5.setIcon(wood);
-		Row3Col5.setBounds(750, 175, 100, 100);
-		Row3Col5.setSize(100, 100);
-		f.add(Row3Col5);
+		JLabel row3Col5 = new JLabel();
+		row3Col5.setIcon(wood);
+		row3Col5.setBounds(750, 175, 100, 100);
+		row3Col5.setSize(100, 100);
+		f.add(row3Col5);
 
-		JLabel Row3Col6 = new JLabel();
-		Row3Col6.setIcon(sea);
-		Row3Col6.setBounds(850, 175, 100, 100);
-		Row3Col6.setSize(100, 100);
-		f.add(Row3Col6);
+		JLabel row3Col6 = new JLabel();
+		row3Col6.setIcon(sea);
+		row3Col6.setBounds(850, 175, 100, 100);
+		row3Col6.setSize(100, 100);
+		f.add(row3Col6);
 
 		// 4th row
-		JLabel Row4Col1 = new JLabel();
-		Row4Col1.setIcon(sea);
-		Row4Col1.setBounds(300, 250, 100, 100);
-		Row4Col1.setSize(100, 100);
-		f.add(Row4Col1);
+		JLabel row4Col1 = new JLabel();
+		row4Col1.setIcon(sea);
+		row4Col1.setBounds(300, 250, 100, 100);
+		row4Col1.setSize(100, 100);
+		f.add(row4Col1);
 
-		JLabel Row4Col2 = new JLabel();
-		Row4Col2.setIcon(wood);
-		Row4Col2.setBounds(400, 250, 100, 100);
-		Row4Col2.setSize(100, 100);
-		f.add(Row4Col2);
+		JLabel row4Col2 = new JLabel();
+		row4Col2.setIcon(wood);
+		row4Col2.setBounds(400, 250, 100, 100);
+		row4Col2.setSize(100, 100);
+		f.add(row4Col2);
 
-		JLabel Row4Col3 = new JLabel();
-		Row4Col3.setIcon(brick);
-		Row4Col3.setBounds(500, 250, 100, 100);
-		Row4Col3.setSize(100, 100);
-		f.add(Row4Col3);
+		JLabel row4Col3 = new JLabel();
+		row4Col3.setIcon(brick);
+		row4Col3.setBounds(500, 250, 100, 100);
+		row4Col3.setSize(100, 100);
+		f.add(row4Col3);
 
-		JLabel Row4Col4 = new JLabel();
-		Row4Col4.setIcon(desert);
-		Row4Col4.setBounds(600, 250, 100, 100);
-		Row4Col4.setSize(100, 100);
-		f.add(Row4Col4);
+		JLabel row4Col4 = new JLabel();
+		row4Col4.setIcon(desert);
+		row4Col4.setBounds(600, 250, 100, 100);
+		row4Col4.setSize(100, 100);
+		f.add(row4Col4);
 
-		JLabel Row4Col5 = new JLabel();
-		Row4Col5.setIcon(ore);
-		Row4Col5.setBounds(700, 250, 100, 100);
-		Row4Col5.setSize(100, 100);
-		f.add(Row4Col5);
+		JLabel row4Col5 = new JLabel();
+		row4Col5.setIcon(ore);
+		row4Col5.setBounds(700, 250, 100, 100);
+		row4Col5.setSize(100, 100);
+		f.add(row4Col5);
 
-		JLabel Row4Col6 = new JLabel();
-		Row4Col6.setIcon(wheat);
-		Row4Col6.setBounds(800, 250, 100, 100);
-		Row4Col6.setSize(100, 100);
-		f.add(Row4Col6);
+		JLabel row4Col6 = new JLabel();
+		row4Col6.setIcon(wheat);
+		row4Col6.setBounds(800, 250, 100, 100);
+		row4Col6.setSize(100, 100);
+		f.add(row4Col6);
 
-		JLabel Row4Col7 = new JLabel();
-		Row4Col7.setIcon(sea);
-		Row4Col7.setBounds(900, 250, 100, 100);
-		Row4Col7.setSize(100, 100);
-		f.add(Row4Col7);
+		JLabel row4Col7 = new JLabel();
+		row4Col7.setIcon(sea);
+		row4Col7.setBounds(900, 250, 100, 100);
+		row4Col7.setSize(100, 100);
+		f.add(row4Col7);
 
 		// 5th row
-		JLabel Row5Col1 = new JLabel();
-		Row5Col1.setIcon(sea);
-		Row5Col1.setBounds(350, 325, 100, 100);
-		Row5Col1.setSize(100, 100);
-		f.add(Row5Col1);
+		JLabel row5Col1 = new JLabel();
+		row5Col1.setIcon(sea);
+		row5Col1.setBounds(350, 325, 100, 100);
+		row5Col1.setSize(100, 100);
+		f.add(row5Col1);
 
-		JLabel Row5Col2 = new JLabel();
-		Row5Col2.setIcon(wheat);
-		Row5Col2.setBounds(450, 325, 100, 100);
-		Row5Col2.setSize(100, 100);
-		f.add(Row5Col2);
+		JLabel row5Col2 = new JLabel();
+		row5Col2.setIcon(wheat);
+		row5Col2.setBounds(450, 325, 100, 100);
+		row5Col2.setSize(100, 100);
+		f.add(row5Col2);
 
-		JLabel Row5Col3 = new JLabel();
-		Row5Col3.setIcon(ore);
-		Row5Col3.setBounds(550, 325, 100, 100);
-		Row5Col3.setSize(100, 100);
-		f.add(Row5Col3);
+		JLabel row5Col3 = new JLabel();
+		row5Col3.setIcon(ore);
+		row5Col3.setBounds(550, 325, 100, 100);
+		row5Col3.setSize(100, 100);
+		f.add(row5Col3);
 
-		JLabel Row5Col4 = new JLabel();
-		Row5Col4.setIcon(wood);
-		Row5Col4.setBounds(650, 325, 100, 100);
-		Row5Col4.setSize(100, 100);
-		f.add(Row5Col4);
+		JLabel row5Col4 = new JLabel();
+		row5Col4.setIcon(wood);
+		row5Col4.setBounds(650, 325, 100, 100);
+		row5Col4.setSize(100, 100);
+		f.add(row5Col4);
 
-		JLabel Row5Col5 = new JLabel();
-		Row5Col5.setIcon(wool);
-		Row5Col5.setBounds(750, 325, 100, 100);
-		Row5Col5.setSize(100, 100);
-		f.add(Row5Col5);
+		JLabel row5Col5 = new JLabel();
+		row5Col5.setIcon(wool);
+		row5Col5.setBounds(750, 325, 100, 100);
+		row5Col5.setSize(100, 100);
+		f.add(row5Col5);
 
-		JLabel Row5Col6 = new JLabel();
-		Row5Col6.setIcon(sea);
-		Row5Col6.setBounds(850, 325, 100, 100);
-		Row5Col6.setSize(100, 100);
-		f.add(Row5Col6);
+		JLabel row5Col6 = new JLabel();
+		row5Col6.setIcon(sea);
+		row5Col6.setBounds(850, 325, 100, 100);
+		row5Col6.setSize(100, 100);
+		f.add(row5Col6);
 
 		// 6th row
-		JLabel Row6Col1 = new JLabel();
-		Row6Col1.setIcon(sea);
-		Row6Col1.setBounds(400, 400, 100, 100);
-		Row6Col1.setSize(100, 100);
-		f.add(Row6Col1);
+		JLabel row6Col1 = new JLabel();
+		row6Col1.setIcon(sea);
+		row6Col1.setBounds(400, 400, 100, 100);
+		row6Col1.setSize(100, 100);
+		f.add(row6Col1);
 
-		JLabel Row6Col2 = new JLabel();
-		Row6Col2.setIcon(brick);
-		Row6Col2.setBounds(500, 400, 100, 100);
-		Row6Col2.setSize(100, 100);
-		f.add(Row6Col2);
+		JLabel row6Col2 = new JLabel();
+		row6Col2.setIcon(brick);
+		row6Col2.setBounds(500, 400, 100, 100);
+		row6Col2.setSize(100, 100);
+		f.add(row6Col2);
 
-		JLabel Row6Col3 = new JLabel();
-		Row6Col3.setIcon(wool);
-		Row6Col3.setBounds(600, 400, 100, 100);
-		Row6Col3.setSize(100, 100);
-		f.add(Row6Col3);
+		JLabel row6Col3 = new JLabel();
+		row6Col3.setIcon(wool);
+		row6Col3.setBounds(600, 400, 100, 100);
+		row6Col3.setSize(100, 100);
+		f.add(row6Col3);
 
-		JLabel Row6Col4 = new JLabel();
-		Row6Col4.setIcon(brick);
-		Row6Col4.setBounds(700, 400, 100, 100);
-		Row6Col4.setSize(100, 100);
-		f.add(Row6Col4);
+		JLabel row6Col4 = new JLabel();
+		row6Col4.setIcon(brick);
+		row6Col4.setBounds(700, 400, 100, 100);
+		row6Col4.setSize(100, 100);
+		f.add(row6Col4);
 
-		JLabel Row6Col5 = new JLabel();
-		Row6Col5.setIcon(sea);
-		Row6Col5.setBounds(800, 400, 100, 100);
-		Row6Col5.setSize(100, 100);
-		f.add(Row6Col5);
+		JLabel row6Col5 = new JLabel();
+		row6Col5.setIcon(sea);
+		row6Col5.setBounds(800, 400, 100, 100);
+		row6Col5.setSize(100, 100);
+		f.add(row6Col5);
 
 		// 7th row
-		JLabel Row7Col1 = new JLabel();
-		Row7Col1.setIcon(sea);
-		Row7Col1.setBounds(450, 475, 100, 100);
-		Row7Col1.setSize(100, 100);
-		f.add(Row7Col1);
+		JLabel row7Col1 = new JLabel();
+		row7Col1.setIcon(sea);
+		row7Col1.setBounds(450, 475, 100, 100);
+		row7Col1.setSize(100, 100);
+		f.add(row7Col1);
 
-		JLabel Row7Col2 = new JLabel();
-		Row7Col2.setIcon(sea);
-		Row7Col2.setBounds(550, 475, 100, 100);
-		Row7Col2.setSize(100, 100);
-		f.add(Row7Col2);
+		JLabel row7Col2 = new JLabel();
+		row7Col2.setIcon(sea);
+		row7Col2.setBounds(550, 475, 100, 100);
+		row7Col2.setSize(100, 100);
+		f.add(row7Col2);
 
-		JLabel Row7Col3 = new JLabel();
-		Row7Col3.setIcon(sea);
-		Row7Col3.setBounds(650, 475, 100, 100);
-		Row7Col3.setSize(100, 100);
-		f.add(Row7Col3);
+		JLabel row7Col3 = new JLabel();
+		row7Col3.setIcon(sea);
+		row7Col3.setBounds(650, 475, 100, 100);
+		row7Col3.setSize(100, 100);
+		f.add(row7Col3);
 
-		JLabel Row7Col4 = new JLabel();
-		Row7Col4.setIcon(sea);
-		Row7Col4.setBounds(750, 475, 100, 100);
-		Row7Col4.setSize(100, 100);
-		f.add(Row7Col4);
+		JLabel row7Col4 = new JLabel();
+		row7Col4.setIcon(sea);
+		row7Col4.setBounds(750, 475, 100, 100);
+		row7Col4.setSize(100, 100);
+		f.add(row7Col4);
 
 		// COST TABLE
 		JLabel costCard = new JLabel();
