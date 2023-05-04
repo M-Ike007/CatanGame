@@ -7,7 +7,7 @@ import hand.*;
  */
 public class PassivePayout {
 	private TileInformation information = new TileInformation();
-	private Hand payout_result;
+	private Hand payoutResult;
 	
 	/**
 	 * Sets the payout of a player
@@ -21,7 +21,7 @@ public class PassivePayout {
 		information.setHouseOnTile();
 		information.setPassivePayoutInformation();
 		information.setTilesInformation(dice_number, hand, playerNumber);
-		payout_result = information.getTilesInformation();
+		payoutResult = information.getTilesInformation();
 	}
 	
 	/**
@@ -29,6 +29,6 @@ public class PassivePayout {
 	 * @return Hand:, hand of the player
 	 */
 	public Hand GetPayout() {
-		return payout_result;
+		return payoutResult;
 	}
 }
