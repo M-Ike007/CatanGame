@@ -30,12 +30,12 @@ import java.util.HashSet;
 
 public class Board {
 	private JFrame f = new JFrame("Catan - Game"); 
-	private JPanel turn_Phase_Panel;
+	private JPanel turnPhasePanel;
 	private Dice diceRoll = new Dice();
 	private String outputString = new String("");
 	private JLabel lblDiceResult = new JLabel(outputString); 
-	private JLabel TurnTitle = new JLabel();
-	private JLabel WhoseTurnIsIt = new JLabel();
+	private JLabel turnTitle = new JLabel();
+	private JLabel whoseTurnIsIt = new JLabel();
 	private JPanel p = new JPanel();
 	private int round = 1;
 	private Player player1 = new Player(new Hand(), PlayerColour.BLUE, "1");
@@ -72,29 +72,29 @@ public class Board {
     // Cost image loading and preparing
     ImageIcon cost = loadImageIcon("Images/Cost_Table.jpg", 250, 333);	    
     // Red Village image loading and preparing (player 1)
-    ImageIcon Red_Village = loadImageIcon("Images/Village_Red.png", 25, 25);
+    ImageIcon redVillage = loadImageIcon("Images/Village_Red.png", 25, 25);
     // Blue Village image loading and preparing (player 2)
-    ImageIcon Blue_Village = loadImageIcon("Images/Village_Blue.png", 25, 25);
+    ImageIcon blueVillage = loadImageIcon("Images/Village_Blue.png", 25, 25);
     // Card brick image loading and preparing
-    ImageIcon card_brick = loadImageIcon("Images/Card_Brick.jpg", 65, 95);
+    ImageIcon cardBrick = loadImageIcon("Images/Card_Brick.jpg", 65, 95);
     // Card forest image loading and preparing
-    ImageIcon card_forest = loadImageIcon("Images/Card_Forest.jpg", 65, 95);
+    ImageIcon cardForest = loadImageIcon("Images/Card_Forest.jpg", 65, 95);
     // Card ore image loading and preparing
-    ImageIcon card_ore = loadImageIcon("Images/Card_Ore.jpg", 65, 95);
+    ImageIcon cardOre = loadImageIcon("Images/Card_Ore.jpg", 65, 95);
     // Card sheep image loading and preparing
-    ImageIcon card_sheep = loadImageIcon("Images/Card_Sheep.jpg", 65, 95);
+    ImageIcon cardSheep = loadImageIcon("Images/Card_Sheep.jpg", 65, 95);
     // Card wheat image loading and preparing
-    ImageIcon card_wheat = loadImageIcon("Images/Card_Wheat.jpg", 65, 95);
+    ImageIcon cardWheat = loadImageIcon("Images/Card_Wheat.jpg", 65, 95);
     // Card invention image loading and preparing
-    ImageIcon card_invention = loadImageIcon("Images/Card_Invention.jpg", 65, 95);
+    ImageIcon cardInvention = loadImageIcon("Images/Card_Invention.jpg", 65, 95);
  	// Card knight image loading and preparing
-    ImageIcon card_knight = loadImageIcon("Images/Card_Knight.jpg", 65, 95);
+    ImageIcon cardKnight = loadImageIcon("Images/Card_Knight.jpg", 65, 95);
     // Card monopoly image loading and preparing
-    ImageIcon card_monopoly = loadImageIcon("Images/Card_Monopoly.jpg", 65, 95);
+    ImageIcon cardMonopoly = loadImageIcon("Images/Card_Monopoly.jpg", 65, 95);
     // Card two roads image loading and preparing
-    ImageIcon card_two_roads = loadImageIcon("Images/Card_TwoRoads.jpg", 65, 95);
+    ImageIcon cardTwoRoads = loadImageIcon("Images/Card_TwoRoads.jpg", 65, 95);
     // Card victory image loading and preparing
-    ImageIcon card_victory = loadImageIcon("Images/Card_VP.jpg", 65, 95);
+    ImageIcon cardVictory = loadImageIcon("Images/Card_VP.jpg", 65, 95);
 	
 	
 	// The constructor class
@@ -124,10 +124,10 @@ public class Board {
 		}
  
 	    // TURN PHASE PANEL
-	    turn_Phase_Panel = new JPanel();
-		turn_Phase_Panel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		turn_Phase_Panel.setBounds(997, 350, 300, 250);
-		turn_Phase_Panel.setLayout(null);				
+	    turnPhasePanel = new JPanel();
+		turnPhasePanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		turnPhasePanel.setBounds(997, 350, 300, 250);
+		turnPhasePanel.setLayout(null);				
 		
 		JButton btnDevCard = new JButton("Buy DEV card");
 		btnDevCard.setBounds(20, 130, 150, 23);
@@ -136,7 +136,7 @@ public class Board {
 				handleBuyDevCard();
 				}
 			});
-		turn_Phase_Panel.add(btnDevCard);
+		turnPhasePanel.add(btnDevCard);
 		
 		
 		JButton btnThrowDice = new JButton("Throw dice");
@@ -146,7 +146,7 @@ public class Board {
 				}
 			});
 		btnThrowDice.setBounds(20, 10, 150, 23);
-		turn_Phase_Panel.add(btnThrowDice);
+		turnPhasePanel.add(btnThrowDice);
 		
 		JButton btnTradeBank = new JButton("Trade with bank");
 		btnTradeBank.addActionListener(new ActionListener() {
@@ -155,16 +155,16 @@ public class Board {
 			}
 		});		
 		btnTradeBank.setBounds(20, 50, 150, 23);
-		turn_Phase_Panel.add(btnTradeBank);
+		turnPhasePanel.add(btnTradeBank);
 		
 		JButton btnBuild = new JButton("Build");
 		btnBuild.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				built_elements();				
+				buildElements();				
 			}
 		});		
 		btnBuild.setBounds(20, 170, 150, 23);
-		turn_Phase_Panel.add(btnBuild);
+		turnPhasePanel.add(btnBuild);
 		
 //		JButton btnTradePlayer = new JButton("Trade with player");
 		JButton btnTradePlayer = new JButton("Update hand");
@@ -176,14 +176,14 @@ public class Board {
 			}			
 		});		
 		btnTradePlayer.setBounds(20, 90, 150, 23);
-		turn_Phase_Panel.add(btnTradePlayer);
+		turnPhasePanel.add(btnTradePlayer);
 		
 		JLabel lblDiceTitle = new JLabel("Dice result");
 		lblDiceTitle.setBounds(188, 10, 90, 23);
-		turn_Phase_Panel.add(lblDiceTitle);
+		turnPhasePanel.add(lblDiceTitle);
 		
 		lblDiceResult.setBounds(205, 35, 49, 14);
-		turn_Phase_Panel.add(lblDiceResult);
+		turnPhasePanel.add(lblDiceResult);
 		
 		JButton btnEndTurn = new JButton("End turn");
 		btnEndTurn.addActionListener(new ActionListener() {
@@ -193,24 +193,24 @@ public class Board {
 
 		});
 		btnEndTurn.setBounds(20, 210, 150, 23);
-		turn_Phase_Panel.add(btnEndTurn);	
+		turnPhasePanel.add(btnEndTurn);	
 		
-		f.add(turn_Phase_Panel);
+		f.add(turnPhasePanel);
 		
 		
 		//TURN TRACKER
-		TurnTitle.setBounds(1020, 565, 140, 120);
-		TurnTitle.setHorizontalAlignment(JLabel.CENTER);
-		TurnTitle.setFont(new Font("arial", Font.PLAIN, 16));
-		TurnTitle.setText("Current turn: "+ round + "/10");
-        f.add(TurnTitle);
+		turnTitle.setBounds(1020, 565, 140, 120);
+		turnTitle.setHorizontalAlignment(JLabel.CENTER);
+		turnTitle.setFont(new Font("arial", Font.PLAIN, 16));
+		turnTitle.setText("Current turn: "+ round + "/10");
+        f.add(turnTitle);
 		
-        WhoseTurnIsIt.setBounds(1028, 600, 100, 100);
-        WhoseTurnIsIt.setHorizontalAlignment(JLabel.CENTER);
-        WhoseTurnIsIt.setText("Player 1");
-        WhoseTurnIsIt.setForeground(Color.RED);
-        WhoseTurnIsIt.setFont(new Font("arial", Font.PLAIN, 25));
-        f.add(WhoseTurnIsIt);
+        whoseTurnIsIt.setBounds(1028, 600, 100, 100);
+        whoseTurnIsIt.setHorizontalAlignment(JLabel.CENTER);
+        whoseTurnIsIt.setText("Player 1");
+        whoseTurnIsIt.setForeground(Color.RED);
+        whoseTurnIsIt.setFont(new Font("arial", Font.PLAIN, 25));
+        f.add(whoseTurnIsIt);
   
 	     
 		// RESOURCE NUMBERS
@@ -592,83 +592,83 @@ public class Board {
 
                
 	    // COST TABLE
-		JLabel CostCard = new JLabel();
-		CostCard.setIcon(cost);
-		CostCard.setBounds(1015, 10, 250, 333);
-		CostCard.setSize(250, 333);
-		f.add(CostCard);
+		JLabel costCard = new JLabel();
+		costCard.setIcon(cost);
+		costCard.setBounds(1015, 10, 250, 333);
+		costCard.setSize(250, 333);
+		f.add(costCard);
 		
 		
 		// CARDS
 		// Brick card
-		JLabel BrickCard = new JLabel();
-		BrickCard.setIcon(card_brick);
-		BrickCard.setBounds(302, 590, 65, 95);
-		BrickCard.setSize(65, 95);
-		f.add(BrickCard);
+		JLabel brickCard = new JLabel();
+		brickCard.setIcon(cardBrick);
+		brickCard.setBounds(302, 590, 65, 95);
+		brickCard.setSize(65, 95);
+		f.add(brickCard);
 		
 		// Forest card
-		JLabel ForestCard = new JLabel();
-		ForestCard.setIcon(card_forest);
-		ForestCard.setBounds(372, 590, 65, 95);
-		ForestCard.setSize(65, 95);
-		f.add(ForestCard);
+		JLabel forestCard = new JLabel();
+		forestCard.setIcon(cardForest);
+		forestCard.setBounds(372, 590, 65, 95);
+		forestCard.setSize(65, 95);
+		f.add(forestCard);
 
 		// Ore card
-		JLabel OreCard = new JLabel();
-		OreCard.setIcon(card_ore);
-		OreCard.setBounds(442, 590, 65, 95);
-		OreCard.setSize(65, 95);
-		f.add(OreCard);
+		JLabel oreCard = new JLabel();
+		oreCard.setIcon(cardOre);
+		oreCard.setBounds(442, 590, 65, 95);
+		oreCard.setSize(65, 95);
+		f.add(oreCard);
 		
 		// Sheep card
-		JLabel SheepCard = new JLabel();
-		SheepCard.setIcon(card_sheep);
-		SheepCard.setBounds(512, 590, 65, 95);
-		SheepCard.setSize(65, 95);
-		f.add(SheepCard);
+		JLabel sheepCard = new JLabel();
+		sheepCard.setIcon(cardSheep);
+		sheepCard.setBounds(512, 590, 65, 95);
+		sheepCard.setSize(65, 95);
+		f.add(sheepCard);
 		
 		// Wheat card
-		JLabel WheatCard = new JLabel();
-		WheatCard.setIcon(card_wheat);
-		WheatCard.setBounds(582, 590, 65, 95);
-		WheatCard.setSize(65, 95);
-		f.add(WheatCard);
+		JLabel wheatCard = new JLabel();
+		wheatCard.setIcon(cardWheat);
+		wheatCard.setBounds(582, 590, 65, 95);
+		wheatCard.setSize(65, 95);
+		f.add(wheatCard);
 		
 		// Knight card
-		JLabel KnightCard = new JLabel();
-		KnightCard.setIcon(card_knight);
-		KnightCard.setBounds(652, 590, 65, 95);
-		KnightCard.setSize(65, 95);
-		f.add(KnightCard);
+		JLabel knightCard = new JLabel();
+		knightCard.setIcon(cardKnight);
+		knightCard.setBounds(652, 590, 65, 95);
+		knightCard.setSize(65, 95);
+		f.add(knightCard);
 		
 		// Invention card
-		JLabel InventionCard = new JLabel();
-		InventionCard.setIcon(card_invention);
-		InventionCard.setBounds(722, 590, 65, 95);
-		InventionCard.setSize(65, 95);
-		f.add(InventionCard);
+		JLabel inventionCard = new JLabel();
+		inventionCard.setIcon(cardInvention);
+		inventionCard.setBounds(722, 590, 65, 95);
+		inventionCard.setSize(65, 95);
+		f.add(inventionCard);
 		
 		// Monopoly card
-		JLabel MonopolyCard = new JLabel();
-		MonopolyCard.setIcon(card_monopoly);
-		MonopolyCard.setBounds(792, 590, 65, 95);
-		MonopolyCard.setSize(65, 95);
-		f.add(MonopolyCard);
+		JLabel monopolyCard = new JLabel();
+		monopolyCard.setIcon(cardMonopoly);
+		monopolyCard.setBounds(792, 590, 65, 95);
+		monopolyCard.setSize(65, 95);
+		f.add(monopolyCard);
 		
 		// Two roads card
-		JLabel TwoRoadsCard = new JLabel();
-		TwoRoadsCard.setIcon(card_two_roads);
-		TwoRoadsCard.setBounds(862, 590, 65, 95);
-		TwoRoadsCard.setSize(65, 95);
-		f.add(TwoRoadsCard);
+		JLabel twoRoadsCard = new JLabel();
+		twoRoadsCard.setIcon(cardTwoRoads);
+		twoRoadsCard.setBounds(862, 590, 65, 95);
+		twoRoadsCard.setSize(65, 95);
+		f.add(twoRoadsCard);
 		
 		// Victory card
-		JLabel VictoryCard = new JLabel();
-		VictoryCard.setIcon(card_victory);
-		VictoryCard.setBounds(932, 590, 65, 95);
-		VictoryCard.setSize(65, 95);
-		f.add(VictoryCard);		
+		JLabel victoryCard = new JLabel();
+		victoryCard.setIcon(cardVictory);
+		victoryCard.setBounds(932, 590, 65, 95);
+		victoryCard.setSize(65, 95);
+		f.add(victoryCard);		
 		
 		// To fix the problem of the last JLabel location
 		JLabel last = new JLabel();
@@ -686,16 +686,16 @@ public class Board {
     }
 
 	private void showHouses() {
-    	labels[1].setIcon(Blue_Village);
+    	labels[1].setIcon(blueVillage);
     	labels[1].setBounds(795-8,270-12,30,30);
     	
-    	labels[9].setIcon(Blue_Village);
+    	labels[9].setIcon(blueVillage);
     	labels[9].setBounds(545-8,345-12,30,30);
     	
-    	labels[11].setIcon(Red_Village);
+    	labels[11].setIcon(redVillage);
     	labels[11].setBounds(645-8,195-12,30,30);
     	
-    	labels[2].setIcon(Red_Village);
+    	labels[2].setIcon(redVillage);
     	labels[2].setBounds(745-8,395-12,30,30);
     	
 	}
@@ -745,7 +745,7 @@ public class Board {
 		updateActivePlayer();
 	}
 	
-    protected void built_elements() {		// Handle building
+    protected void buildElements() {		// Handle building
     	 BuildingSelectionMenu.main(null);
     }
 	
@@ -793,14 +793,14 @@ public class Board {
 			lblDiceResult.setText("");
 			updateActivePlayer();
 			lblDiceResult.setText(" ");
-			WhoseTurnIsIt.setText("Player " + activePlayer.getName());
+			whoseTurnIsIt.setText("Player " + activePlayer.getName());
 			round += 1;
-			TurnTitle.setText("Current turn: " + round + "/10");
+			turnTitle.setText("Current turn: " + round + "/10");
 			if (activePlayer.getName() == "1") {
-			    WhoseTurnIsIt.setForeground(Color.RED);
+			    whoseTurnIsIt.setForeground(Color.RED);
 			}
 			else {
-				WhoseTurnIsIt.setForeground(Color.BLUE);
+				whoseTurnIsIt.setForeground(Color.BLUE);
 			}
 		}
 		else {
