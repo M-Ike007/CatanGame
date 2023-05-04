@@ -14,8 +14,8 @@ public class DevInvention extends DevCard {
 	 */
 	@Override
 	public void setInventReward(Hand hand) {
-		can_invent = true;
-		if (can_invent) {
+		canInvent = true;
+		if (canInvent) {
 			hand.setCard("resource", getResourceDraw(), 1);
 			hand.setCard("resource", getResourceDraw(), 1);
 			hand.setCard("development", "invention", -1);

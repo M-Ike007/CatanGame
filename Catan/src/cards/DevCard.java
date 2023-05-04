@@ -5,8 +5,8 @@ import java.util.Random;
 import hand.Hand;
 
 public class DevCard {
-	protected boolean can_invent = false;
-	private int resource_result = 0;
+	protected boolean canInvent = false;
+	private int resourceResult = 0;
 	private DistributionDevelopmentCards dist = new DistributionDevelopmentCards();
 
 	/**
@@ -40,7 +40,7 @@ public class DevCard {
 	 * @param hand The hand that is given a new resource. 
 	 */
 	public void setInventReward(Hand hand) {
-		if (can_invent) {
+		if (canInvent) {
 			hand.setCard("resource", getResourceDraw(), 1);
 			hand.setCard("resource", getResourceDraw(), 1);
 			hand.setCard("development", "invention", -1);
@@ -60,8 +60,8 @@ public class DevCard {
 		resource.put(4, "brick");
 		resource.put(5, "wheat");
 		Random res_gen = new Random();
-		resource_result = res_gen.nextInt(1, 6);
-		String drawn_resource = resource.get(resource_result);
+		resourceResult = res_gen.nextInt(1, 6);
+		String drawn_resource = resource.get(resourceResult);
 		return drawn_resource;
 	}
 }
