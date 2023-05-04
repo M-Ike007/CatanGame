@@ -27,6 +27,10 @@ import java.util.HashSet;
 
 // we make the main Board class in which we put everything
 
+/**
+ * This class makes the board
+ *
+ */
 public class Board {
 	private JFrame f = new JFrame("Catan - Game"); 
 	private JPanel turnPhasePanel;
@@ -97,7 +101,9 @@ public class Board {
 	
 	
 	// The constructor class
-	
+	/**
+	 * The constructor makes the board and initialise the game 
+	 */
 	public Board() { 
 		manager.setActiveplayer(activePlayer);
 		
@@ -683,6 +689,9 @@ public class Board {
 	    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+	/**
+	 * This method shows the houses of the players on the board
+	 */
 	private void showHouses() {
     	labels[1].setIcon(blueVillage);
     	labels[1].setBounds(795-8,270-12,30,30);
@@ -698,7 +707,9 @@ public class Board {
     	
 	}
 	
-	
+	/**
+	 * This method updates the field of the hand of the active player
+	 */
 	private void updateActivePlayer() {
 		p.setBorder(new EmptyBorder(5, 5, 5, 5));
 		p.setBounds(300, 590, 260, 20);
@@ -713,6 +724,10 @@ public class Board {
     // Action handlers
     
     // Handle the build buttons on the board
+	/**
+	 * This class shows a village on the board when clicked
+	 *
+	 */
     private class ButtonHandler implements ActionListener{
 
         @Override
@@ -729,6 +744,9 @@ public class Board {
         }
     }
     
+    /**
+     * This method handles the dice roll and shows the die number on the board
+     */
 	protected void handleDiceroll () {		// Handle dice roll
 		diceRoll.setSum();
 		int output = diceRoll.getSum();
@@ -743,6 +761,9 @@ public class Board {
 		updateActivePlayer();
 	}
 	
+	/**
+	 * This method handles to play an invention card
+	 */
     protected void playInventionCard() {		// Handle play invention card
     	 DevInvention invention = new DevInvention();
     	 invention.setInventReward(activePlayer.getHand());
@@ -751,6 +772,9 @@ public class Board {
     	 lblDiceResult.setText(" ");
     }
 	
+    /**
+     * This method handles the bank trade 
+     */
 	protected void handleBankTrade() {		// Handle bank trading
 		new TradeBank(activePlayer.getHand());
 	}
@@ -779,6 +803,9 @@ public class Board {
 		return null;		
 	}
 	
+	/**
+	 * This method handles the purchase of a dev card
+	 */
 	private void handleBuyDevCard() {
 		DevCard devCard = new DevCard();
 		String drawnCard = devCard.getDevCard();
@@ -788,6 +815,9 @@ public class Board {
 		lblDiceResult.setText(" ");
 	}
 	
+	/**
+	 * This method handles the end of the turn and switch the active player
+	 */
 	private void handleEndTurn() {
 		if (round < 10) {
 			manager.setTurn();
