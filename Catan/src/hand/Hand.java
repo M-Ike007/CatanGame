@@ -9,24 +9,24 @@ import java.util.*;
  * @see Player.
  */
 public class Hand {
-	private Map<String, Integer> resource_cards = new HashMap<String, Integer>();
-	private Map<String, Integer> development_cards = new HashMap<String, Integer>();
+	private Map<String, Integer> resourceCards = new HashMap<String, Integer>();
+	private Map<String, Integer> developmentCards = new HashMap<String, Integer>();
 
 	/**
 	 * Hand constructor. All card classes and types are initialized at 0.
 	 */
 	public Hand() {
-		this.resource_cards.put("wool", 0);
-		this.resource_cards.put("brick", 0);
-		this.resource_cards.put("wheat", 0);
-		this.resource_cards.put("ore", 0);
-		this.resource_cards.put("wood", 0);
+		this.resourceCards.put("wool", 0);
+		this.resourceCards.put("brick", 0);
+		this.resourceCards.put("wheat", 0);
+		this.resourceCards.put("ore", 0);
+		this.resourceCards.put("wood", 0);
 
-		this.development_cards.put("knight", 0);
-		this.development_cards.put("monopoly", 0);
-		this.development_cards.put("invention", 0);
-		this.development_cards.put("twoRoads", 0);
-		this.development_cards.put("vcp", 2);
+		this.developmentCards.put("knight", 0);
+		this.developmentCards.put("monopoly", 0);
+		this.developmentCards.put("invention", 0);
+		this.developmentCards.put("twoRoads", 0);
+		this.developmentCards.put("vcp", 2);
 	}
 
 	/**
@@ -39,11 +39,11 @@ public class Hand {
 	public void setCard(String card_class, String card, int amount) {
 		switch (card_class) {
 		case "resource":
-			this.resource_cards.put(card, this.resource_cards.get(card) + amount);
+			this.resourceCards.put(card, this.resourceCards.get(card) + amount);
 
 			break;
 		case "development":
-			this.development_cards.put(card, this.development_cards.get(card) + amount);
+			this.developmentCards.put(card, this.developmentCards.get(card) + amount);
 
 			break;
 		}
@@ -59,9 +59,9 @@ public class Hand {
 	public int getCard(String card_class, String card) {
 		switch (card_class) {
 		case "resource":
-			return this.resource_cards.get(card);
+			return this.resourceCards.get(card);
 		case "development":
-			return this.development_cards.get(card);
+			return this.developmentCards.get(card);
 		}
 		throw new IllegalArgumentException("The supplied card type does not exist.");
 	}
