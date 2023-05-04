@@ -3,7 +3,7 @@ package player;
 import hand.*;
 
 public class Player {
-	private final Hand hand;
+	private Hand hand;
 	private PlayerColour colour;
 	private String name;
 
