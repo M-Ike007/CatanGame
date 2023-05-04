@@ -11,7 +11,7 @@ import javax.swing.*;
  * 
  */
 public class HandActivePlayer {
-	private JPanel p;// = new JFrame();
+	private JPanel p;
 
 	/**
 	 * takes current Hand and a Jpanel and creates ten textfields. text is not
